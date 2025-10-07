@@ -1,3 +1,5 @@
+console.log(">>>>>>>>>>>>>>>>>", process.env.PUSHER_APP_ID)
+
 const config = {
   api: {
     API_URL_PROD: 'http://api.testing.3darchitecturalacademy.com/api',
@@ -11,7 +13,7 @@ const config = {
   //   API_URL_DEV: 'https://api.3daa.apppixies.local/api',
   //   API_URL_STAGING: 'https://api.3daa.apppixies.local/api',
   // },
-  
+
   PUSHER_APP_ID: process.env.PUSHER_APP_ID,
   STRIPE_KEY: process.env.STRIPE_KEY, //pk_test_AmDR6NAKbOpdoFUOB0oYdm5T
   INTERCOM_APP_ID: process.env.INTERCOM_APP_ID,

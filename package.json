@@ -13,7 +13,6 @@
     "lint:webpack": "eslint webpack.*.js --cache",
     "lint": "eslint",
     "eslint-check": "eslint --print-config .eslintrc | eslint-config-prettier-check",
-    "server": "cross-env NODE_ENV=development webpack-dev-server --progress --colors --hot --inline --host 0.0.0.0",
     "test": "NODE_ENV=test karma start",
     "test-dev": "NODE_ENV=test karma start",
     "test:debug": "NODE_ENV=test karma start --no-single-run --browsers Chrome --reporters mocha",
@@ -21,8 +20,7 @@
     "test:e2e-dev": "nightwatch -e firefox-teamcity  --reporter ./test/e2e/config/html-reporter.js",
     "test:coverage": "NODE_ENV=development nyc mocha src/app/**/*.spec.js",
     "precommit": "lint-staged",
-    "server-seg": "cross-env WEB_APP_BRAND=seg NODE_ENV=development webpack-dev-server --progress --colors --hot --inline --host 0.0.0.0",
-    "server-3daa": "cross-env WEB_APP_BRAND=3daal NODE_ENV=development webpack-dev-server --progress --colors --hot --inline --host 0.0.0.0"
+    "server": "cross-env WEB_APP_BRAND=3daal NODE_ENV=development webpack-dev-server --progress --colors --hot --inline --host 0.0.0.0"
   },
   "lint-staged": {
     "*.js": [
