@@ -1,0 +1,27 @@
+.content-slider {
+  position: relative;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) $speed * 2;
+  overflow: hidden;
+
+  > .content-slider-inner {
+    width: 100%;
+    height: 100%;   
+    position: relative;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) $speed * 2;
+    font-size: 0;
+    white-space: nowrap;
+	
+    > .content-slider-slide {
+      width: 100%;
+      display: inline-block;
+      font-size: $font-size-base;
+      white-space: normal;
+      vertical-align: top;
+      opacity: 0;
+      transition: all cubic-bezier(0.075, 0.82, 0.165, 1) $speed * 2;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}

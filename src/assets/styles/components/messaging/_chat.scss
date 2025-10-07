@@ -1,0 +1,301 @@
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+}
+
+.chat {
+  $speechmark-dimension: 15px;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+
+  .more {
+    height: 100%;
+
+    &::after {
+      content: '\22EE';
+      font-size: 30px;
+    }
+  }
+
+  .cards-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: $primary;
+
+    .slider,
+    .slider-frame,
+    .slider-list,
+    .slider-slide {
+      flex: 1;
+      display: flex !important;
+      flex-direction: column;
+    }
+
+    .slider-list,
+    .slider-slide {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .slider-control-centerleft,
+    .slider-control-centerright {
+      display: none;
+    }
+
+    .slider-control-bottomcenter {
+      top: 0px;
+      height: 60px;
+
+      button {
+        font-size: 3rem !important;
+        color: $white !important;
+        outline: none;
+      }
+    }
+  }
+
+  .message-card {
+    padding: 60px 25px 15px;
+    // height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    > div {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      padding: 20px 0;
+      @include image('sidebar_bg.png');
+      background-repeat: repeat;
+      box-shadow: 0 1px 9.5px 0 rgba($black, 0.5);
+      // flex: 1;
+      // display: flex;
+      // flex-direction: column;
+    }
+  }
+
+  .chat-side-container {
+    width: 100%;
+    .message-card {
+      padding: 0;
+    }
+    .messages-window {
+      padding: 10px;
+      overflow-y: auto;
+      height: calc(100vh - 265px);
+    }
+  }
+
+  .messages-window {
+    max-width: 100%;
+    overflow-y: auto;
+    padding: 0 20px;
+    height: calc(100vh - 490px);
+    // flex: 1;
+    // display: flex;
+    // flex-direction: column;
+  }
+
+  .messages-wrapper {
+    display: flex;
+    flex-flow: column-reverse;
+    flex: none;
+    min-height: 100%;
+
+    .loading-spacer {
+      height: 1px;
+    }
+
+    .message {
+      flex-shrink: 0;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 0;
+      border: none;
+      margin: 0 0 17px;
+      background: none;
+      cursor: default;
+    }
+
+    .text {
+      display: inline-block;
+      position: relative;
+      padding: 5px 10px;
+      margin-right: $speechmark-dimension;
+      border-radius: 4px;
+      line-height: 1.8;
+
+      &::after {
+        position: absolute;
+        top: 8px;
+        border-style: solid;
+        content: "";
+      }
+    }
+
+    .time {
+      color: black;
+      opacity: .45;
+      font-size: 11px;
+      margin-bottom: 6px;
+      text-align: right;
+    }
+
+    .unread {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: red;
+      margin-left: 8px;
+    }
+
+    figure{
+      display: inline-block;
+    }
+
+    .user {
+      padding-left: 30px;
+      .media-content {
+        text-align: right;
+      }
+      .text {
+        background-color: $green;
+        color: white;
+        text-align: left;
+        &::after {
+          right: -15px;
+          border-width: 15px 15px 0 0;
+          border-color: $green transparent transparent transparent;
+        }
+      }
+      .time {
+        padding-right: 16px;
+      }
+      .unread {
+        margin-right: 8px;
+      }
+      .custom.checkbox {
+        margin: 17px -10px 0 10px;
+      }
+    }
+
+    .friend {
+      padding-right: 30px;
+      .text {
+        margin-left: $speechmark-dimension;
+        background-color: $color-background-light;
+        color: $black;
+        &::after {
+          left: -15px;
+          border-width: 0 15px 15px 0;
+          border-color: transparent $color-border-default transparent transparent;
+        }
+      }
+      .time {
+        text-align: left;
+        padding-left: 20px;
+      }
+      figure {
+        cursor: pointer;
+      }
+      .custom.checkbox {
+        margin: 17px 0 0 0;
+      }
+    }
+
+    .react-contextmenu-item {
+      padding: 5px 10px;
+      border: 1px solid $color-border-secondary;
+      border-radius: 5px;
+      background-color: $white;
+      margin-left: -8px;
+      margin-top: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: red;
+        color: $white;
+      }
+    }
+  }
+
+  .message-box {
+    @extend .app-sidebar-pane__footer;
+    .box-inner {
+      display: flex;
+      .emoticons {
+        display: flex;
+        background-color: $white-ter;
+        padding: 13px 22px 0 22px;
+        cursor: pointer;
+      }
+
+      .chatbox {
+        width: 100%;
+        font-size: 1rem;
+        border: 0;
+        padding: 16px 25px;
+        resize: none;
+        overflow-y: auto;
+        display: inline-block;
+        outline: none;
+        max-height: 200px;
+      }
+      .sendicon {
+        display: flex;
+        padding: 7px 10px 0 10px;
+        cursor: pointer;
+      }
+    }
+
+    .delete-box {
+      height: 54px;
+      display: flex;
+      justify-content: flex-end;
+
+      a {
+        color: $red;
+        margin-right: 25px;
+        display: flex;
+        align-items: center;
+        
+        svg > g > g {
+          fill: $red;
+        }
+      }
+
+      .isvg {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+// .on-line / .off-line
+[class*="-line"] {
+  font-size: 12px;
+
+  &::before {
+    display: inline-block;
+    content: "";
+    margin-right: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+  }
+}
+
+.on-line::before { background-color: $green; }
+
+.off-line {
+  color: $grey-light;
+  &::before { background-color: $grey-light; }
+}

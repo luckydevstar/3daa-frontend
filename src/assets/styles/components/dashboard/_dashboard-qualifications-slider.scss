@@ -1,0 +1,30 @@
+.your-qualifications-container {
+  position: relative;
+  .qualification-description {
+    display: none;
+  }
+  .qualifications-link {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    padding: 0 35px;
+  }
+  .view-qualification {
+    width: 100%;
+    border-radius: 3px;
+  }
+  .swiper-wrapper {
+    margin-bottom: 75px;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $primary;
+  }
+  .swiper-pagination-bullets {
+    bottom: 0;
+  }
+  .card-front {
+    width: 100%;
+  }
+}

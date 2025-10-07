@@ -1,0 +1,16 @@
+.voucher-check-form {
+  margin-top: 60px;
+  color: $black;
+
+  .voucher-check-title {
+    font-size: $font-size-base-h1;
+  }
+  .voucher-check-subtitle {
+    margin-top: 28px;
+    font-size: $font-size-base-biggest;
+  }
+  .voucher-check-code {
+    max-width: 400px;
+    margin: 30px auto;
+  }
+}

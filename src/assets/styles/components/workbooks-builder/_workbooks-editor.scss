@@ -1,0 +1,58 @@
+.workbooks-editor {
+  background-color: $white;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  
+  .current-moderator {
+	  position: absolute;
+	  z-index: 999;
+	  left: 10px;
+	  top: 10px;
+	  padding: 7px 20px 8px;
+	  background: $red;
+	  color: white;
+	  border-radius: 30px;
+	  font-size: 14px;
+	  display: flex;
+	  justify-content: flex-start;
+	  align-items: center;
+	  i {
+		  display: inline;
+		  margin-right: 15px;
+	  }
+	  div {
+		  flex: 1;
+		  span {
+			  display: block;
+			  font-style: italic;
+			  font-size: 12px;
+		  }
+	  }
+  }
+  
+  .rich-editor {
+    overflow: auto;
+    transition: all .6s ease-out;
+    width: 100vw;
+    
+    > div {
+      max-width: 864px;
+      margin: auto; 
+      width: 100%;
+    }
+  }
+  
+  &.open {
+    @include desktop {
+      .rich-editor {
+        width: 60vw;
+      }
+    }
+    
+    .workbooks-outcomes-tray {
+      right: 0;
+    }
+  }
+}

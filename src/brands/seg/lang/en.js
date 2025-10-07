@@ -1,0 +1,25 @@
+const dictionary = {
+  title: 'Skills and Education Group',
+  businessTitle: 'Skills and Education Group',
+
+  subBusinessTitle:
+    'The advancement of skills and education to improve the lives of individuals.',
+  subPersonalTitle:
+    'The advancement of skills and education to improve the lives of individuals.',
+
+  regBusinessTab: 'Sign up for an account',
+  regPersonalTab: 'Sign up for a Personal account',
+  regBusinessDesc1:
+    'If you’re part of an educational organisation, sign up here by entering your email address and following the next steps. Our range of qualifications combined with high quality learning resources will give you access to your online profile where you can keep track of the progress of your learners 24/7',
+  regBusinessDesc2: ' ',
+  regBusinessDesc3: ' ',
+  regBusinessDesc4: ' ',
+  regPersonalDesc1:
+    'If you are a student, sign up here. Simply type in your email address and complete the registration process to be part of the NCFE platform. You will have access to your online profile and Mobile App anytime, anywhere so you can keep educating on the go.',
+  regPersonalDesc2: ' ',
+  regPersonalDesc3: ' ',
+  regPersonalDesc4: ' ',
+  shortTitle: 'SEG'
+};
+
+export default dictionary;

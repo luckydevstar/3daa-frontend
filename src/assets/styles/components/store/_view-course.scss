@@ -1,0 +1,25 @@
+.view-course {
+  .course-content {
+    background: $white;
+
+    .aim {
+      margin-bottom: 80px;
+
+      p {
+        width: 720px;
+        margin: 0 auto;
+      }
+    }
+    h2 {
+      color: $primary;
+    }
+    .detail-card {
+      box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+
+      .detail-card-bottom {
+        padding: 10px 30px;
+        border-top: 1px solid $border;
+      }
+    }
+  }
+}

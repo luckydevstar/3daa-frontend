@@ -1,0 +1,25 @@
+.accordion {
+  width: 100%;
+  .accordion__head {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Open Sans Light';
+    font-weight: 300;
+    font-size: 16px;
+    color: #007FA3;
+    width: 100%;
+    cursor: pointer;
+  }
+  .accordion__body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #F9F9F9;
+    font-family: 'Open Sans Light';
+    font-weight: 300;
+    font-size: 16px;
+    color: #000000;
+  }
+}

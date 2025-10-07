@@ -1,0 +1,66 @@
+.my-references {
+  .picture {
+    display: inline-block;
+    width: 100%;
+    background-color: $grey-lighter;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 100px;
+  }
+
+  .columns {
+    margin-bottom: 0;
+  }
+
+  .details {
+    display: table;
+    height: $profile-avatar-size - 5px; /* minus pixels to cater for font line height spacing */
+  }
+
+  .inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .name {
+    font-family: $family-secondary;
+    font-size: 22px;
+    color: $primary;
+  }
+
+  .qualification {
+
+  }
+
+  .swiper-pagination {
+    position: relative;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+  }
+
+  .swiper-slide:not(.swiper-slide-active) {
+    opacity: 0 !important;
+  }
+
+  &__empty-icon {
+    min-height: 150px;
+    min-width: 150px;
+    @include image('icon_profile_references_empty.svg');
+    background-position: center center;
+  }
+
+  &__empty-message {
+    color: $primary;
+    font-size: 1.3rem;
+  }
+
+  &__empty-cta {
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+}

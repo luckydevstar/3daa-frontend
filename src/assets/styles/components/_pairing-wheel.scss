@@ -1,0 +1,17 @@
+.pairing {  
+    @import 'pairing-wheel/_pairing-wheel-head';
+    @import 'pairing-wheel/_pairing-wheel-footer';
+    @import 'pairing-wheel/navigation/_pairing-navigation';
+    @import 'pairing-wheel/pairing-wheel/pairing-wheel-container';
+    @import 'pairing-wheel/categories/pairing-main-category/pairing-main-category';
+    @import 'pairing-wheel/categories/pairing-main-category/pairing-main-category-list';
+    @import 'pairing-wheel/categories/pairing-main-category/pairing-main-category-phone';
+    @import 'pairing-wheel/categories/pairing-sub-category/pairing-sub-category-search';
+    @import 'pairing-wheel/categories/pairing-sub-category/pairing-sub-category-list';
+    @import 'pairing-wheel/categories/pairing-recommended-category/pairing-recommended-category-container';
+    @import 'pairing-wheel/categories/pairing-recommended-category/select-main-category';
+    @import 'pairing-wheel/categories/pairing-recommended-category/select-sub-category';
+    @import 'pairing-wheel/categories/pairing-recommended-category/select-pairing';
+    @import 'pairing-wheel/categories/select-list';
+}
+@import 'pairing-wheel/pairing-wheel-select-icon-modal';

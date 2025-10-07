@@ -1,0 +1,17 @@
+.user-conflict__filters {
+  padding-top: 5px;
+  padding-bottom: 30px;
+  .user-conflict__filters__title {
+    color: #505759;
+    margin-bottom: 10px;
+    padding-left: 3px;
+  }
+  select {
+    border: 1px solid #D1D1D1;
+    padding: 7px;
+    min-width: 175px;
+    margin-right: 60px;
+    border-radius: 3px;
+    padding-right: 10px;
+  }
+}

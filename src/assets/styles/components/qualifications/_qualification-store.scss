@@ -1,0 +1,25 @@
+& .store .Collapsible__trigger {
+  padding-left: 0px;
+  &:after {
+    left: auto;
+    right: 10px;
+  }
+}
+
+& .Collapsible__contentInner {
+  background-color: white;
+}
+
+& .option-status {
+  position: absolute;
+  top: 15px;
+  right: 50px;
+}
+
+& .store {
+  .price {    
+    input {
+      padding-left: 50px;
+    }
+  }
+}

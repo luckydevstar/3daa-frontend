@@ -1,0 +1,34 @@
+.animate {
+  &.fade-in {
+    opacity: 0;
+    &.init {
+      opacity: 1;
+      transition: opacity 1s ease;
+      &[disabled], .disabled {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &.move-in {
+    &-left {
+    transform: translateX(-100px);
+    }
+    &-right {
+      transform: translateX(100px);
+    }
+    &-top {
+      transform: translateY(-100px)
+    }
+    &-bottom {
+      transform: translateY(100px);
+    }
+
+    &-left, &-right, &-top, &-bottom {
+      &.init {
+        transform: translateX(0);
+        transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+    }
+  }
+}

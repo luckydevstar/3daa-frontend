@@ -1,0 +1,60 @@
+.jobs-admin-new {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .job-list {
+        display: flex;
+        width: 100%;
+        padding: 20px 30px;
+        border-bottom: 1px solid $color-border-default;
+        .icon {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            background-color: rgba($primary, 0.3);
+        }
+        .infos {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .j-title {
+                display: flex;
+                width: 100%;
+                color: $primary;
+                font-size: 1.1rem;
+                padding: 5px 0;
+            }
+            .j-contents {
+                display: flex;
+                width: 100%;
+                .content {
+                    display: flex;
+                    flex: 8;
+                }
+                .btn {
+                    display: flex;
+                    justify-content: flex-end;
+                    flex: 4;
+                }
+            }
+            .j-a-contents {
+                display: flex;
+                width: 100%;
+                .logo {
+                    display: flex;
+                    flex: 3;
+                }
+                .content {
+                    display: flex;
+                    flex: 5;
+                }
+                .btn {
+                    justify-content: flex-end;
+                    display: flex;
+                    flex: 4;
+                }
+            }
+        }
+    }
+}

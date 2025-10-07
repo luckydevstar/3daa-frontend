@@ -1,0 +1,17 @@
+<svg fill="#c9c9c9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.667 16.295">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #c9c9c9;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="literature_copy_3" data-name="literature copy 3" transform="translate(0 0.5)">
+    <path id="Stroke_1" data-name="Stroke 1" class="cls-1" d="M0,13.263V0" transform="translate(9.333 0.718)"/>
+    <path id="Fill_2" data-name="Fill 2" d="M17.949.9A13.207,13.207,0,0,0,13.641,0,13.207,13.207,0,0,0,9.333.9,13.207,13.207,0,0,0,5.026,0,13.207,13.207,0,0,0,.718.9L0,1.994H18.667Z" transform="translate(0 13.083)"/>
+    <path id="Stroke_3" data-name="Stroke 3" class="cls-1" d="M12.923,0A13.207,13.207,0,0,0,8.615.9,13.207,13.207,0,0,0,4.308,0,13.207,13.207,0,0,0,0,.9V13.981a13.207,13.207,0,0,1,4.308-.9,13.207,13.207,0,0,1,4.308.9,13.207,13.207,0,0,1,4.308-.9,13.207,13.207,0,0,1,4.308.9V.9A13.207,13.207,0,0,0,12.923,0Z" transform="translate(0.718)"/>
+    <path id="Fill_4" data-name="Fill 4" d="M2.872.6A1.436,1.436,0,0,1,0,.6C0-.2,2.872-.2,2.872.6Z" transform="translate(7.897 13.764)"/>
+  </g>
+</svg>

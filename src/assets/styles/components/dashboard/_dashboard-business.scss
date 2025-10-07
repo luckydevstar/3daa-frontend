@@ -1,0 +1,539 @@
+.dashboard-business {
+  background-color: $white;
+
+  &.fixed-banner {
+    .hidden-card-title {
+      display: block;
+      position: fixed;
+      width: calc(100% - 15px);
+      z-index: 11;
+      top: $header-height;
+      left: 0;
+      background-color: $white;
+      border-bottom: 1px solid $color-border-default;
+
+      .card-title {
+        display: flex;
+        align-items: center;
+      }
+      img {
+        width: 65px;
+        height: 65px;
+        margin: 5px 20px;
+        animation: animation-in 0.3s;
+        object-fit: contain;
+        object-position: center;
+        // border-radius: 50%;
+      }
+    }
+    .dashboard-business-content {
+      .dashboard-business-alert {
+        .alert-logo {
+          z-index: 11;
+          visibility: hidden;
+          animation: animation-logo-in 0.1s;
+        }
+      }
+    }
+  }
+
+  @keyframes animation-logo-in {
+    /* You could think of as "step 1" */
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    /* You could think of as "step 2" */
+    100% {
+      opacity: 1;
+      width: 150px;
+      visibility: visible;
+    }
+  }
+  @keyframes animation-logo-out {
+    /* You could think of as "step 1" */
+    0% {
+      left: 0;
+      width: 70px;
+      opacity: 0;
+      visibility: hidden;
+    }
+    /* You could think of as "step 2" */
+    100% {
+      opacity: 1;
+      visibility: visible; 
+    }
+  }
+  @keyframes animation-in {
+    /* You could think of as "step 1" */
+    0% {
+      opacity: 0;
+    }
+    /* You could think of as "step 2" */
+    100% {
+      opacity: 1;
+    }
+  }
+
+  // header
+  .dashboard-business-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 420px;
+    padding: 0;
+    background-color: $primary;
+
+    .hero-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .title {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      font-family: $family-primary-Semibold;
+      color: $white;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      line-height: 1.2;
+      font-family: $family-primary;
+      color: $white;
+    }
+    
+    .dashboard-business-header__video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  // end header
+
+  // alert
+  .dashboard-business-alert {
+    display: flex;
+    position: relative;
+    .alert-logo {
+      width: 100%;
+      position: absolute;
+      z-index: 10;
+      top: -20px;
+      text-align: center;
+      animation: animation-logo-out 0.5s;
+      background: white;
+      img {
+        // border: 5px solid $white;
+        // border-radius: 100%;
+        width: 200px;
+        height: 200px;
+        // border-radius: 50%;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+    .card {
+      margin-top: 80px;
+      text-align: center;
+      color: $black;
+      .title {
+        padding-top: 120px;
+        font-size: 20px;
+        font-family: $family-primary-Semibold;
+      }
+    }
+  }
+  // end alert
+
+  // card
+  .card {
+    width: 100% !important;
+  }
+
+  // card title
+  .card-title {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    font-size: 0.95rem;
+    color: rgba($black, 0.8);
+    font-family: $family-primary-Semibold;
+  }
+  .hidden-card-title {
+    display: none;
+  }
+  // end card title
+
+  // card awards
+  .dashboard-business-awards {
+    .columns {
+      align-items: center;
+      height: 40px;
+      margin: 10px 0;
+      img, .isvg {
+        width: 40px;
+        height: 40px;
+        svg{
+          width: 40px;
+          height: 40px;
+          g {
+            fill: $primary !important;
+          }
+        }
+        &.small {
+          svg{
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+    .is-color-primary {
+      color: $primary;
+    }
+  }
+  // end card awards
+
+  // news
+  .dashboard-business-news {
+    // max-height: 910px;
+    // overflow-y: auto;
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 20px 0;
+      button {
+        padding: 0 60px;
+        color: rgba($black, 0.5);
+      }
+    }
+
+    .news {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+
+      .photo {
+        width: 100%;
+        height: 240px;
+        flex: 1;
+        flex-direction: row;
+        align-items: stretch;
+        overflow: hidden;
+
+        img {
+          flex: 1;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .content {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba($black, 0.03);
+
+        .title {
+          font-size: 1.5rem;
+        }
+
+        .desc, .infos {
+          color: rgba($black, 0.9);
+        }
+
+        .desc {
+          width: 100%;
+          overflow: hidden;
+          font-size: 1.1rem;
+        }
+
+        .infos {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .date, .view {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+  // end news
+
+  // card store
+  .dashboard-business-store {
+    .card{
+      
+    }
+    .qualification-info {
+      width: 100%;
+      min-height: 240px;
+      display: flex;
+      flex-direction: column;
+      background-color: $primary;
+      color: $white;
+
+      .isvg {
+        svg{
+          width: 100%;
+          height: 100%;
+          g, path, polygon {
+            fill: $white !important;
+          }
+        }
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .price {
+          font-size: 2rem;
+          font-weight: 700;
+        }
+        .per {
+          font-size: 1rem;
+        }
+      }
+
+      .name {
+        font-size: 1.5em;
+      }
+    }
+    .buy-info {
+      width: 100%;
+      height: 200px;
+      .price {
+        font-size: 1.3rem;
+        text-align: right;
+        line-height: 38px;
+      }
+    }
+  }
+  // end card store
+
+  // card chat
+  .dashboard-business-chat {
+    height: 440px;
+    text-align: center;
+    .logo {
+      padding: 30px;
+    }
+
+    .live-chat {
+      font-size: 1.2rem;
+      color: $primary;
+    }
+
+    .desc-1 {
+      padding: 0 10%;
+    }
+
+    .desc-2 {
+      padding: 0 10%;
+      color: rgba($black, 0.3);
+    }
+  }
+  // end card chat
+
+  .dashboard-business-users {
+    .card {
+      padding: 0!important;
+    }
+    .dashboard-business-users__active-tutors-container {
+      background-color: #043956;
+      padding: 60px 25px 25px 25px;
+      .dashboard-business-users__active-users, .dashboard-business-tutors-users {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 18px;
+        color: #ffffff;
+        i {
+          font-size: 30px;
+        }
+        .dashboard-business-users__active-users__count {
+          width: 50px;
+          text-align: center;
+        }
+      }
+      .dashboard-business-tutors-users {
+        margin-top: 30px;
+        padding-left: 5px;
+      }
+    }
+    .dashboard-business-users__add-more-staff {
+      padding: 40px;
+      button {
+        background-color: #043956;
+        cursor: pointer;
+        color: #ffffff;
+        width: 100%;
+        border: none;
+        border-radius: 2px;
+        font-size: 20px;
+        padding: 5px 0;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 978px) {
+
+    .card-title.first,
+    .dashboard-business-awards,
+    .dashboard-business-store {
+        // padding-top: 10px !important;
+    }
+
+    .dashboard-business-chat {
+      margin-top: 100px !important;
+    }
+  
+  }
+}
+
+// news-view
+.news-view-modal {
+  .modal-content {
+    width: 1000px;
+  }
+}
+.dashboard-business-news-view__header {
+  border-bottom: 1px solid #E6E6E6;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .header-background {
+    width: 25%;
+  }
+  
+  .header__share-block {
+    
+    .header__share-block__title {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 18px;
+      i {
+        font-size: 30px;
+        margin-right: 15px;
+      }
+    }
+    p {
+      cursor: pointer;
+      line-height: 1;
+    }
+    .header__share-block__shares {
+      font-size: 24px;
+      i {
+        cursor: pointer;
+        margin: 0 5px;
+      }
+    }
+    .__react_component_tooltip {
+      pointer-events: auto!important;
+    }
+  }
+  .header__news__pagination {
+    border: 1px solid #E6E6E6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    color: #154461;
+    margin-left: 50px;
+    .header__news__pagination__left, .header__news__pagination__right {
+      padding: 0 8px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .header__news__pagination__count {
+      border-left: 1px solid #E6E6E6;
+      border-right: 1px solid #E6E6E6;
+      flex: 1;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #868686;
+      font-size: 16px;
+    }
+  }
+}
+.dashboard-business-news-view {
+  overflow: auto;
+  height: 680px;
+  .news {
+    display: flex;
+    flex-direction: column;
+
+    .photo {
+      width: 100%;
+      height: 400px;
+      flex: 1;
+      flex-direction: row;
+      align-items: stretch;
+      overflow: hidden;
+
+      img {
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .content {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba($black, 0.03);
+
+      .title {
+        font-size: 1.5rem;
+      }
+
+      .desc, .infos {
+        color: rgba($black, 0.5);
+      }
+
+      .desc {
+        width: 100%;
+      }
+
+      .infos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .date, .view {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+// end news

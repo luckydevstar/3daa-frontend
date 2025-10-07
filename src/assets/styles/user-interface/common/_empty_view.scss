@@ -1,0 +1,114 @@
+.empty-view {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  .empty-view-cards, .empty-view-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .empty-view-description {
+    flex-direction: column;
+    align-items: baseline;
+    padding: 20px 50px;
+
+    h2 {
+      font-family: $family-secondary;
+      font-size: 36px;
+      color: $blue;
+    }
+
+    p {
+      color: $grey-dark;
+      margin-top: 10px;
+      width: 330px;
+      text-align: left;
+    }
+  }
+
+  .empty-view-cards {
+    justify-content: center;
+    position: relative;
+    width: 500px;
+    height: 265px;
+  }
+
+  .blank-card {
+    background-color: $white;
+    box-shadow: 0 0 12px 0 rgba($black, 0.05);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 205px;
+    height: 100%;
+    padding: 30px;
+
+    &-big {
+      left: 50%;
+    }
+
+    &-medium {
+      left: 30%;
+      transform: scale(0.9);
+    }
+
+    &-small {
+      left: 10%;
+      transform: scale(0.8);
+    }
+
+    .icon {
+      width: 60px;
+      height: 40px;
+
+      &-workbook {
+        width: 60px;
+        height: 40px;
+        @include image('icon_workbooks_fat_grey.svg');
+      }
+      &-male {
+        width: 92px;
+        height: 80px;
+        @include image('icon_male.svg');
+      }
+      &-female {
+        width: 92px;
+        height: 80px;
+        @include image('icon_female.svg');
+      }
+      &-learner {
+        width: 92px;
+        height: 80px;
+        @include image('icon_learner.svg');
+      }
+    }
+
+    .line-wrapper {
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    .line {
+      width: 100%;
+      border: 2px solid $color-border-default;
+      margin: 10px 0;
+  
+      &-short {
+        width: 50px;
+      }
+    }
+
+    .button {
+      color: $white;
+      font-size: 14px;
+    }
+  }
+}

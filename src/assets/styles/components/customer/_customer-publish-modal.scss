@@ -1,0 +1,20 @@
+.customer-publish-modal {
+  .modal-content {
+    width: 800px;
+  }
+  .customer-publish {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 100px;
+    text-align: center;
+
+    .btns {
+      display: flex;
+      width: 100%;
+      border-top: 1px solid $color-border-default;
+      justify-content: center;
+    }
+  }
+}

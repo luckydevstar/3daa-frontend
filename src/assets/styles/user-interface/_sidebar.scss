@@ -1,0 +1,128 @@
+.app-sidebar {
+  overflow: hidden;
+  position: absolute;
+  width: $sidebar-width;
+  right: -$sidebar-width;
+  top: 0;
+  height: 100%;
+  transform: translate3d(0,0,0);
+  transition: transform $speed $easing;
+  @include image('sidebar_bg.png');
+  background-repeat: repeat;
+  z-index: 151;
+
+  .app-sidebar-open & {
+    transform: translate3d(-$sidebar-width,0,0);
+  }
+}
+
+.app-sidebar nav {
+  height: $nav-dimension;
+  background: $primary;
+}
+
+.app-sidebar nav .item {
+  $sidebar-items: (
+    notifications: "../images/icon_bell.svg",
+    calendar: "../images/icon_calendar.svg",
+    newsfeed: "../images/icon_news.svg",
+    messaging: "../images/icon_speechbubble.svg",
+    close: "../images/icon-close-white.svg"
+  );
+
+  @each $section, $image in $sidebar-items {
+    &.#{$section} { @include image-replace($image); }
+  }
+
+  width: $nav-dimension;
+  height: $nav-dimension;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  cursor: pointer;
+
+  &.active:after {
+    content: '';
+    height: 4px;
+    background: rgba($white, 0.5);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  &:hover {
+    background-color: lighten($primary, 2%);
+  }
+}
+
+.app-sidebar-feature {
+  position: relative;
+  display: none;
+  height: calc(100% - #{$nav-dimension});
+
+  &.active {
+    display: block;
+  }
+
+  // TODO: Consider deletion of `footer {}` as the design around the `<NewChatButton />` changed
+  header,
+  footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  header {
+    height: 74px;
+    background-color: $white;
+    box-shadow: 0 2px 10px 0 $black-20-percent;
+  }
+
+  footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 66px;
+    background-color: $grey-lighter;
+  }
+}
+
+.app-sidebar-pane {
+  width: $sidebar-width;
+  height: 100%;
+}
+
+// ps I hate long classNames
+.app-sidebar-pane__header {
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 17px;
+  z-index: 1;
+  box-shadow: 0 2px 10px 0 $black-20-percent;
+  background: white;
+}
+
+.app-sidebar-pane__footer {
+  flex-grow: 0;
+  z-index: 1;
+  background-color: $white;
+  box-shadow: 0 -2px 10px 0 $black-20-percent;
+}
+
+.app-sidebar .backarrow {
+  align-self: center;
+  width: 2em;
+  height: 2em;
+  padding: 0;
+  border: 0;
+  margin-right: 10px;
+  outline: 0;
+  @include image('icon_left_arrow.png');
+  background-color: transparent;
+  background-position: center center;
+  background-size: 14px 13px;
+  cursor: pointer;
+}

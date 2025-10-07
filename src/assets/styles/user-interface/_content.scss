@@ -1,0 +1,91 @@
+/**
+ * Main wrapper
+ */
+
+ main {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - #{$header-height});
+  // z-index: 5;
+}
+
+
+/**
+ * Custom container sizing
+ */
+ .container {
+  width: 100%;
+  @include desktop {
+    max-width: 100%;
+  }
+  @include widescreen {
+    max-width: $widescreen - 40;
+  }
+}
+
+.container-smaller {
+  max-width: 680px;
+  width: 100%;
+  margin: auto;
+}
+
+/**
+ * Content container
+ */
+ .content-container {
+  transition: width $speed $easing;
+  width: 100%;
+  max-width: 100%;
+  background: $white;
+  height: calc(100vh - #{$header-height});
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 5;
+  .content-inner {
+    background: $color-background-default;
+  }
+
+  @include desktop {
+    .app-sidebar-open & {
+      width: calc(100% - #{$sidebar-width});
+    }
+  }
+}
+
+/**
+ * Content section
+ */
+ .content-section {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.separated {
+  border-bottom: 1px solid $color-border-default;
+  margin-bottom: 15px;
+}
+
+/**
+ * Page for very basic content
+ */
+ .content-under-development-container {
+   width: 100%;
+ }
+ .page-basic {
+   width: 100%;
+   display: flex;
+   align-items: center;
+}
+
+
+/**
+ * Min height - 100vh - footer/header
+ */
+
+.min-content-height {
+  min-height: calc(100vh - #{$header-height + $footer-height});
+}
+
+.min-content-height-inner {
+  min-height:  calc(100vh - #{$header-height + $footer-height} - #{45px + 247px});
+}

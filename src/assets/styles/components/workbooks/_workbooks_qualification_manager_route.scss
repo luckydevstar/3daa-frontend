@@ -1,0 +1,106 @@
+.qualification-manager-route {
+  background: $color-background-default;
+  border: 1px solid $color-border-default;
+  .empty-view-container {
+    margin: 0 auto;
+    padding: 100px 0 150px;
+  }
+    .pathway-cta {
+      margin-top: 15px;
+      .top {
+        .button {
+          width: 100%;
+        }
+      }
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        .button {
+          width: 45%;
+          margin-top: 15px;
+        }
+      }
+    }
+
+  .qualification-carousel {
+    .details {
+      display: none;
+    }
+  }
+  .expandable-button {
+    position: absolute;
+    right: 50px;
+    top: 60px;
+  }
+  .workbooks-qualification-status {
+    &.centered {
+      margin: 0 auto;
+      width: 200px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .fa {
+      margin-bottom: 2px;
+      vertical-align: middle;
+      margin-left: 10px;
+      color: $primary;
+    }
+  }
+  .separator {
+    min-height: 300px;
+  }
+  .Collapsible__contentInner {
+    background-color: transparent;
+  }
+  .Collapsible__trigger {
+    background: $white;
+    border: 1px solid $color-border-default;
+    color: $black;
+    &:after {
+      display: none;
+    }
+    &:before {
+      content: '+';
+      position: absolute;
+      right: 20px;
+      font-size: 25px;
+      top: 5px;
+    }
+    &.is-open {
+      &:after {
+        display: none;
+      }
+      &:before {
+        content: '-';
+        font-size: 35px;
+        top: -4px;
+      }
+    }
+  }
+}
+
+.unit-overview-modal {
+  .modal-body {
+    padding: 0;
+  }
+  .unit-overview-modal-container {
+    padding: 50px;
+    margin-bottom: 0;
+  }
+}
+
+.unit-overview-modal-footer {
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  background-color: $grey-lighter;
+  .button {
+    width: 150px;
+  }
+  .selected-info {
+    color: $primary;
+  }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="39px" viewBox="0 0 58 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_workbooks_fat</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Hero-Header-Existing" transform="translate(-1177.000000, -80.000000)">
+            <g id="Hero-Header">
+                <g id="Group-7" transform="translate(1136.000000, 82.000000)">
+                    <g id="icon_workbooks_fat" transform="translate(43.000000, 0.000000)">
+                        <path d="M27,28.4146844 C24.344,27.1244444 20.492,25.6928356 16.5,25.6928356 C13.36,25.6928356 9.906,26.1527822 6.234,27.06272 L8.602,6.64586667 C10.32,5.96092444 13.672,4.78616889 16.382,4.78616889 C20.414,4.78616889 24.352,7.33080889 24.39,7.35271111 L26.992,9.07900444 L29.594,7.36864 C29.632,7.34474667 32.57,5.46314667 35.968,4.94147556 L38.282,25.7167289 C34.062,25.5056711 29.828,27.0388267 27,28.4146844 L27,28.4146844 Z" id="Fill-1" fill="#FFFFFF"></path>
+                        <path d="M49.75,3.48 C49.75,3.48 43.218,0.119004444 37.618,0.119004444 C32.016,0.119004444 27,3.48 27,3.48 C27,3.48 21.984,0.119004444 16.382,0.119004444 C10.782,0.119004444 4.25,3.48 4.25,3.48 L0.75,33.7209956 C0.75,33.7209956 8.68,30.36 16.5,30.36 C21.632,30.36 27,33.7209956 27,33.7209956 C27,33.7209956 32.368,30.36 37.5,30.36 C45.32,30.36 53.25,33.7209956 53.25,33.7209956 L49.75,3.48 Z" id="Stroke-2" stroke="#FFFFFF" stroke-width="4"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

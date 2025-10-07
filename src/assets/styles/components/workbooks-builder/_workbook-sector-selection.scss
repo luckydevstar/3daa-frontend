@@ -1,0 +1,125 @@
+.workbook-selector-selection-container {
+  background: $white;
+  .grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 300px;
+    
+    .grid-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 5px;
+           
+      @include mobile {
+        width: calc(100% - 10px);  
+        height: 180px;
+      }
+      
+      @include tablet {
+        width: calc(50% - 10px);
+        height: 220px;
+      }
+      
+      @include desktop {
+        width: calc(25% - 10px);
+        height: 280px;
+        margin: 5px;        
+      }
+      
+      height: 280px;
+      background-size: cover;
+      position: relative;
+      
+      &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,0.6);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        transition: all $speed linear;
+        z-index: 5;
+      }
+
+      .title {
+        font-family: $family-secondary;
+        font-size: 28px;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 25px;
+        color: $blue;
+        transition: all $speed-faster linear;
+        transform: translateY(50%);
+      }
+
+      .customtitle {
+        font-family: $family-secondary;
+        font-size: 28px;
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 41%;
+        text-align: center;
+        color: $blue;
+        transition: all $speed-faster linear;
+        transform: translateY(50%);
+      }
+      
+      .subtitle {
+        color: $grey-light;
+        position: relative;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: transform $speed-faster $easing, opacity $speed-faster linear;
+        line-height: 2.5;
+      }
+
+      .customsubtitle {
+        color: $grey-light;
+        position: relative;
+        transform: translateY(-50%);
+        opacity: 0;
+        font-size: 18px;
+        transition: transform $speed-faster $easing, opacity $speed-faster linear;
+        line-height: 4.5;
+      }
+      
+
+      .subtitle, .customsubtitle, .title, .customtitle{
+        position: relative;
+        z-index: 10;
+      }
+
+      .button {
+        display: none;
+      }      
+
+      &:hover {
+        &:after {
+          background: rgba(0,0,0,0.6);
+        }
+        .title, .customtitle {
+          color: white;
+          transform: none;
+        }
+        .subtitle, .customsubtitle{
+          transform: none;
+          opacity: 1;
+          transition: transform $speed-faster $easing, opacity $speed-faster linear $speed-faster;
+        }
+
+        .button {
+          display: block;
+        }
+
+      }
+    }
+  }
+}

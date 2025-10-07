@@ -1,0 +1,15 @@
+.login-container {
+  text-align: center;
+  .section {
+    background-color: $color-background-default;
+  }
+
+  .container {
+    max-width: 685px;
+	}
+
+  .shrink {
+    margin: auto;
+    max-width: 450px;
+	}
+}

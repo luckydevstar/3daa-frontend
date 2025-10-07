@@ -1,0 +1,24 @@
+
+<svg width="28px" height="147px" viewBox="0 0 28 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M0,0 L17.0057979,0 C18.6594501,0 20,1.34223517 20,2.99991835 L20,136.000082 C20,137.656891 18.656688,139 17.0057979,139 L0,139 L0,0 Z" id="path-1"></path>
+        <filter x="-25.0%" y="-5.0%" width="170.0%" height="110.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="2" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Tutor" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tutor-Evidence-Gallery-" transform="translate(-400.000000, -388.000000)">
+            <g id="Evidence-Card-View-1-[Approved]" transform="translate(65.000000, 392.000000)">
+                <g id="Info-bar-Copy-4" transform="translate(337.000000, 0.000000)">
+                    <g id="Rectangle-26-Copy">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#003157" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <path d="M11.5408075,60 C12.3466903,60 13,60.6533097 13,61.4591925 C13,62.2650754 12.3466903,62.918385 11.5408075,62.918385 C10.7348955,62.918385 10.081615,62.2650754 10.081615,61.4591925 C10.081615,60.6533097 10.7348955,60 11.5408075,60 Z M9.762402,63.2102235 C10.3936779,63.1818831 11.0024822,63.3270903 11.5317021,63.6935811 C14.0590527,65.4435731 10.4002734,71.7985755 9.96307016,73.0597847 C9.05559833,75.6744243 10.1807817,76.2782089 11.750581,75.7866362 L11.6411416,76.9722301 C8.75579263,79.035003 4.71222424,78.4567542 6.39715384,73.4519281 C7.01824455,71.6071878 9.28620912,68.0860249 8.62242244,66.0738889 C8.34981609,65.2467135 7.43942588,65.2430801 6.55217846,65.5905313 L6.65251254,64.496137 C7.59159047,63.7757365 8.7103242,63.2574576 9.762402,63.2102235 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

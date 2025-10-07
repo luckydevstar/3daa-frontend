@@ -1,0 +1,53 @@
+.workbook-preview-container .navbar-item {
+  width: 80px;
+  background-position: center center;
+  .dropdown__trigger {
+    width: 100%;
+    height: 100%;
+  }
+  &.chapters {
+    @include image('icon_workbook_all_white.svg');
+  }
+}
+
+// Workbook page nav
+//------------------------
+.navbar-end.footer-page-nav {
+  flex-grow: .6;
+  max-width: 560px;
+  margin-left: auto;
+
+  .navbar-item {
+    justify-content: center;
+  }
+
+  .arrow {
+    margin: 0 10px;
+    border-width: 3px;
+  }
+
+  .prev .arrow {
+    @include arrow(10px, 'left', #FFFFFF);
+  }
+  
+  .next .arrow {
+    @include arrow(10px, 'right', #FFFFFF);
+  }
+}
+
+.workbook-preview-container .navbar-item {
+  &.workbook-page-nav,
+  &.page-count {
+    color: $white;
+  }
+  &.workbook-page-nav {
+    cursor: pointer;
+    flex-grow: 1;
+    &.is-disabled {
+      opacity: .3;
+    }
+    &:hover {
+      background-color: $grey;
+    }
+  }
+}

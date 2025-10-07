@@ -1,0 +1,52 @@
+.expandable-button {
+  display: inline-flex;
+
+  .expandable {
+    max-width: 0;
+    overflow: hidden;
+    transition: max-width 1s ease;
+    display: flex;
+    flex-wrap: nowrap;
+
+    .button {
+      border-radius: 0;
+      border-right: 0;
+      &:first-child {
+        border-radius: 5px 0 0 5px;
+      }
+
+      &:last-child {
+        
+      }
+    }
+  }
+  .inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .icon-options {
+      width: 6px;
+      height: 22px;
+      margin-right: 10px;
+      @include image('icon_options_blue.svg');
+    }
+  }
+
+  &:hover {
+    .expandable {
+      max-width: 450px;
+    }
+
+    .button:not(.ex) {
+      background-color: $primary;
+      border-color: $primary;
+      color: $white;
+      border-radius: 0 5px 5px 0;
+    }
+    .inner {
+      .icon-options {
+        @include image('icon_options_white.svg');
+      }
+    }
+  }
+}

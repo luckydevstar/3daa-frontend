@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="18px" viewBox="0 0 28 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>workbook_icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14,14.7073422 C12.672,14.0622222 10.746,13.3464178 8.75,13.3464178 C7.18,13.3464178 5.453,13.5763911 3.617,14.03136 L4.801,3.82293333 C5.66,3.48046222 7.336,2.89308444 8.691,2.89308444 C10.707,2.89308444 12.676,4.16540444 12.695,4.17635556 L13.996,5.03950222 L15.297,4.18432 C15.316,4.17237333 16.785,3.23157333 18.484,2.97073778 L19.641,13.3583644 C17.531,13.2528356 15.414,14.0194133 14,14.7073422 L14,14.7073422 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="16.024" height="11.8142578" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Large-List-View-Row---Resting" transform="translate(-988.000000, -36.000000)" stroke="#00a287">
+            <g id="Group-8-Copy-6">
+                <g transform="translate(988.000000, 30.000000)">
+                    <g id="Group">
+                        <g id="workbook_icon" transform="translate(0.000000, 6.000000)">
+                            <use id="Pages" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                            <path d="M25.3800049,2.24 C25.3800049,2.24 22.1140049,0.559502222 19.3140049,0.559502222 C16.5130049,0.559502222 14.0050049,2.24 14.0050049,2.24 C14.0050049,2.24 11.4970049,0.559502222 8.69600488,0.559502222 C5.89600488,0.559502222 2.63000488,2.24 2.63000488,2.24 L0.880004883,17.3604978 C0.880004883,17.3604978 4.84500488,15.68 8.75500488,15.68 C11.3210049,15.68 14.0050049,17.3604978 14.0050049,17.3604978 C14.0050049,17.3604978 16.6890049,15.68 19.2550049,15.68 C23.1650049,15.68 27.1300049,17.3604978 27.1300049,17.3604978 L25.3800049,2.24 Z" id="Book"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

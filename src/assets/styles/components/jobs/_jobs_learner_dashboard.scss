@@ -1,0 +1,69 @@
+.jobs-learner-dashboard {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .jobs-find-section {
+        display: flex;
+        width: 100%;
+        background: url('../images/bg_map.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .jobs-find-form {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 500px;
+            background-color: rgba(#fff, 0.7);
+       
+            .find-card{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                .card {
+                    width: 760px;
+                    .column {
+                        padding: 0 10px;
+                    }
+                    input {
+                        border: 1px solid $color-border-default;
+                        border-radius: 3px;
+                    }
+                    .button {
+                        height: 45px;
+                    }
+                    
+                    .options {
+                        display: flex;
+                        justify-content: flex-end;
+                        .btn-toggle {
+                            color: $primary;
+                            cursor: pointer;
+                            i {
+                                font-size: 1.4rem;
+                                padding-left: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .jobs-navbar {
+        width: 100%;
+        height: 45px;
+        background-color: $color-background-default;
+        border-top: 1px solid $color-border-default;
+        border-bottom: 1px solid $color-border-default;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

@@ -1,0 +1,20 @@
+.media-video {
+  position: relative;
+  cursor: pointer;
+  .media-video__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 50px;
+    opacity: 0;
+    transition: opacity 1s ease;
+    cursor: pointer;
+  }
+  &:hover {
+    .media-video__play  {
+      opacity: 1;
+    }
+  }
+}

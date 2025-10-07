@@ -1,0 +1,11 @@
+.customer-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  background-color: $color-background-default;
+  .title {
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -1,0 +1,28 @@
+& .qualifications-sector-container {
+    position: relative;
+    
+    .hero {
+      background: $color-background-default;
+      word-wrap: normal;
+    }
+  
+    .separated {
+      margin-bottom: 50px;
+    }
+  
+    .courses {
+      display: flex;
+      flex-wrap: wrap;      
+      padding-bottom: 50px;
+  
+      .no-qualification {
+        padding: 50px;
+      }
+  
+      @include mobile() {
+        flex-direction: column;
+      }
+    }    
+  }
+  
+  

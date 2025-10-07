@@ -1,0 +1,75 @@
+.progress-badge-container {
+  position: relative;
+
+  svg.progress-badge-svg {
+    height: 100%;
+    width: 100%;
+
+    circle {
+      transition: all $speed $easing;
+      &.svg-bg-default {
+        stroke: $color-progress-badge-default;
+      }
+      &.svg-bg-fill {
+        stroke: $color-progress-badge-primary;
+      }
+    }
+  }
+
+  .tick-icon {
+    @include image('icon_tick_white.svg');
+    background-size: contain;
+  }
+
+  .progress-badge-inner {
+    background-color: $white;
+    border-radius: 100%;
+    overflow: hidden;
+    position: absolute;
+    transform: translateX(0);
+    
+    &.completed {
+      background-color: $color-progress-badge-primary;
+    }
+
+    &.shadow {
+      box-shadow: 0 0 5px rgba($black, .4);
+    }
+
+    .progress-label-wrapper {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      justify-content: center;
+
+      .progress-number,
+      .progress-label {
+        color: $color-text-secondary;
+        font-family: $family-primary;
+        .check {
+          color: $white;
+        }
+      }
+    }
+
+    .progress-label-wrapper-hover {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color-progress-badge-primary, .8);
+      opacity: 0;
+      transition: opacity $speed ease;
+      .progress-number{
+        color: $white;
+        position: initial;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }  
+}

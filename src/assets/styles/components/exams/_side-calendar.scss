@@ -1,0 +1,27 @@
+.side-calendar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+    .plugin-data {
+        align-items: center;
+        background-color: $white;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 4px;
+    }
+
+    .item {
+        align-items: center;
+        background-color: $white;
+        display: flex;
+        padding: 20px;
+
+        .date {
+            flex: 1;
+            font-weight: bold;
+        }
+    }
+}

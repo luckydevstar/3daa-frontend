@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="42px" viewBox="0 0 10 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>activity-textarea</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Workbook-Builder---activities" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1b---Activity---Free-Text-Entry-Front" transform="translate(-260.000000, -831.000000)">
+            <g id="Activity-Pop-Up" transform="translate(142.000000, 300.000000)">
+                <g id="Answer-Box" transform="translate(118.000000, 468.000000)">
+                    <g id="activity-textarea" transform="translate(0.000000, 63.000000)">
+                        <rect id="Rectangle" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="10" height="40"></rect>
+                        <rect id="Rectangle-Copy-44" fill="#000000" opacity="0.1" x="0" y="40" width="10" height="2"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,57 @@
+.jobs-post-modal {
+    .modal-content {
+        width: 800px;
+        max-width: 800px;
+    }
+}
+.jobs-admin-post {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    text-align: center;    
+
+    .p-title {
+        width: 100%;
+        font-size: 1.3rem;
+        color: $primary;
+    }
+    .p-s-title {
+        width: 100%;
+    }
+    .contents {
+        display: flex;
+        width: 100%;
+        padding: 30px 0 10px 0;
+        .map {
+            width: 100%;
+            height: 150px;
+            background-color: $color-background-default;
+        }
+        .align-items-center {
+            display: flex;
+            align-items: center;
+        }
+        .infos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            .info {
+                display: flex;
+                width: 100%;
+                margin: 10px 0;
+                p {
+                    display: flex;
+                }
+                p.i-t {
+                    flex: 1;
+                    color: $color-text-default;
+                }
+                p.i-c {
+                    flex: 4;
+                    color: #444;
+                }
+            }
+        }
+    }
+}

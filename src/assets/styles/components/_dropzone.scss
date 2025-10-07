@@ -1,0 +1,46 @@
+.dropzone {
+    align-items: center;
+    // border: 2px dashed $color-border-default;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    margin: 0 40px;
+    min-height: 250px;
+    padding: 20px;
+    text-align: middle;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+    &.is-hidden {
+      display: none;
+    }
+    &.has-error {
+      border-color: $red;
+    }
+    @include mobile() {
+      min-height: 100px;
+      img {
+        display: block;
+        height: auto;
+        max-height: 200px;
+        width: auto;
+      }
+    }
+    img {
+      display: block;
+      height: auto;
+      max-height: 350px;
+      width: auto;
+    }
+    .title,
+     p {
+      color: $grey-dark;
+      margin-bottom: 0;
+      padding: 3px;
+      @include mobile() {
+        display: none;
+      }
+    }
+    .button {
+      margin-top: 15px;
+    }
+  }

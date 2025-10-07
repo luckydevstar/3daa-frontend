@@ -1,0 +1,87 @@
+.chart-dialog-content {
+  display: flex;
+  flex-direction: column;
+  .header {
+    flex: none;
+  }
+  h1 {
+    font-family: $family-primary;
+    color: $color-text-default;
+    font-size: 2.25rem;
+  }
+  .add-chart.button {
+    margin-top: 4px;
+    margin-right: 50px;
+  }
+  .box {
+    text-align: center;
+    cursor: pointer;
+
+    svg {
+      height: 55px;
+    }
+
+    span {
+      display: block;
+      margin: 5px 0;
+      font-family: $family-primary;
+      font-size: 1.125rem;
+      color: $color-text-primary;
+    }
+
+    &.selected {
+      background-color: rgba(0, 48, 87, .1);
+    }
+  }
+  .line.selected {
+    defs linearGradient stop {
+      stop-color: #e6eaed;
+    }
+  }
+  .select, select {
+    width: 100%;
+  }
+  .data-pickers {
+    flex: 1;
+    overflow-y: scroll;
+    max-height: calc(100vh - 290px);
+    margin: 0 -10px;
+  }
+
+  .is-primary .isvg .fillable {
+    fill: $primary;
+  }
+
+  .is-primary.is-outlined {
+    &:hover, &:focus {
+      .isvg .fillable {
+        fill: #ededed;
+      }
+    }
+  }
+
+  .data-row {
+    position: relative;
+
+    .button svg {
+      margin-top: 5px;
+      margin-right: 8px;
+    }
+
+    .remove-btn {
+      position: absolute;
+      top: 22px;
+      right: -12px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0;
+      transition: .3s opacity;
+    }
+
+    &:hover {
+      .remove-btn {
+        opacity: 1;
+      }
+    }
+  }
+}

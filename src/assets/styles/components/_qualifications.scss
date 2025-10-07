@@ -1,0 +1,8 @@
+.qualifications {  
+  @import 'qualifications/_qualification-main';
+  @import 'qualifications/_qualification-sector-container';  
+  @import 'qualifications/_qualification-modal-edit';
+  @import 'qualifications/_qualification-modal-colour';  
+  @import 'qualifications/_qualification-store';
+  @import 'qualifications/_qualification-buttons';
+}

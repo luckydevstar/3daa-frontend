@@ -1,0 +1,26 @@
+<svg width="20px" height="24px" viewBox="0 0 20 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-10" transform="translate(-594.000000, -1155.000000)" stroke="#4A4A4A">
+            <g id="Group-20" transform="translate(583.000000, 1148.000000)">
+                <g id="Group-28" transform="translate(12.000000, 8.000000)">
+                    <g id="unit-progress">
+                        <g id="Group">
+                            <path d="M3.95879357,5.1447458 C4.55592737,5.13844287 5.04212393,4.64112774 5.04475193,4.03210456 L5.06055791,0.369176683 C5.06143771,0.165286037 5.22573318,0 5.4216864,0 L16.9191793,0 C17.5161001,0 18,0.49034689 18,1.09851038 L18,20.9014896 C18,21.5081801 17.5185435,22 16.9212483,22 L1.07875166,22 C0.482973588,22 0,21.5059105 0,20.8968214 L0,5.55334168 C0,5.35075831 0.161981568,5.18482228 0.36246438,5.18270614 L3.95879357,5.1447458 Z" id="Shape" stroke-width="2"></path>
+                            <path d="M0.54,4.21666667 L4.14,0.55" id="Shape" stroke-width="2" stroke-linecap="round"></path>
+                            <rect id="Rectangle-path" x="3.6" y="16.5" width="1.8" height="1.83333333" rx="0.9"></rect>
+                            <path d="M4.86,16.5 L6.48,13.2" id="Shape" stroke-linecap="round"></path>
+                            <path d="M7.92,11.9166667 L11.52,11" id="Shape" stroke-linecap="round"></path>
+                            <path d="M12.6,9.9 L13.32,6.23333333" id="Shape" stroke-linecap="round"></path>
+                            <rect id="Rectangle-path" x="11.52" y="9.9" width="1.8" height="1.83333333" rx="0.9"></rect>
+                            <rect id="Rectangle-path" x="6.12" y="11.3666667" width="1.8" height="1.83333333" rx="0.9"></rect>
+                            <rect id="Rectangle-path" x="12.6" y="4.4" width="1.8" height="1.83333333" rx="0.9"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

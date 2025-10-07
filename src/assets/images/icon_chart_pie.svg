@@ -1,0 +1,35 @@
+<svg width="63px" height="63px" viewBox="0 0 63 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-36.7%" y="-18.4%" width="173.5%" height="136.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-36.7%" y="-36.7%" width="173.5%" height="173.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-36.7%" y="-36.7%" width="173.5%" height="173.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.8">
+        <g id="2a---Add-a-chart" transform="translate(-500.000000, -336.000000)">
+            <g id="Popped-out" transform="translate(151.000000, 197.000000)">
+                <g id="BG-Group">
+                    <g id="Sample-Size-Copy-9" transform="translate(316.000000, 122.000000)">
+                        <g id="Group-3-Copy" transform="translate(40.000000, 23.000000)">
+                            <g opacity="0.2" transform="translate(0.000000, 0.844828)" id="Combined-Shape">
+                                <path d="M24.5003738,2.59032618e-09 L24.5003738,15.4082031 C19.4258839,15.4082031 15.3125,19.521587 15.3125,24.5957031 C15.3125,29.6698193 19.4258839,33.7832031 24.5,33.7832031 L24.5003738,49 C10.9690236,49 0,38.0309764 0,24.5 C0,10.9690236 10.9690236,1.0658141e-14 24.5,1.0658141e-14 Z" fill="#505759" filter="url(#filter-1)"></path>
+                                <path d="M24.5003738,2.79100918e-09 C38.0311784,0.000202038881 49,10.9691482 49,24.5 L33.6870118,24.5 C33.6356793,19.4700903 29.5423791,15.4084039 24.5003738,15.4082031 L24.5003738,2.59031442e-09 Z" fill="#D4CE12" filter="url(#filter-2)"></path>
+                                <path d="M49,24.5 C49,38.0308518 38.0311784,48.999798 24.5003738,49 L24.5003738,33.7832031 C29.5743182,33.7830011 33.6875,29.6696946 33.6875,24.5957031 C33.6875,24.5637638 33.687337,24.5318625 33.6870118,24.5 L49,24.5 Z" fill="#EA7600" filter="url(#filter-3)"></path>
+                            </g>
+                            <path d="M24.5,2.59032618e-09 L24.5,15.4082031 C19.4255875,15.4082031 15.3122664,19.521587 15.3122664,24.5957031 C15.3122664,29.6698193 19.4255875,33.7832031 24.4996262,33.7832031 L24.5,49 C10.9688563,49 0,38.0309764 0,24.5 C0,10.9690236 10.9688563,1.0658141e-14 24.4996262,1.0658141e-14 Z" id="Combined-Shape" fill="#505759"></path>
+                            <path d="M24.5,1.49515345e-14 C38.031011,0.00020203609 49,10.9691482 49,24.5 L33.6867782,24.5 C33.6354448,19.4700903 29.5420822,15.4084039 24.5,15.4082031 L24.5,-2.00680694e-10 Z" id="Combined-Shape" fill="#D4CE12"></path>
+                            <path d="M49,24.5 C49,38.0308518 38.031011,48.999798 24.5,49 L24.5,33.7832031 C29.5740218,33.7830011 33.6872663,29.6696947 33.6872663,24.5957031 C33.6872663,24.5637638 33.6871034,24.5318625 33.6867782,24.5 L49,24.5 Z" id="Combined-Shape" fill="#EA7600"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

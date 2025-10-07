@@ -1,0 +1,37 @@
+.test-footer {
+    background: #4A4A4A;
+    display: flex;
+    justify-content: space-between;
+    height: $header-height;
+
+    > div {
+        display: flex;
+    }
+
+    .block {
+        border-right: 1px solid #5D5D5D;
+        color: $white;
+        display: block;
+        height: 100%;
+        line-height: $header-height;
+        padding: 0 30px;
+
+        &.btn {
+            cursor: pointer;
+        }
+
+        &.disabled {
+            color: gray;
+        }
+
+        .fa {
+            margin-top: 24px;
+            font-size: 30px;
+        }
+
+        .fa.fa-bars {
+            font-size: 20px;
+            margin-top: 32px;
+        }
+    }
+}

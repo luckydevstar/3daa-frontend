@@ -1,0 +1,26 @@
+& .button.unregulated-button {
+  background-color: #F3EFF6;  
+  border: none;
+  min-width: 340px;
+  &:hover {
+    border: 1px solid #00B4BC;
+  }
+}
+
+& .button.regulated-button {
+  background-color: #E8F7F8;  
+  min-width: 340px;
+  border: none;
+  &:hover {
+    border: 1px solid #00B4BC;
+  }
+}
+
+& .button.standard-button {
+  background-color: #FDF0EE;  
+  min-width: 340px;
+  border: none;  
+  &:hover {
+    border: 1px solid #FF674D;
+  }
+}

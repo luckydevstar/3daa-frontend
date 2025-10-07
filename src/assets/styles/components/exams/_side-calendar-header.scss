@@ -1,0 +1,83 @@
+.side-calendar-header {
+    background: $white;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 10px;
+    .sc-left,
+    .sc-right {
+      display: flex;
+      align-items: center;
+    }
+    .back-btn {
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 10px;
+        color: #039b87;
+        font-size: 16px;
+        width: 36px;
+        height: 36px;
+        margin-right: 2px;
+        &:hover {
+            background-color: #f0f0f0;
+        }
+    }
+    .next-btn {
+      margin-left: 2px;
+      margin-right: 0;
+    }
+    span, .fa {
+        display: block;
+    }
+    .month {
+      font-size: 14px;
+      color: #606060;
+      font-family: "Open Sans Regular";
+      cursor: pointer;
+    }
+    .side-calendar-icon {
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 16px;
+        width: 36px;
+        height: 36px;
+        color: #2d2d2d;
+        &:hover {
+          background-color: #f0f0f0;
+        }
+        i.fa-ellipsis-v {
+          color: #039b87;
+          font-size: 22px;
+        }
+        i.fa-plus {
+          margin-left: 2px;
+        }
+    }
+    .side-calendar-icon.side-ellipsis-btn {
+      width: auto;
+      height: auto;
+      padding: 12px 4px 8px 10px;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    .side-calendar-icon.side-desktop-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 8px;
+      span {
+        line-height: 8px;
+        display: inline-block;
+      }
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .spacer {
+        flex: 1;
+    }
+}

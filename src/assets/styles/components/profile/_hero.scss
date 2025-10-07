@@ -1,0 +1,151 @@
+.profile-hero {
+  position: relative;
+  background-color: $primary;
+
+  .profile-hero__body__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .back {
+      color: #ffffff;
+      width: 42px;
+      height: 42px;
+      max-width: 42px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        background-color: #ffffff;
+        color: #043956;
+      }
+    }
+  }
+
+  .download-cv {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+  }
+
+  @media screen and (min-width: 980px) {
+    .container {
+      padding-top: 9rem;
+      padding-bottom: 9rem;
+    }
+  }
+
+  &__body {
+    position: relative;
+    z-index: 10;
+    margin-left: 20px;
+  }
+
+  &__title {
+    color: white;
+    font-size: 57px;
+    text-shadow: 0 2px 3px rgba(black, 0.15);
+  }
+
+  &__subtitle {
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+    text-shadow: 0 2px 3px rgba(black, 0.15);
+  }
+
+  &__slider-control {
+    font-size: 0;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    cursor: pointer;
+
+    &.pause-button {
+      &:after, &:before {
+        width: 5px;
+        height: 16px;
+        background: white;
+        content: '';
+        display: inline-block;
+      }
+
+      &:before {
+        margin-right: 5px;
+      }
+    }
+
+    &.play-button {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 0 10px 15px;
+      border-color: transparent transparent transparent $white;
+    }
+  }
+
+  .back-button-container {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    color: $primary;
+    font-size: 32px;
+    z-index: 1000;
+    align-items: center;
+
+    .back.button {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border: none;
+
+      i {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+
+/* TODO: Organize */
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.25)
+  }
+}
+
+.hero-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  .react-swiper-component,
+  .swiper-container,
+  .slide {
+    height: 100%;
+  }
+  .slide {
+    background-size: cover;
+    background-position: center center;
+  }
+  .swiper-slide-active, .previous-slide {
+    .slide {
+      animation: zoom 10s;
+      animation-direction: forward;
+    }
+  }
+
+  &.stop-animation {
+    .slide {
+      animation-play-state: paused;
+    }
+  }
+}

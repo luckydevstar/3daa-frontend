@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Create-Business-Profile_icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="26" height="26"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="26" height="26" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Create-Business-Profile_icon">
+            <use id="Rectangle" stroke="#000000" mask="url(#mask-2)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <polyline id="Line" stroke="#000000" stroke-linecap="square" points="3.5 12.5 3.5 3.08007813 13.0473633 3.08007812"></polyline>
+            <path d="M11.4935234,13.354817 L9.74992188,10.4151021 L5.416375,17.7206596 L9.02744531,17.7206596 L14.0830313,17.7206596 L20.58275,17.7206596 L14.805125,7.49270213 L11.4935234,13.354817 Z M7.477,16.5404255 L9.74992188,12.7086894 L10.83,14.5299064 L9.69397656,16.5404255 L7.477,16.5404255 Z M11.0380859,16.5404255 L14.805125,9.87142553 L18.5729844,16.5404255 L11.0380859,16.5404255 Z" id="Mountains" fill="#000000"></path>
+        </g>
+    </g>
+</svg>

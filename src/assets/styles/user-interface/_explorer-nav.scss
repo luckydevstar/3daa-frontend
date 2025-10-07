@@ -1,0 +1,137 @@
+.explorer-nav {
+  height: 77px;
+  position: relative;
+  
+	.explorer-nav__users-total {
+		margin-left: 20px;
+		font-size: 18px;
+		flex-grow: 1;
+	}
+  .position-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    // z-index: 150;
+    z-index: 20;
+    overflow: hidden;
+  }
+
+	.cohort-button-container {
+		max-width: 0;
+		overflow: hidden;
+		transition: max-width $speed $easing;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.filter-menu {
+		@include mobile {
+			display: flex;
+			width: 100%;
+
+			.filter-item {
+				flex-grow: 1;
+				display: flex;
+				flex-direction: column-reverse;
+				text-align: center;
+
+				&:after {
+					margin: auto;
+					display: block;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+
+	.filter-dropdown-container {
+		flex-grow: 1;
+    	display: flex;
+
+		.filter-by {
+			margin-left: 15px;
+			.control-label {
+				min-width: 35px;
+			}
+		}
+
+		@include mobile {
+			margin-bottom: 15px;
+			padding-bottom: 15px;
+			width: 100%;
+			border-bottom: 1px solid darken($color-border-default, 7.5%);
+		}
+
+		.control-label {
+			flex-grow: 0;
+			margin-left: 10px;
+			font-size: 12px;
+			label {
+				white-space: nowrap;
+			}
+			@include ie11() {
+				display: inline-table;
+			}
+		}
+
+		.select, .select select {
+			height: 40px;
+			color: $black;
+			border-radius: 3px;
+			border-color: $color-border-default;
+		}
+	}
+	
+	&.hidden {
+		.view-menu {
+			opacity: 0;
+			user-select: none;
+			pointer-events: none;
+		}
+	}
+
+	.view-option {
+		display: inline-block;
+		padding: 10px 50px 10px 15px;
+		background-position: 90% center;
+		cursor: pointer;
+		font-size: 12px;
+		transition: all $easing $speed-slower;
+		position: relative;
+
+		&.view-toggle > div {
+			display: flex;
+			align-items: center;
+		}
+
+		& + .view-option {
+			border-left: 1px solid darken($color-border-default, 7.5%);
+		}
+		
+		.isvg.loaded {
+			position: absolute;
+			top: 6px;
+			right: 15px;
+		}
+
+		&.active, &:hover {
+			color: $primary;
+
+			polygon, g {
+				fill: $primary;
+			}
+		}
+	}
+}
+
+.fixed-nav .cohort-button-container {
+	max-width: 133px;
+	.button {
+		padding: 0px 10px;
+	}
+}

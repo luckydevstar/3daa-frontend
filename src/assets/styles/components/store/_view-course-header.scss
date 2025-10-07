@@ -1,0 +1,33 @@
+.view-course-header {
+  .video-block {
+    position: relative;
+    background: black;
+    padding: 0;
+    height: 346px;
+
+    .play-arrow {
+      position: absolute;
+      top: 45%;
+      font-size: 3rem;
+      color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      opacity: 0;
+      transition: .5s opacity;
+    }
+
+    &:hover {
+      .play-arrow {
+        opacity: 1;
+      }
+    }
+
+    .video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,331 @@
+// Taken from this example - https://github.com/andrewcoelho/react-text-editor
+.rich-editor {
+  position: absolute;
+  height: auto;
+  top: 0;
+  bottom: 80px;
+  background-color: $grey-lighter;
+  z-index: 0;
+
+  .workbook-atomic {
+    user-select: none;
+    h2, h3 {
+      color: white;
+    }
+  }
+  .DraftEditor-root {
+    background: $white;
+    padding: 100px 80px;
+    height: auto;
+    min-height: 100%;
+    box-shadow: 1px 5px 15px rgba($black, .1);
+  }
+  .DraftEditor-editorContainer {
+    min-height: 100vh;
+  }
+
+  h1, h2, h3 {
+    font-weight: normal;
+    font-family: $family-secondary;
+  }
+
+  h2, h3 {
+    color: $blue;
+  }
+
+  h1 {
+    font-size: 46px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .paragraph, ul, ol {
+    font-size: 18px;
+    color: $grey-dark;
+  }
+
+  ul, ol {
+    padding: 0;
+    margin-top: 5px;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  .text {
+
+  }
+}
+/**
+ * Editor UI styling
+ */
+.editor-ui {
+  position: fixed;
+  background-color: $primary;
+  border-radius: 1.5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .35);
+  color: $white;
+  display: inline-flex;
+  font-size: 25px;
+  max-width: 500px;
+  z-index: 10;
+  bottom: 15px;
+  left: 25px;
+  // transition: max-width ease $speed;
+
+  .hud-item {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    height: 50px;
+    justify-content: center;
+    width: 50px;
+
+    &:active {
+      box-shadow: inset 0 0 10px rgba($black, .4);
+    }
+
+    &:not(:last-child, :first-child) {
+      border-color: rgba($white, .1);
+      border-style: solid;
+      border-width: 0 1px;
+    }
+
+    &.active {
+      background-color: $blue;
+    }
+    
+    .header-two {
+      font-size: .75em;
+    }
+    
+    .header-three {
+      font-size: .5em;
+    }
+    
+    .highlight {
+      font-size: 16px;
+      padding: 5px 2px;
+    }
+    
+    &.applied {
+      box-shadow: inset 0 0 10px rgba($black, .4);
+    }
+  }
+
+  .submenu {
+    background-color: $blue;
+    border-radius: 1.5px;
+    display: inline-flex;
+    height: 50px;
+    left: 0;
+    max-width: 500px;
+    overflow: hidden;
+    position: absolute;
+    top: -52px;
+    // transition: max-width ease $speed;
+  }
+
+  &.hidden,
+   .hidden {
+    max-width: 0;
+    // transition: max-width ease $speed;
+  }
+}
+
+.outcomes-view {
+  min-height: 150px;
+
+  .errorMessage {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .Collapsible {
+    background-color: $color-background-default;
+    border-bottom: 1px solid $color-border-default;
+
+    &__contentInner {
+      background-color: $white;
+    }
+    &__trigger {
+      font-weight: bold;
+      height: auto;
+      min-height: 80px;
+      padding: 10px 75px 10px 45px;
+      position: relative;
+
+      &::after {
+        left: 20px;
+        top: 31px;
+      }
+      &.is-open::after {
+        top: 37px;
+      }
+    }
+  }
+
+  .progress-badge-container {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+
+    .progress-number {
+      color: $black;
+    }
+  }
+
+  .criteria-view {
+    padding-left: 40px;
+    .criteria-checkbox {
+      width: 25px;
+      height: 25px;
+      min-width: 25px;
+      min-height: 25px;
+      border: 1px solid #cbcbcb;
+      border-radius: 2px;
+      cursor: pointer;
+      margin-right: 15px;
+      position: relative;
+      bottom: 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 15px;
+      }
+    }
+  }
+  .criteria {
+    display: flex;
+    padding-top: 15px;
+    .criteria-activity {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 15px;
+      color: #11853c;
+      &.criteria-activity__old {
+        opacity: 0.45;
+      }
+    }
+
+    .criteria-activity__not-attached {
+      color: #1a8dad;
+      font-style: italic;
+    }
+    .criteria-activity__text {
+      cursor: pointer;
+    }
+    
+    &.disabled {
+      .criteria-activity__text {
+        opacity: .3;
+      }
+      .criteria-activity__text {
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    
+    &-number {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    &-description {
+      border-bottom: 1px solid $color-border-default;
+      padding-bottom: 15px;
+      width: 100%;
+    }
+
+    &-activity {
+      font-style: italic;
+    }
+    
+    &-title {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.outcomes-filter {
+  align-items: center;
+  background-color: $color-background-default;
+  border-bottom: 1px solid $color-border-default;
+  box-shadow: inset 0 10px 20px -10px rgba($black, .15);
+  display: flex;
+  height: 80px;
+  padding: 0 10px;
+
+  p {
+    font-weight: bold;
+    padding: 0 10px;
+    white-space: nowrap;
+    user-select: none;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .input {
+    @include image('icon_search_grey.svg');
+    background-position: right 10px center;
+    padding-right: 40px;
+  }
+}
+
+.link-block {
+  background-color: $color-background-secondary;
+  margin-top: 25px;
+  padding: 40px 100px;
+  position: relative;
+  text-align: center;
+  
+  a {
+    color: $color-text-default;
+    font-family: $family-secondary;
+    font-size: 22px;
+    border-bottom: 1px solid $color-text-default;
+    padding-bottom: 2px;
+  }
+  
+  .globe-icon {
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    svg {
+      width: 50px;
+      height: 50px;
+      .icon-globe {
+        fill: $color-background-secondary;
+      }
+    }
+  }
+}
+
+.link-block-form {
+  h1 {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  form {
+    padding: 40px 40px;
+    background-color: $grey-lighter;
+  }
+
+  .button {
+    margin: 20px 40px;
+  }
+}

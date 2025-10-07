@@ -1,0 +1,254 @@
+.jobs-feed{
+    .jobs-feed__empty {
+        text-align: center;
+        padding: 40px 0;
+        font-size: 16px;
+        color: #cbcbcb;
+        width: 100%;
+    }
+    .admin-feed {
+        box-shadow: 3px 0px 5px -2px rgba(0,0,0,0.2);
+        .list__empty {
+            width: 100%;
+            text-align: center;
+            padding: 50px;
+            font-size: 18px;
+            color: #cbcbcb;
+        }
+        .jobs-feed-edit-delete {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            top: 10px;
+            .jobs-feed-edit-delete__icon {
+                margin: 10px 0;
+                text-align: center;
+                font-size: 18px;
+            }
+        }
+    }
+    .feed{
+        position: relative;
+        margin: 0;
+        padding: 15px;
+        border-bottom: 1px solid $color-border-default;
+        cursor: pointer;
+        .photo{
+            .img{
+                width: 50px;
+                height: 50px;
+                margin-top: 5px;
+                border: 1px solid $color-border-default;
+            }
+        }
+        .info{
+            p{
+                color: $color-text-default;
+                font-size: 14px;
+            }
+            p.corp-title{
+                font-size: 16px;
+                font-weight: 600;
+                i{
+                    font-size: 0.7em;
+                    padding: 9px;
+                    color: $color-active-secondary;
+                }
+            }
+        }
+        .interview-point {
+            position: absolute;
+            font-size: 0.7em;
+            color: $color-active-secondary;
+        }
+        &.is-active {
+            border-left: 5px solid $primary;
+            background-color: $color-background-default;
+        }
+        &.is-active.is-interview {
+            border-left: 5px solid $color-active-secondary;
+        }
+
+        .status {
+            display: flex;
+            height: 100%;
+            margin-top: 10px;
+            .column {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 40px;
+
+                    &.icon {
+                        color: $primary;
+                        border-left: 1px solid $color-border-default;
+                        .isvg {
+                            width: 30px;
+                        }
+                        &.sm {
+                            font-size: 0.9em;
+                        }
+                    }
+                    &.txt {
+                        text-align: center;
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .jobs-map{
+        padding-top: 0px;
+        padding-left: 0;
+        position: relative;
+        min-height: 700px;
+        .google-map{
+            width: 100%;
+            height: 700px;
+            border: 1px solid $color-border-default;
+            border-top: none;
+            .map-marker{
+                font-size: 16px;
+                color: $color-active-secondary;
+                cursor: pointer;
+            }
+        }
+    }
+    .jobs-viewer{
+        position: absolute;
+        display: none;
+        z-index: 10;
+        top: 0px;
+        min-height: 300px;
+        border: 1px solid $color-border-default;
+        background-color: $white;
+        color: $grey-dark;
+        box-shadow: 14px 0 12px -15px rgba(0, 0, 0, 0.5), -10px 0 20px -15px rgba(0, 0, 0, 0.5);
+
+        &.viewer-active{
+            display: block;
+        }
+        .viewer{
+            width: 472px;            
+            position: relative;
+            .viewer_close-bar{
+                padding: 15px 15px 0px 0px;
+                .icon{
+                    cursor: pointer;
+                }
+            }
+            .viewer-inner {
+                overflow-y: auto;
+            }
+            .viewer_info{
+                border-bottom: 1px solid $color-border-default;
+                padding: 15px 30px;
+                p{ line-height: 30px; }
+                p.title{
+                    font-size: 22px;
+                    b{
+                        font-weight: 300;
+                        color: $color-active-secondary;
+                    }
+                }
+            }
+            .viewer_interview-info {
+                border-bottom: 1px solid $color-border-default;
+                padding: 15px 30px;
+                p.title{
+                    font-size: 22px;
+                    color: $color-active-secondary;
+                }
+            }
+            .viewer_media-zone{
+                border-bottom: 1px solid $color-border-default;
+                padding: 15px 30px 0px 30px;
+                .media-list{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    .one{
+                        display: flex;
+                        width: 124px;
+                        height: 124px;
+                        border: 1px black solid;
+                    }
+                }
+                .media-bottom{
+                    height: 40px;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    width: 100%;
+                    color: $primary;
+                    cursor: pointer;
+                    i{
+                        font-size: 22px;
+                    }
+                }
+            }
+            .viewer_message-zone{
+                border-bottom: 1px solid $color-border-default;
+                padding: 25px 30px;
+                .photo{
+                    width: 68px;
+                    height: 68px;
+                    border: 1px solid $color-border-default;
+                    border-radius: 50%;
+                }
+            }
+            .viewer_qualifications {
+                padding: 25px 30px 0 30px;
+                .qualification {
+                    color: $primary;
+                }
+            }
+            .viewer_detail{
+                border-bottom: 1px solid $color-border-default;
+                padding: 25px 30px;
+            }
+
+            .fixed {
+                width: 457px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 99;
+                background-color: $white;
+            }
+
+            .viewer_footer-bar{
+                padding: 25px 30px;
+                background-color: $color-background-default;
+                box-shadow: 0px 8px 14px -4px rgba(0,0,0,0.3);
+                
+                .time{
+                    font-size: 12px;
+                    color: $color-text-default;
+                }
+                .link{
+                    span{
+                        margin: 9px;
+                        cursor: pointer;
+                        color: $primary;
+                    }
+                }
+                .btn {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}

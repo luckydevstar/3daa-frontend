@@ -1,0 +1,22 @@
+.dashboard-bar-chart {
+  .block-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chart-container {
+    flex: 1;
+    padding: 12px 0;
+    // border-bottom: 2px solid $color-border-default;
+  }
+
+  .p-legends {
+    flex: none;
+    margin: 0;
+    margin-left: 60px;
+    
+    .p-color {
+      margin-right: 40px;
+    }
+  }
+}

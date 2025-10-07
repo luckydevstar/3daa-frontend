@@ -1,0 +1,126 @@
+.workbooks-unit-view-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  background-color: $white;
+  
+  @include touch() {
+    .right-side {
+      display: block;
+      flex: none;
+      .column {
+        width: 100%;
+      }
+    }
+  }
+
+  .unit-details {
+    padding-top: 45px;
+    .control-label {
+      flex-basis: 20%;
+      max-width: 150px;
+      @include desktop() {
+        flex-basis: 50%;
+        max-width: none;
+      }
+    }
+  }
+  
+  .sidebar-left {
+    text-align: center;
+    
+    .book {
+      align-items: center;
+      background-color: $primary;
+      background-position: center center;
+      background-size: cover;
+      border: 1px solid $color-border-default;
+      display: flex;
+      flex-direction: column;
+      height: 320px;
+      justify-content: center;
+      margin: auto;
+      margin-bottom: 15px;
+      width: 250px;
+      
+      @include tablet() {
+        width: 100%;
+      }    
+      
+      span {
+        text-align: center;
+      }
+
+      .field-error {
+        margin-top: 25px;
+        transform: none;
+      }
+    }
+    
+    i {
+      font-size: 80px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+    
+    .icon {
+      @include image('icon_workbooks_fat.svg');
+      height: 39px;
+      width: 58px;
+	  opacity: 0.9;
+    }
+    
+    .add-cover-image {
+      color: rgba(255, 255, 255, .9);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+    }
+    
+    
+    .button {
+      width: 100%;
+    }
+  }
+
+  .unit-summary {
+    b {
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+
+  .criteria-box {
+    padding-left: 25px;
+
+     .criteria {
+      align-items: center;
+      border-bottom: 1px solid $color-border-default;
+      display: flex;
+      height: 50px;
+    }
+  }
+
+  .control-footer {
+    align-items: center;
+    display: flex;
+    height: 65px;
+    justify-content: flex-end;
+    width: 100%;
+    > .button {
+      margin-right: 20px;
+    }
+  }
+  
+  .clear {
+    background-color: $white;
+    border: 0;
+    padding-bottom: 2px;
+  }
+
+  .outcomes {
+    width: 100%;
+  }
+}

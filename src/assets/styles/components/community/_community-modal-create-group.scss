@@ -1,0 +1,170 @@
+.community-modal-create-group-container {
+  .modal-content-inner {
+    .modal-body {
+      padding: 0;
+    }
+  }
+}
+.community-modal-create-group {
+  .community-modal-create-group__title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 0;
+    color: #043956;
+    padding-top: 25px;
+  }
+
+  .community-modal-create-group__description {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  .community-modal-create-group__group-title {
+    width: 70%;
+    margin: 35px auto 18px auto;
+    input {
+      margin-top: 5px;
+    }
+  }
+  
+  .community-modal-create-group__group-image {
+    width: 70%;
+    margin: 0 auto 55px auto;
+    input {
+      display: none;
+    }
+    .community-modal-create-group__group-image__select {
+      margin-top: 6px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: pointer;
+      img {
+        width: 68px;
+        height: 68px;
+      }
+      span {
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .community-modal-create-group__selected-users {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+
+  .community-modal-create-group__selected-users__items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    .community-modal-create-group__selected-users__item {
+      background-color: #043956;
+      padding: 6px 11px 6px 22px;
+      margin-right: 10px;
+      font-family: 'Open Sans Light';
+      font-weight: 300;
+      font-size: 14px;
+      color: #ffffff;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      i {
+        margin-left: 12px;
+      }
+    }
+  }
+
+  .community-modal-create-group__search {
+    .community-modal-create-group__search__input {
+      position: relative;
+      width: 100%;
+      height: 54px;
+      input {
+        padding-left: 65px;
+        padding-right: 25px;
+        height: 100%;
+        width: 100%;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid #E1DEE2;
+        border-bottom: 1px solid #E1DEE2;
+        color: #6D6D6D;
+        font-family: 'Open Sans Light';
+        font-weight: 300;
+        font-size: 16px;
+      }
+      i {
+        position: absolute;
+        top: 50%;
+        left: 35px;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.3);
+      }
+      button {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        border: none;
+        background: transparent;
+      }
+    }
+    .community-modal-create-group__search__users-head {
+      display: grid;
+      grid-template-columns: 0.7fr 1fr 1.3fr 0.8fr 0.4fr;
+      .community-modal-create-group__search__users-head__item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 48px;
+        .ui-component-check {
+          margin-top: 0;
+        }
+      }
+    }
+    .community-modal-create-group__search__users-body {
+      .community-modal-create-group__search__users-body__item {
+        display: grid;
+        grid-template-columns: 0.7fr 1fr 1.3fr 0.8fr 0.4fr;
+        padding: 11px 0;
+        .community-modal-create-group__search__users-body__item__inner {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+        }
+        .community-modal-create-group__search__users-body__item__avatar {
+          justify-content: center;
+          img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+          }
+          .community-modal-create-group__search__users-body__item__avatar__placeholder {
+            background-color: #f9f9f9;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  .community-modal-create-group__search__buttons {
+    padding: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .community-modal-create-group__search__buttons__create-group {
+      margin-left: 20px;
+    }
+  }
+}

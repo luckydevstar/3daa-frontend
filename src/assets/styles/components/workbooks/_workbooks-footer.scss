@@ -1,0 +1,98 @@
+.workbook-preview-container footer {
+  height: 60px;
+  width: 100%;
+
+  .dropdown__trigger:hover,
+  .search:hover,
+  .search-bar > .inner:hover {
+    background-color: rgba(255, 255, 255, .1);
+    cursor: pointer;
+  }
+
+  nav {
+    background: $grey-dark;
+    height: 100%;
+  }
+
+  @include touch {
+    .navbar-item {
+      width: 60px;
+    }
+  }
+
+  @include desktop(){
+    height: 80px;
+  }
+
+  .dropdown {
+    position: static;
+  }
+
+  // Search icon
+  .search {
+    @include image('icon_search.svg');
+    background-position-x: 28px;
+  }
+
+  .dropdown__content {
+    top: auto;
+    bottom: 100%;
+    box-shadow: none;
+    background: rgba(41, 41, 41, 0.6);
+    padding: 30px;
+    left: 0;
+    overflow: auto;
+    // 100vh - padding (25 * 2) and header/footer (80 + 80)
+    max-height: calc(100vh - 50px - 160px);
+    
+    
+    
+    .entry {
+      width: 100%;
+      background: $white;
+      margin-top: 10px;
+      padding: 20px;
+      white-space: normal;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        background: $grey-lighter;
+      }
+      .name {
+        flex-grow: 1;
+        text-align: left;
+        font-size: 15px;
+        color: black;
+      }
+    }
+
+    .pages-entry, .page-entry {
+      .number {
+        padding: 9px 20px;
+        font-size: 12px;
+        background: #9b9b9b;
+        color: $white;
+      }
+      .image {
+        margin: 0 15px 15px;
+        background-position: center center;
+        background-size: cover;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+      }
+    }
+    .arrow {
+      @include arrow();
+      border-color: $blue;
+      border-width: 2px;
+      margin-left: 5px;
+    }
+
+    > .inner {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

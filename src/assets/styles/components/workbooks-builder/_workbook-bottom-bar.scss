@@ -1,0 +1,15 @@
+.bottom-bar {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background: white;
+  z-index: 9;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 1px 1px 13px rgba($black, .1);
+  .button {
+    margin-right: 15px;
+  }
+}

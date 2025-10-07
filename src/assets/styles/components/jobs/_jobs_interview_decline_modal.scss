@@ -1,0 +1,89 @@
+.jobs-interview-modal, .jobs-decline-modal {
+    .jobs-interview-decline {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        text-align: center;
+        form { width: 100%; }
+        .i-title {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: $primary;
+        }
+
+        .user-infos {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .photo {
+                display: flex;
+                width: 50px;
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            .name {
+                display: flex;
+                text-align: left;
+                flex-direction: column;
+                p:first-child {
+                    font-size: 1rem;
+                    color: #444;
+                }
+            }
+        }
+
+        .email-title {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            border-top: 1px solid $color-border-default;
+            padding: 10px 60px;
+            p {
+                text-align: left;
+                text-indent: 20px;
+                color: #444;
+            }
+        }
+
+        .cover-letter {
+            display: flex;
+            width: 100%;
+            padding: 10px 60px;
+            min-height: 50px;
+            background-color: $color-background-default;
+            .textarea {
+                background-color: transparent;
+                width: 100%;
+                padding: 0;
+                border: none;
+                outline: 0;
+                resize: none;
+            }
+        }
+
+        .i-label {
+            padding: 0px 100px;
+            color: #444;
+            text-align: left;
+        }
+
+        .i-date {
+            display: flex;
+            padding: 0px 100px;
+        }
+
+        .btns {
+            display: flex;
+            width: 100%;
+            padding: 0 30px;
+            justify-content: flex-end;
+            button {
+                margin: 0 10px;
+            }
+        }
+    }
+}

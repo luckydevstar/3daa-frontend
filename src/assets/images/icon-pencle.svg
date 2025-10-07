@@ -1,0 +1,19 @@
+
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Tutor" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tutor-Action-Plan" transform="translate(-665.000000, -712.000000)">
+            <g id="Group" transform="translate(250.000000, 661.000000)">
+                <g id="Rectangle-45-+-pencil-Copy-2" transform="translate(415.000000, 51.000000)">
+                    <rect id="Rectangle-45" stroke="#4A4A4A" stroke-width="2" fill="#FFFFFF" x="1" y="1" width="32" height="32" rx="16"></rect>
+                    <g id="pencil" transform="translate(8.500000, 8.500000)">
+                        <path d="M13.3689545,1.15909091 L13.9879091,0.540136364 C14.6818182,-0.153772727 15.7620909,-0.153772727 16.4598636,0.540136364 C17.1537727,1.23790909 17.1537727,2.31818182 16.4598636,3.01209091 L15.8409091,3.63104545" id="Stroke-1" stroke="#4A4A4A"></path>
+                        <path d="M10.7393636,2.93713636 L14.0628636,6.26063636" id="Stroke-2" stroke="#4A4A4A"></path>
+                        <polyline id="Stroke-3" stroke="#4A4A4A" points="4.48259091 15.9197273 3.86363636 13.1363636 1.08027273 12.5174091"></polyline>
+                        <polygon id="Stroke-4" stroke="#4A4A4A" points="4.25 16.1484545 0 17 0.851545455 12.75 12.9037727 0.693909091 16.3060909 4.09622727"></polygon>
+                        <polygon id="Fill-5" fill="#4A4A4A" points="2.70454545 16.4598636 0 17 0.540136364 14.2954545"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

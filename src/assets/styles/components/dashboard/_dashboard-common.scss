@@ -1,0 +1,85 @@
+.dashboard-body {
+  background-color: $color-background-default;
+  
+  .column-wrapper {
+    background-color: $white;
+    box-shadow: 0 0 15px #dadada;
+  }
+
+  .container {
+    padding-bottom: 20px;
+  }
+
+  .column {
+    .swiper-wrapper {
+      .card {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .content-section {
+    padding-top: 40px;
+  }
+
+  .border-bottom {
+    border-bottom: 1px solid $color-border-default;
+  }
+
+}
+
+.dashboard-column-header {
+  padding: 30px 0 15px 20px;
+  color: $primary;
+  font-size: $font-size-base-bigger;
+  font-family: $family-serif;
+  font-weight: 300;
+  .col-title {
+    color: $color-text-primary;
+  }
+  .view-all-link {
+    color: $blue;
+    font-size: $font-size-base;
+    text-decoration: underline;
+    padding-right: 10px;
+  }
+
+}
+
+.dashboard-progress-circle {
+  .bg-grey-ring {
+    fill: none;
+    stroke: rgba($grey-lighter, 0.7);
+  }
+
+  .progress-line {
+    fill: none;
+    stroke: $color-progress-badge-dashboard;
+  }
+
+  .fill-primary {
+    fill: $color-progress-badge-dashboard;
+  }
+
+  .fill-white {
+    fill: $white;
+  }
+}
+
+.dashboard-progress-bar {
+  position: absolute;
+
+  .bg-path {
+    stroke: $white;
+    fill: none
+  }
+
+  .progress-path {
+    stroke: $color-progress-badge-dashboard;
+    fill: none;
+  }
+
+  .progress-point {
+    fill: $color-progress-badge-dashboard;
+  }
+}

@@ -1,0 +1,40 @@
+.jobs-header {
+    background-image: url('../images/bg_registration.png');
+    background-position: left -50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+        max-width: 100% !important;
+    }
+
+    .title, .subtitle {
+        color: $white;
+    }
+
+    .sector_select_button {
+        .select-dropdown {
+            justify-content: flex-end;
+        }
+        .dropdown-display {
+            width: 80% !important;
+            color: $white;
+        }
+        .dropdown-list {
+            top: 43px;
+        }
+    }
+}
+
+.jobs-admin-header {
+    background-color: $color-background-default;
+    .container {
+        max-width: 100% !important;
+    }
+    
+    .btns {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}

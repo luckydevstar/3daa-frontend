@@ -1,0 +1,14 @@
+.my-media {
+  &__empty-icon {
+    min-height: 150px;
+    min-width: 150px;
+    @include image('icon_profile_add_media.svg');
+    background-position: center center;
+  }
+
+  &__empty-cta.button {
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+}

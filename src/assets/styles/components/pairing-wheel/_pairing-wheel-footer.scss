@@ -1,0 +1,27 @@
+.pairing-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    height: 80px;
+    padding: 18px;
+    box-shadow: 0 -5px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    .button {
+        border: 1px solid #808080;
+    }
+    .pairing-footer__delete {
+        min-width: 250px;
+    }
+    .pairing-footer__save {
+        min-width: 250px;
+        background-color: #4A4A4A;
+        color: #ffffff;
+    }
+    .pairing-footer__publish {
+        background-color: #11853C;
+    }
+}

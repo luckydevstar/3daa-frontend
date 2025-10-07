@@ -1,0 +1,21 @@
+.selected-item-list {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 50px;
+
+  &.column {
+    flex-direction: column;    
+  }
+
+  .selected-item {
+    display: inline-flex;
+    align-items: center;    
+    margin: 5px;
+    .name {    
+      background: $primary;
+      color: white;
+      font-size: $font-size-base-big;
+      padding: 5px;
+    }  
+  }
+}

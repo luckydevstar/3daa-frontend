@@ -1,0 +1,75 @@
+.workbooks-builder-container {
+  height: 100%;
+  min-height: calc(100vh - #{$header-height});
+  overflow: hidden;
+  position: relative;
+  background-color: $color-background-default;
+}
+
+
+// These were the styles before settling on DraftJS
+
+.workbooks-builder-controls {
+  padding: 20px;
+}
+
+.workbooks-builder-wrapper {
+  display: flex;
+  padding: 0 20px 20px;
+
+  .workbooks-builder {
+    flex-grow: 1;
+    min-width: 70%;
+
+    .code {
+      overflow: scroll;
+    }
+
+    &-heading,
+    &-paragraph,
+    &-list-item-heading,
+    &-list-item-body,
+    &-simple-list-item {
+      width: 100%;
+    }
+
+    &-heading {
+      font-size: $font-size-base-h1;
+    }
+
+    &-paragraph {
+      font-size: 14px;
+    }
+
+    &-image {
+      background-color: $grey-light;
+      height: auto;
+      min-height: 250px;
+      min-width: 100%;
+      width: 100%;
+    }
+
+    &-image-input {
+      width: 100%;
+    }
+
+    &-page-controls {
+      background-color: $grey-light;
+      margin: 20px;
+      padding: 20px;
+    }
+  }
+
+  .preview {
+    flex-grow: 1;
+    min-width: 30%;
+  }
+
+  .split-pages,
+  .long-pages {
+    $scale: .5;
+    transform: scale($scale, $scale);
+    transform-origin: top left;
+    width: (100% / $scale);
+  }
+}

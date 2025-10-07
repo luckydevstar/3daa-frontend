@@ -1,0 +1,89 @@
+.editor-block-container-image {
+
+  .editor-block-header {
+    .select {
+      select {
+        background-color: $primary;
+        border-color: $primary;
+        color: $white;
+        font-weight: bold;
+      }
+
+      &::after {
+        border-color: $white;
+      }
+
+    }
+
+    label {
+      font-weight: bold;
+      padding: 10px;
+    }
+  }
+
+  .editor-block-body {
+    justify-content: space-between;
+
+    &.block-left {
+      flex-direction: row-reverse;
+    }
+
+    &.block-center {
+      .text {
+        display: none;
+      }
+
+      .image {
+        width: 100%;
+      }
+    }
+
+    .text {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+      padding-left: 30px;
+      width: 50%;
+
+      .description {
+        max-width: 300px;
+        color: $grey;
+        font-size: 14px;
+      }
+
+      h2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+        max-width: 250px;
+      }
+    }
+
+    .image {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      padding: 20px;
+
+      img {
+        height: auto;
+        max-height: 400px;
+        max-width: 100%;
+        width: auto;
+      }
+
+      &.default {
+        background-image: radial-gradient(circle at 50% 35%, rgba($black, 0), rgba($black, .5)), linear-gradient($primary, $primary);
+        color: $grey-lighter;
+        font-size: 50px;
+        justify-content: center;
+      }
+    }
+  }
+
+  .editor-block-footer {
+    
+  }
+}

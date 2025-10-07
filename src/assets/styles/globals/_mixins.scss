@@ -1,0 +1,225 @@
+/**
+ * Truncate a multiline string into 1 line with an elipses (...)
+ */
+
+@mixin truncate-text($width) {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: $width;
+  overflow: hidden;
+}
+
+
+/**
+ * App spinner mixin
+ */
+
+@mixin loading-spinner() {
+  height: 50px;
+  margin: auto;
+  position: relative;
+  width: 50px;
+
+  &:before, &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &:after {
+    z-index: 10;
+    border-top: 4px solid $primary;
+    border-right: 4px solid $primary;
+    border-bottom: 4px solid $primary;
+    border-left: 4px solid $color-border-default;
+    animation: spinAround infinite 2s linear;
+  }
+
+  &.large:after {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+
+/**
+ * Serif title mixin
+ */
+
+@mixin title($size: 24px) {
+  margin-bottom: 10px;
+  font-family: $family-secondary;
+  font-size: $size;
+  color: $primary;
+}
+
+/**
+ * Yum
+ */
+@function pi() {
+  @return 3.14159265359;
+}
+
+/**
+ * Image mixin
+ */
+@mixin image($filename){
+  background-image: url("../images/#{$filename}");
+  background-repeat: no-repeat;
+}
+
+/**
+ * Transform element into arrow mixin
+ */
+@mixin arrow($d: 10px, $direction: right, $color: black){
+
+  @if $direction == right {
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+  }
+
+  @if $direction == left {
+    border-top: 1px solid;
+    border-left: 1px solid;
+  }
+
+  @if $direction == bottom {
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    position: relative;
+    top: -$d/2;
+  }
+
+  @if $direction == top {
+    border-right: 1px solid;
+    border-top: 1px solid;
+    position: relative;
+  }
+
+  border-color: $color;
+  width: $d;
+  height: $d;
+  transform-origin: center center;
+  transform: rotate(-45deg);
+}
+
+/**
+ * Custom shadow
+ */
+
+@mixin shadow() {
+  &:after {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    right: 0;
+    width: calc(100% - 20px);
+    height: 100%;
+    background: black;
+    content: '';
+    filter: blur(7px);
+    z-index: 1;
+    opacity: .3;
+    transition: all $easing $speed-slower;
+  }
+}
+
+/**
+ * Move the shadow from default position
+ */
+@mixin translate-shadow($x: 0, $y: 0){
+  &:after {
+    top: 5px + $y;
+    left: 0 + $x;
+  }
+}
+
+/**
+ * Adjust shadow opacity
+ */
+@mixin shadow-opacity($val: .3){
+  &:after {
+    opacity: $val;
+  }
+}
+
+/**
+ * Scott Kellum Method image replacement from c2012
+ * see https://css-tricks.com/the-image-replacement-museum/#ir-kellum
+ */
+@mixin image-replace($filename) {
+  @include image($filename);
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
+}
+
+/**
+ * Tablet large e.g. iPad Pro
+ **/
+@mixin tablet-large {
+  @media (max-width: #{$tablet-large}){
+    @content;
+  }
+}
+
+/**
+ * Larger desktops
+ */ 
+@mixin desktop-large {
+  @media (min-width: #{$desktop-large}){
+    @content;
+  }
+}
+
+/**
+ * Browser specific
+ **/
+@mixin edge(){
+  @supports (-ms-accelerator:true) {
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin ie11(){
+  @media all and (-ms-high-contrast:none){
+    *::-ms-backdrop, & {
+      @content;
+    }
+  }
+}
+
+@mixin firefox(){
+  & #{',  x:-moz-any-link'}{
+    @content;
+  }
+}
+
+
+@mixin chrome(){
+  @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+    & { @content; }
+  }
+}
+
+@mixin safari(){
+  @supports (overflow:-webkit-marquee) and (justify-content:inherit){
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin ios(){
+  @supports (-webkit-text-size-adjust:none) and (not (-ms-accelerator:true)) and (not (-moz-appearance:none)){
+    & { @content; }
+  }
+}

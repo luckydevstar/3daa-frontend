@@ -1,0 +1,37 @@
+.test-sidebar {
+    height: 100%;
+    position: absolute;
+    right: -650px;
+    transition: width .5s, right .5s;
+    width: 650px;
+    
+    .bg-overlay {
+        background: transparent;
+        height: 0;
+        width: 0;
+    }
+
+    .sidebar-frame {
+        background-color: rgba(192,192,192,.5);
+        height: 100%;
+        overflow: auto;
+        padding: 20px 50px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 650px;
+    }
+
+    &.open {
+        right: 0;
+        width: 100%;
+
+        .bg-overlay {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+.navbar-brand {
+  justify-content: space-around;
+}

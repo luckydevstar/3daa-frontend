@@ -1,0 +1,21 @@
+.editor-block-container-video {
+
+  .editor-block-header {
+
+  }
+
+  .editor-block-body {
+    align-items: center;
+    background-image: radial-gradient(circle at 50% 35%, rgba($black, .0), rgba($black, .5)), linear-gradient($primary, $primary);
+    justify-content: center;
+
+    i {
+      color: $grey-lighter;
+      font-size: 60px;
+    }
+  }
+
+  .editor-block-footer {
+    
+  }
+}

@@ -1,0 +1,23 @@
+<svg fill="#c9c9c9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.64 16.002">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #c9c9c9;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Movie_Copy_3" data-name="Movie Copy 3" transform="translate(-0.32 0.001)">
+    <path id="Midle_Line" data-name="Midle Line" class="cls-1" d="M15.36.96H0" transform="translate(0.64 7.04)"/>
+    <g id="Left">
+      <path id="Fill_16_Copy_13" data-name="Fill 16 Copy 13" d="M1.28,16H0V0H1.279V.64H2.56V0H3.84V16H2.56v-.64H1.28V16Zm0-3.841v1.28H2.56V12.16Zm0-3.2v1.28H2.56V8.96Zm0-3.2V7.04H2.56V5.76Zm0-3.2V3.84H2.56V2.56Z" transform="translate(0.32)"/>
+    </g>
+    <g id="Right" transform="translate(12.8)">
+      <path id="Fill_16_Copy_13-2" data-name="Fill 16 Copy 13" d="M1.28,16H0V0H1.279V.64H2.56V0H3.84V16H2.56v-.64H1.28V16Zm0-3.841v1.28H2.56V12.16Zm0-3.2v1.28H2.56V8.96Zm0-3.2V7.04H2.56V5.76Zm0-3.2V3.84H2.56V2.56Z" transform="translate(0.32)"/>
+    </g>
+    <rect id="Btm_Line" data-name="Btm Line" width="16.64" height="1.778" transform="translate(0.32 13.191)"/>
+    <rect id="Btm_Line_Copy" data-name="Btm Line Copy" width="16.64" height="1.778" transform="translate(0.32 0.747)"/>
+  </g>
+</svg>

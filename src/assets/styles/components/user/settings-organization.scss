@@ -1,0 +1,58 @@
+.organization-profile {
+  .label {
+    text-align: left;
+    font-family: $family-primary;
+  }
+
+  .control-describe {
+    margin-top: -15px;
+    text-align: left;
+  }
+
+  .postcode {
+    width: 100px;
+  }
+
+  .photo {
+    img, figure {
+	    position: relative;
+      border: 6px solid $color-border-default;
+      border-radius: 50%;
+      display: inline-block;
+      width: 110px;
+      height: 110px;
+	    background-color: $color-background-primary;
+	  &:before {
+		  content: " ";
+		  position: absolute;
+		  border: 5px solid $color-border-default;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
+		  border-radius: 100px;
+	  }
+    }
+    &__default {
+      margin-right: 10px;
+      width: 90px;
+      height: 90px;
+      background-color: $grey-light;
+    }
+
+    .media-left {
+      display: inline-block;
+      .image {
+        width: 90px;
+        height: 90px;
+        background-position: center, center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      &+figure.photo__default {
+        display: none;
+      }
+    }
+  }
+
+}

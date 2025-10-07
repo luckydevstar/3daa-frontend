@@ -1,0 +1,20 @@
+.workbooks-qualification-status {
+  display: flex;
+  flex-direction: column;
+  // color: $grey-dark;
+  color: $color-text-default;
+  line-height: 2;
+  font-size: 14px;
+
+  h3 {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.33;
+  }
+
+  .full-spec {
+    // color: $blue;
+    color: $primary;
+    line-height: 1.33;
+  }
+}

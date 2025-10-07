@@ -1,0 +1,139 @@
+.qualification-progress-route {
+  color: #4a4a4a;
+
+  .guidance {
+    .subtitle {
+      font-family: $family-primary-Semibold;
+      font-size: $font-size-base-biggest;
+      color: $color-text-primary;
+      margin-bottom: 0;
+    }
+  }
+  
+  .progresses {
+    display: flex;
+    justify-content: center;
+  
+    .progress-item {
+      position: relative;
+      margin: 0 30px;
+
+      .progress-item-title {        
+        font-family: $family-primary-Semibold;
+        font-size: 16px;
+      }
+  
+      .progress-item-content {
+        position: relative;
+        text-align: center;
+  
+        .learning-info {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          width: 110px;
+          height: 110px;
+          background-color: white;
+          border-radius: 50%;
+          justify-content: center;
+          align-items: center;          
+    
+          &.primary {
+            top: 25px;
+            left: 25px;        
+            box-shadow: 0 1px 15px 2px rgba(0,0,0,0.5);
+          }
+    
+          &.secondary {       
+            top: 15px;
+            left: 15px;
+            width: 90px;
+            height: 90px;
+          }
+
+          &.third {       
+            top: 16px;
+            left: 32px;
+            width: 90px;
+            height: 90px;
+          }
+    
+          p {
+            margin-bottom: 0;
+            line-height: 1.2;
+
+            &.percent {
+              font-family: $family-primary-Semibold;
+              font-size: 46px;
+            }
+            &.level {
+              font-family: $family-primary-Semibold;
+              font-size: 12px;
+            }
+          }
+    
+          .divider {
+            width: 52px;
+            height: 1px;
+            margin: 2px 0 6px 0;
+            background-color: $border;
+          }
+        }
+      }    
+    }
+
+    .progress-sign {
+      display: flex;
+      align-items: center;
+      font-size: 48px;
+      opacity: 0.1;
+      margin: 0 -15px;
+    }
+  }
+  
+  b {
+    font-family: $family-primary-Semibold;
+  }
+  
+  .Collapsible__contentInner {
+    background: white;
+    padding: 5px 5px 5px 45px;
+  }
+
+  .chart-slider {
+
+    .slick-arrow {
+      z-index: 99;
+      width: 40px;
+      height: 40px;
+      opacity: .8;
+      border-radius: 100%;
+      box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.3);
+
+      &:hover {
+        opacity: 1;
+      }
+      &::before { 
+        font-size: 30px;
+        color: $primary;
+        line-height: 0;
+        opacity: 1;
+      }
+
+      &.slick-prev {
+        &::before {
+          content: '\2039';
+        }
+      }
+      &.slick-next {        
+        &::before {
+          content: '\203A';
+        }
+      }
+    }
+
+    .recharts-responsive-container {
+      height: 150px!important;
+    }
+  }
+}

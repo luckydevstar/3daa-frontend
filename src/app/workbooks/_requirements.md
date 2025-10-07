@@ -1,0 +1,57 @@
+####Requirements:
+
+- render the workbook as spreads on screens larger than X
+- render the workbook as a single long page on screen smaller than X
+- render the following content types
+	- heading
+	- paragraph
+	- list?
+	- images (which with the page width with variable height)
+	- videos (render the same as images)
+	- activity CTAs
+	- pull quotes?
+- re-render and recalculate when the window is resized
+- users will be able to search for content and link to a specific page/location in the workbook
+- users will be able to view a list of spreads
+	- the list will show the current selected spread in the context of the workbook
+	- users will be able to link to a specific spread
+- users will be able to skip to chapters inside a workbook
+- users will be able to create a bookmark and link to it
+	- users will be able to add notes to a bookmark
+	- users will be able to delete bookmarks
+	- bookmarks will show what page they're on
+- users will be able to see a grid view of spreads and link to a spread
+- users will be able to change the current selected spread
+- users will be able to select a passage of text and have it spoken to them
+- users will be able to toggle between 3 text sizes
+- users will be able to expand the workbook
+- users will be able to select an activity which will open the activity in a modal
+- activities will have the following types
+	- free text
+	- multiple free text
+	- table (checkbox and/or radio button)
+	- drag and drop
+	- multiple choice
+	- photo upload
+	- video upload
+- activity results are send to the server
+- users will be able to see the results of their activities
+- activities are locked after completion for 24 hours? Two chances to complete.
+- page flipping animation
+
+
+####Questions:
+- what will the spreads footer layout look like on small screens?
+- what does the page transition look like?
+- are bookmarks to a chapter, spread or each individual content element?
+	- is the bookmark button in the header the only way to add a bookmark?
+	- can users create inline bookmarks like Medium's highlight/share popup?
+- what's the thinking behind the speaking plugin?
+	- how does the plugin compare to OS level Screen readers
+	- have you spoken to users with visual impairment to check this is required or desired?
+- what does the expand button in the header do?
+- how does search work?
+	- frontend?
+	- backend?
+	- chapters, headings or full text?
+	- image/video meta data?

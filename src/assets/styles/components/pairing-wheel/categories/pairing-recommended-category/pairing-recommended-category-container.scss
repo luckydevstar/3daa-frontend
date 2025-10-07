@@ -1,0 +1,14 @@
+.pairing-recommended-select-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 80px;
+    .select-head {
+        height: 70px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 35px;
+        font-family: 'Open Sans Semibold';
+        font-size: 15px;
+    }
+}

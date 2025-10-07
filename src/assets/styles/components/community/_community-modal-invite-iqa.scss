@@ -1,0 +1,182 @@
+.modal-invite-iqa {
+  padding-bottom: 60px;
+  padding: 0;
+  overflow: hidden;
+  .title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 30px;
+    color: $primary;
+  }
+
+  .sub-title {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #043956;
+    transition: all 0.2s ease;
+    &:focus {
+      box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  .modal-invite-iqa_slides {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    max-width: 300%;
+    transition: all 0.2s ease;
+  }
+  .modal-invite-iqa__slide {
+    min-width: 100%;
+    padding: 0 25px;
+  }
+  .modal-invite-iqa__form {
+    width: 100%;
+    margin: 0 auto;
+    width: 70%;
+    padding-top: 20px;
+    label {
+      display: block;
+      color: black;
+    }
+    .modal-invite_field {
+      margin-bottom: 15px;
+      .modal-invite_field_error {
+        color: red;
+      }
+    }
+  }
+  .modal-invite-iqa__centre {
+    width: 70%;
+    min-height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .modal-invite-iqa__centre__content {
+      width: 100%;
+      flex: 1;
+    }
+    .modal-invite-iqa__centre__input__wrapper {
+      position: relative;
+      .modal-invite-iqa__centre__input__dropdown {
+        position: absolute;
+        height: 200px;
+        width: 100%;
+        overflow: auto;
+        top: 45px;
+        left: 0;
+        box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.25);
+        z-index: 10;
+        background-color: white;
+        .modal-invite-iqa__centre__input__dropdown__item {
+          transition: all 0.2s ease;
+          cursor: pointer;
+          padding: 10px;
+          &:hover {
+            background-color: $primary;
+            color: white;
+          }
+        }
+      }
+    }
+    .modal-invite-iqa__centre__input {
+      label {
+        display: block;
+        color: black;
+        margin-bottom: 5px;
+      }
+    }
+    .ui-component-loading {
+      .loading-spinner {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  .modal-invite-iqa__centre__selected {
+    margin-top: 50px;
+    .modal-invite-iqa__centre__selected__tag {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .modal-invite-iqa__centre__selected__avatar {
+      margin-left: 20px;
+      width: 50px;
+      height: 50px;
+      img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .modal-invite-iqa__summary {
+    width: 70%;
+    min-height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .modal-invite-iqa__summary__content {
+      flex: 1;
+      width: 100%;
+    }
+  }
+  .modal-invite-iqa__centre__user {
+    background-color: #128eff;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: white;
+    display: inline-block;
+    .modal-invite-iqa__centre__user__remove {
+      margin-left: 15px;
+      font-size: 20px;
+      line-height: 1;
+      cursor: pointer;
+    }
+  }
+  .modal-invite-iqa__result {
+    text-align: center;
+    padding-bottom: 50px;
+    .modal-invite-iqa__result__title {
+      font-size: 36px;
+    }
+    .modal-invite-iqa__result__description {
+      margin-bottom: 40px;
+    }
+    .modal-invite-iqa__result__status {
+      margin-bottom: 100px;
+      margin-top: 40px;
+      color: black;
+    }
+  }
+  .modal-invite-iqa__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .modal-invite-iqa__footer__back {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: pointer;
+      div {
+        margin-left: 10px;
+      }
+    }
+  }
+}

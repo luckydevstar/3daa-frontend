@@ -1,0 +1,220 @@
+.educator-registration-container {
+	text-align: center;
+	padding: 50px;
+	background-color: $grey-lighter;
+	height: 100%;
+
+	.labelWrapper {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+	.content-slider {
+		transition: none;
+	}
+
+	h3.wide {
+		padding: 30px 0;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 1.75;
+		@include touch() {
+			text-align: left;
+		}
+	}
+
+	label {
+		margin-top: 20px;
+		text-align: left;
+
+		& + p {
+			padding-top: 0;
+		}
+	}
+
+	.is-short {
+		width: 50%;
+	}
+
+	.control {
+		text-align: center;
+
+		input[type="text"] {
+			max-width: 500px;
+			min-height: 44px;
+			display: block;
+			margin: 10px auto;
+		}
+	}
+
+	.star::after {
+		content: "*";
+		color: $red;
+		vertical-align: super;
+		margin-left: 3px;
+	}
+
+	.control-describe {
+		padding-top: 0;
+		font-size: 14px;
+		@include touch() {
+			text-align: center;
+		}
+	}
+
+	.button {
+		margin: 30px 0;
+		height: 50px;
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	.footer {
+		max-width: 700px;
+		margin: 20px auto 0;
+		background-color: white;
+		border-top: 2px solid $color-border-default;
+	}
+	/* Tooltip container */
+	.tooltip {
+		position: relative;
+		display: inline-block;
+
+		i {
+			@include image('icon_info.png');
+			margin-left: 2px;
+			
+		}
+
+		.tooltiptext {
+			visibility: hidden;
+			width: 120px;
+			background-color: $grey-dark;
+			color: $white;
+			text-align: center;
+			padding: 5px 0;
+			border-radius: 6px;
+			/* Position the tooltip text */
+			position: absolute;
+			z-index: 1;
+			bottom: 125%;
+			left: 50%;
+			margin-left: -60px;
+			/* Fade in tooltip */
+			opacity: 0;
+			transition: opacity 1s;
+		}
+		/* Tooltip arrow */
+		.tooltiptext::after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: $color-border-primary transparent transparent transparent;
+		}
+
+		&:hover .tooltiptext {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	.radio-error{
+		display: inline-block;
+		margin-top: 10px
+	}                                                                                                                                                                                                       
+	
+	.photo {
+		position: relative;
+		width: 100px;
+		height: 100px;
+		border: 6px solid $color-border-default;
+		border-radius: 100px;
+		margin: 20px auto 0 auto;
+		@include image('icon_profile_brand.svg');
+		background-size: cover;
+		background-position: -1px -2px;
+		background-color: $color-background-primary;
+		&:before {
+			content: " ";
+			position: absolute;
+			border: 5px solid $white;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: 100px;
+		}
+	}
+	
+	.upload {
+		float: left;
+		height: 35px;
+		margin-top: 40px;
+		padding: 0 10px;
+		font-size: 14px;
+		font-weight: 600;
+		color: $blue;
+		border-color: $blue;
+		&:active,&:focus,&:hover {
+			border-color: $blue;
+			color: $blue;
+			background-color: transparent;
+		}
+	}
+	
+
+	.radio + .radio {
+		@include mobile() {
+			margin-left: 0;
+		}
+	}
+
+	.photo-upload {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+		&:hover {
+			opacity: .8;
+		}
+
+		input {
+		  width: 100%;
+		  height: 100%;
+		  opacity: 0;
+		  cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+		}
+	}
+
+		.edit {
+			position: absolute;
+			bottom: 1px;
+			right: -93px;
+			width: 72px;
+			padding: 0;
+			background-color: $white;
+		}
+}
+
+.verify-educator-container {
+	min-height: 100%;
+	height: 1px;
+	background-color: white;
+
+	.image {
+		min-height: 469px;
+	}
+}

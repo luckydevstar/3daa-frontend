@@ -1,0 +1,69 @@
+.workbook-unit-list-container {
+  background-color: $white;
+
+  .has-text-right li {
+    margin-right: 10px;
+  }
+
+  .hero {
+    background: $color-background-default;
+    .media {
+      margin-right: 150px;
+    }
+  }
+
+  .media {
+    @include mobile() {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &-right {
+      flex-shrink: 1;
+
+      @include mobile() {
+        text-align: center;
+      }
+    }
+  }
+
+  .download-spec {
+    margin: 10px 0;
+  }
+
+  .summary {
+    border-top: 1px solid $color-border-default;
+  }
+
+  .workbook-cover {
+    background-repeat: no-repeat;
+    box-shadow: 0 5px 10px 0 rgba($black, .1);
+    height: 250px;
+    width: 180px;
+  }
+
+  .default {
+    background-image: radial-gradient(circle at 50% 35%, rgba($black, 0), rgba($black, .5)), linear-gradient($blue, $blue);
+  }
+
+  .is-4 {
+    color: $primary;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 20px 0;
+  }
+
+  .workbook-controlls {
+    width: 250px;
+  }
+
+
+  .no-matches {
+    text-align: center;
+  }
+}
+
+.edit-workbook-button {
+  margin-bottom: 15px;
+  width: 100%;
+}

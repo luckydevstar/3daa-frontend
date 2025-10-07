@@ -1,0 +1,333 @@
+.edit-unit-footer {
+  padding: 15px 20px;
+  text-align: right;
+  box-shadow: 0 -5px 7.5px rgba(0,0,0,.05);
+  button {
+    margin-left: 10px;
+  }
+}
+
+.workbooks-builder-header {
+  background-color: $primary;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 250px;
+
+  .top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: $blue;
+    padding: 5px 65px !important;
+    & > div {
+      margin-right: 15px;
+	  color: white;
+    }
+  }
+  
+  .container {
+    flex-wrap: wrap;
+  }
+  .left {
+    display: flex;
+    .back-button {
+      flex-shrink: 0;
+    }
+  }
+  .right {
+    flex-grow: 1;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    
+    i {
+      font-size: 80px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+    
+    .add-cover-video {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      user-select: none;
+      color: rgba(255, 255, 255, .9);
+      @include tablet() {
+        margin-top: 15px;
+      }
+
+      span {
+        text-align: center;
+      }
+
+      .field-error {
+        margin-top: 25px;
+      }
+    }
+  }
+
+  .icon {
+    @include image('icon_workbooks_fat.svg');
+    width: 58px;
+    height: 39px;
+	opacity: 0.9;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .subtitle {
+    font-size: 18px;
+  }
+  .title, .subtitle, .details {
+    color: white;
+    margin-bottom: 7.5px;
+    padding-bottom: 7.5px;
+    margin-top: 0;
+  }
+  .title, .subtitle { 
+    border-bottom: 2px solid $blue;
+  }
+  .width-constraint {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .details {
+    display: flex;
+    > * {
+      margin-right: 5px;
+    }
+  }
+  .button {
+    margin-bottom: 10px;
+  }
+}
+
+.Collapsible {
+  border-bottom: 2px solid $color-border-default;
+  position: relative;
+
+  &-title {
+    cursor: default;
+    left: 40px;
+    position: absolute;
+    top: 14px;
+    user-select: none;
+  }
+
+  &__trigger {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 50px;
+    padding-left: 45px;
+    position: relative;
+
+
+    &::after {
+      @include arrow(10px, 'bottom');
+      content: '';
+      left: 10px;
+      position: absolute;
+      top: 18px;
+      transition: all 300ms;
+    }
+
+    &.is-open::after {
+      top: 23px;
+      transform: rotateZ(135deg);
+      transition: all 300ms;
+    }
+  }
+
+  &__contentInner {
+    background-color: $color-background-default;
+    padding: 30px 10px;
+  }
+}
+
+.activity-customise-form {
+  @include tablet {
+    padding: 0 45px;
+  }	
+  @include desktop {
+    padding: 0 95px;
+  }
+  .dropzone {
+    width: 100%;
+    margin: 0;
+  }
+  .bg-light-grey {
+    background: $grey-lighter;
+  }
+  .hero-left {
+    padding-right: 20%;
+    padding-left: 20%;
+  }
+  .activity-right-bottom {
+    background-size: cover;
+  }
+  .is-two-third-height {
+    height: 63vh;
+  }
+  .is-link-info {
+    text-decoration: underline;
+    color: $blue;
+  }
+  .is-info-color {
+    color: $blue;
+  }
+  .bg-is-info {
+    background: $blue;
+    color: $white;
+  }
+  .subform-container {
+    padding-top: 15px;
+  }
+  .select select {
+    background-color: $blue;
+    border-color: $blue;
+    color: $white;
+    font-weight: bold;
+  }
+  .select:after {
+    border: 2px solid $white;
+    border-right: 0;
+    border-top: 0;
+  }
+  .select:hover:after {
+    border: 2px solid $white;
+    border-right: 0;
+    border-top: 0;
+  }  
+  .hero {
+    overflow: hidden;
+  }
+}
+
+.activity-form-container {
+  .activity-type-select {
+    select {
+      background-color: $blue;
+      border-color: $blue;
+      color: $white;
+      font-weight: bold;
+    }
+    &:after {
+      border: 2px solid $white;
+      border-right: 0;
+      border-top: 0;
+    }
+    &:hover:after {
+      border: 2px solid $white;
+      border-right: 0;
+      border-top: 0;
+    }
+  }
+  input[type="file"] {
+    display: none;
+  }
+  .media-shell {
+    margin: 0;
+    padding: 0;
+    height: 300px;
+    border-radius: 6px;
+    box-shadow: 'none';
+    border-color: $color-border-default;
+    border-right: 1px solid $color-border-default;
+  }
+  .media-box-left {
+    height: 300px;
+    background-size: 100% 100%;
+  }
+  .media-box-right {
+    height: 300px;
+    background-size: 100% 100%;
+  }
+  .vertical-center {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .is-text-input {
+    color: $color-text-default;
+  }
+  .margin-container {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+}
+
+/**
+ * Drag and Drop activity subform styles.
+ */
+.ddoa-container, .ddaa-container, .mca-container {
+  position:relative;
+  .order-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .select, select {
+    width: 100%;
+  }
+  .delete-container {
+    margin-left: 10px;
+    height: 100%;
+    display: flex;
+    .fa {
+      font-size: 18px;
+    }
+  }
+  .image-container {
+    display: flex;
+  }
+  .image {
+    height: 44px;
+    min-width: 44px;
+    margin-right: 16px;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+  }
+  .clickable {
+    margin-top: 10px;
+  }
+
+  .columns-head {
+    margin: 0;
+    .column {
+      padding: 0;
+    }
+  }
+  .tabs {
+    li {
+      a{
+        font-size: inherit;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+    }
+  }
+  .bg-is-info {
+    background: $blue;
+    color: $white;
+  }
+  .button {
+    min-width: 140px;
+  }
+  input[type="file"] {
+    display: none;
+  }
+  .bg-is-info-light {
+    background-color: rgba(0, 127, 163, 0.1);
+  }
+  .mca-prompt {
+    margin: 0 -25px 25px;
+    padding: 25px;
+  }
+}

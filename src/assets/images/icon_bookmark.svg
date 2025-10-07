@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="22px" viewBox="0 0 15 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7.50005495,17.3953488 L14.4828647,22 C14.8438657,21.9998977 15.000022,21.8720419 15.0001099,21.4883721 L15.0001099,1.53488372 C15.0001099,0.697732558 14.2346724,0 13.1897518,0 L1.81035809,0 C0.765434919,0 0,0.697732558 0,1.53488372 L0,21.4883721 C8.79316788e-05,21.8720419 0.156244248,21.9998977 0.517245169,22 L7.50005495,17.3953488 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="15.0001099" height="22" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="header" transform="translate(-1068.000000, -30.000000)" stroke-width="4" stroke="#000000">
+            <g id="Icon-1">
+                <g transform="translate(1068.000000, 30.000000)">
+                    <use id="Shape" mask="url(#mask-2)" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

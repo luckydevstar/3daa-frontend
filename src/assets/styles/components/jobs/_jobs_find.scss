@@ -1,0 +1,87 @@
+.jobs-learner-find {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - #{$header-height});
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .find-header {
+        flex: none;
+        width: 100%;
+        padding-top: 20px;
+        text-align: right;
+        .button:hover {
+            .caret {
+                border-color: $white !important;
+            }
+        }
+        .caret {
+            width: 10px;
+            border-color: $primary;
+        }
+    }
+
+    .find-form {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        height: 100%;
+
+        h1 {
+            text-align: center;
+            color: $primary;
+            font-size: 2.5rem;
+            font-weight: normal;
+            margin-top: 5%;
+        }
+        .subtitle {
+            text-align: center;
+            color: $color-text-default;
+            font-size: 1.2rem;
+            padding: 20px 0;
+        }
+    
+        .find-card{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin-top: 3%;
+            .card {
+                width: 760px;
+                .column {
+                    padding: 0 10px;
+                }
+                input {
+                    border: 1px solid $color-border-default;
+                }
+                .button {
+                    height: 45px;
+                }         
+            }
+        }
+    }
+
+    .find-infos {
+        flex: none;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 50px;
+
+        .info-title {
+            width: 100%;
+            color: $black;
+            font-weight: 700;
+            padding: 10px;
+        }
+        .info {
+            width: 100%;
+            color: $primary;
+            .new {
+                color: $purple;
+            }
+        }
+    }
+}

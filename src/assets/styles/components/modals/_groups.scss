@@ -1,0 +1,321 @@
+.manage-group-modal {
+  .modal-content-inner {
+    transform: translate3d(0, 0, 0);
+  }
+  .modal-body {
+    padding: 0;
+  }
+  .modal-footer {
+    width: 100%;
+    box-shadow: $box-shadow;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .user-selection {
+    .control.is-loading:after {
+      top: 30%!important;
+    }
+    .search {
+      .is-loading {
+        &:after {
+          top: 30%!important;
+        }
+      }
+    }
+  }
+  .search {
+    .is-loading {
+      &:after {
+        top: 30%!important;
+      }
+    }
+    .input {
+      border-color: transparent;
+    }
+  }
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .user-selection {
+    display: flex;
+    flex-direction: column;
+    .columns {
+      margin: 0;
+      border-top: 1px solid $color-border-default;
+      border-bottom: 1px solid $color-border-default;
+    }
+    .toggle-container {
+      border-left: 1px solid $color-border-default;
+    }
+  }
+  .users-table-container,
+  .selected-members-container {
+    overflow: auto;
+  }
+  .users-table-container {
+    width: 100%;
+    height: 330px;
+    overflow-y: auto;
+  }
+  .selected-members-container {
+    z-index: 10;
+    background: rgb(255, 255, 255);
+    border-left: 1px solid $color-border-default;
+    min-width: 0;
+    max-width: 0;
+    .inner {
+      padding: 15px 0;
+    }
+  }
+  .group-members-selection-container {
+    display: flex;
+    flex: 1;
+    &.show-selected {
+      .selected-members-container {
+        min-width: 230px;
+        max-width: 230px;
+      }
+    }
+  }
+  .selected-member {
+    padding: 5px 20px;
+    cursor: pointer;
+    &:hover {
+      background: $grey-lighter;
+    }
+    .fa-times {
+      color: $danger;
+      padding-top: 3px;
+      padding-right: 10px;
+    }
+  }
+  .select,
+  select {
+    width: 100%;
+  }
+  .group-overview-container {
+    text-align: center;
+    h3 {
+      margin-bottom: 25px;
+    }
+    h4 {
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
+  }
+  .image-preview-default span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-position: center center;
+  }
+  .trigger-file-upload {
+    position: relative;
+    color: $primary;
+    font-size: 16px;
+    overflow: hidden;
+    display: inline-block;
+    span {
+      margin-bottom: 10px;
+      display: block;
+    }
+    input {
+      height: 35px;
+      padding: 8px;
+      border: none;
+    }
+  }
+  .users-table-row {
+    border: none;
+    cursor: pointer;
+  }
+  .content-slider {
+    flex: 1;
+  }
+  .content-slider-inner {
+    height: 400px;
+  }
+  .content-slider-slide,
+  .content-slider-slide>div,
+  .user-selection {
+    height: 100%;
+  }
+
+  .create-group-modal form {
+    display: flex;
+    flex-direction: column;
+  }
+  .group-members-search-container {
+    .tabs {
+      border-bottom: 1px solid $color-border-default;
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+    .users-table-header {
+      background: none;
+    }
+  }
+  .steps {
+    margin-right: auto;
+  }
+  .step {
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    background: $grey-lighter;
+    margin-left: 25px;
+    position: relative;
+    display: inline-block;
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 80%;
+      width:  32px;
+      height: 8px;
+      background: $grey-lighter;
+    }
+    &.active, &.active:before {
+      background: $primary;
+    }
+    &:last-child {
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.group-members-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -2.5px;
+  .group-member {
+    background: $blue;
+    &.seat {
+      background: $grey-light;
+    }
+    color: white;
+    margin: 2.5px;
+    border-radius: 3px;
+    overflow: hidden;
+    display: flex;
+    .inner {
+      padding: 6px;
+      cursor: pointer;
+    }
+    &:not(.disabled) {
+      &:hover {
+        background: lighten($blue, 3%);
+        &.seat {
+          background: lighten($grey-light, 3%);
+        }
+      }
+    }
+    .remove {
+      width: 16px;
+      height: 16px;
+      position: relative;
+      transform: translate3d(0, 0, 0);
+      display: block;
+      margin-top: 2px;
+      &:after,
+      &:before {
+        content: '';
+        width: 16px;
+        height: 1px;
+        background: white;
+        position: absolute;
+        top: 50%;
+        transform-origin: center center;
+      }
+      &:after {
+        transform: rotate(45deg);
+      }
+      &:before {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.group-details-container {
+  max-width: 584px;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 25px;
+  .disabled {
+    background-color: $grey-light;
+  }
+  .image-preview {
+    width: 68px;
+    height: 68px;
+    background-color: $grey-lighter;
+    transition: all $speed-faster $easing;
+    position: relative;
+    background-size: cover;
+    .remove-image {
+      z-index: 1;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      opacity: 0;
+      transition: opacity .5s ease;
+      &:before,
+      &:after {
+        background-color: $red;
+      }
+    }
+    .add-overlay {
+      opacity: 0;
+      transition: opacity .5s ease;
+      background: rgba(0, 0, 0, 0.25);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: opacity .5s ease;
+      span {
+        font-size: 26px;
+        transition: all .5s ease;
+        transform: rotate(-45deg);
+      }
+    }
+    &:hover {
+      background-color: lighten($grey-lighter, 1%);
+      .remove-image {
+        opacity: 1;
+      }
+      .add-overlay,
+      .add-overlay span {
+        transform: rotate(0);
+        opacity: 1;
+      }
+    }
+    input {
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.contents-viewer {
+  display: flex;
+  width: 100%;
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: $black;
+
+    .ex-title {
+      width: 100%;
+      height: 100px;
+      font-size: 22pt;
+      display: flex;
+      align-items: center;
+      padding-left: 50px;
+    }
+    .ex-headline {
+      font-size: 12pt;
+      padding-left: 50px;
+    }
+    .ex-text {
+      font-size: 8pt;
+      padding: 0 200px 0 50px;
+    }
+
+    .btns {
+      button {
+        margin-right: 20px;
+      }
+    }
+  }
+}

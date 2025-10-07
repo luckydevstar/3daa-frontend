@@ -1,0 +1,421 @@
+//unit styles
+.units-container {
+  position: relative;
+  background-color: $color-background-default;
+
+  .nav-right {
+    display: flex;
+  }
+
+  .separated {
+    margin-bottom: 50px;
+  }
+
+  .is-right {
+    margin-bottom: 0;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .hero {
+    background-color: $color-background-default;
+    .media-right {
+      width: 100%;
+      img {
+        max-width: 350px;
+      }
+    }
+    .hero-body {
+      font-family: $family-primary-Semibold;
+      .container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        .edit-form {
+          width: 93%;
+          padding-left: 85px;
+        }
+
+        .edit-btns {
+          justify-content: center;
+          button {
+            margin: 0 20px;
+          }
+        }
+
+        .media {
+          .media-left {
+            flex: none;
+          }
+          .media-btns {
+            flex: none;
+            .btn-unlock {
+              padding: 10px 20px;
+              border: 1px solid $primary;
+              border-radius: 3px;
+              color: $primary;
+              .isvg {
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    h1 {
+      color: $primary;
+      font-family: $family-primary-Semibold;
+    }
+  }
+
+  .section-name {
+    border-bottom: 2px solid $color-border-default;
+    margin-right: 30px;
+  }
+
+  .container {
+    @include widescreen {
+      max-width: 1400px;
+    }
+  }
+
+  .columns {
+    margin: 0;
+  }
+
+  .unit-box {
+    width: 100%;
+    height: 100%;
+    background-color: $grey-lighter;
+    padding: 5px;
+    position: relative;
+
+    @include tablet() {
+
+      .unit-alert {
+        float: right;
+      }
+
+    }
+
+    .unit-link {
+      color: $primary;
+      font-size: 16px;
+    }
+
+    .unit-level {
+      color: $grey-dark;
+      font-size: 14px;
+    }
+
+    .unit-alert {
+      color: $red;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  }
+
+
+  .unit {
+    padding-bottom: 20px;
+	  h2 {
+      color: $primary;
+      font-family: $family-primary;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .hero {
+      h1 {
+        font-family: $family-primary-Light;
+        font-size: 30px;
+        font-weight: 300;
+      }
+
+      h2 {
+        font-family: $family-primary;
+        font-size: 14px;
+        line-height: 1.5;
+        color: $grey-dark;
+      }
+
+      h5 {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      .expandable-text {
+        max-height: 700px;
+        overflow: hidden;
+        transition: max-height 1s ease;
+        padding-left: 85px;
+        width: 93%;
+
+        h1 {
+          word-wrap: break-word;
+        }
+
+        h5:last-of-type {
+          margin-top: 20px;
+        }
+
+
+        &.hidden {
+          max-height: 0;
+          transition: max-height 1s ease;
+        }
+
+        .overview {
+          max-height: 400px;
+          overflow: auto;
+          padding-bottom: 40px;
+        }
+
+      }
+
+      .is-danger-special {
+        background: $red;
+        border-radius: 100px;
+        color: $white;
+        height: 30px;
+        margin-bottom: 10px;
+
+        @include desktop() {
+          float: right;
+        }
+      }
+
+      .button-separator {
+        border-top: 2px solid rgba(0,0,0,0.05);
+        margin-top: 30px;
+        padding-top: 20px;
+        position: relative;
+
+        &:before{
+          content: ' ';
+          height: 50px;
+          position: absolute;
+          top: -32px;
+          transform: translateY(-100%);
+          user-select: none;
+          width: 100%;
+        }
+      }
+
+      #expand-button {
+        line-height: 2.5;
+        user-select: none;
+      }
+    }
+
+    .separated {
+      margin-bottom: 20px;
+    }
+
+    .accordion {
+      padding-bottom: 20px;
+    }
+
+    .Collapsible {
+      &__contentOuter.units-outcome {
+        margin-top: 10px;
+      }
+      &__contentInner.units-outcome {
+        background: $color-background-default;
+        color: $grey-dark;
+        margin-top: 10px;
+        padding: 10px 20px 0;
+
+        li {
+          border-bottom: 2px solid rgba(0,0,0,0.05);
+          min-height: 50px;
+          padding: 20px;
+          padding-left: 50px;
+
+          &:last-child{
+            border-bottom: 0;
+          }
+
+          @include mobile() {
+            padding: 10px;
+          }
+        }
+
+        .editToggle{
+          cursor: pointer;
+          display: inline-block;
+          margin: 25px 0;
+          text-align: center;
+          width: 100%;
+        }
+
+        .criteria-submit {
+          max-height: 100px;
+          padding: 0 20px;
+          transition: max-height ease 1s;
+
+          .control {
+            float: none;
+            margin: 0 auto;
+            max-width: 500px;
+
+            @include mobile(){
+              width: 90%;
+            }
+          }
+
+          .button {
+            margin-bottom: 15px;
+          }
+
+          &.hidden {
+            max-height: 0;
+            transition: max-height ease 1s;
+          }
+        }
+      }
+
+      &.units-criteria {
+        position: relative;
+      }
+
+      &__contentOuter.units-criteria {
+        background-color: $color-background-default;
+        margin-top: 10px;
+      }
+
+      &__contentInner.units-criteria {
+        padding: 10px 0 0 30px;
+      }
+
+      .units-outcome-title {
+        left: 40px;
+        position: absolute;
+        top: -6px;
+      }
+
+      .units-criteria-title {
+        left: 60px;
+        position: absolute;
+        top: -5px;
+      }
+    }
+  }
+
+  .unit-guidance-row {
+    padding: 10px;
+  }
+
+  .unit-delete{
+    height: auto;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  .editor {
+    &-remove {
+
+      &-outcome-button { 
+        height: auto;
+        position: absolute;
+        right: 10px;
+        top: 7px;
+      }
+
+      &-criteria-button {
+        height: auto;
+        position: absolute;
+        right: 10px;
+        top: -6px;
+      }
+
+      &-guidance-button {
+        height: auto;
+        padding: 2px 10px;
+        width: auto;
+      }
+    }
+  }
+}
+
+.unit-outcomes-accordion {
+  .outcomes-add {
+    display: flex;
+    align-items: center;    
+    color: $black;
+    button {
+      font-size: 1rem;
+      font-weight: 300;
+    }
+  }
+  .outcomes-container {
+    background-color: $white;
+  }
+}
+
+.custom-text-editor {
+  margin: 20px 0;
+
+  .editor-controls {
+    border-bottom: 1px solid $color-border-default;
+    color: $grey;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    user-select: none;
+
+    span {
+      cursor: pointer;
+      margin: 10px;
+    }
+  }
+
+  .editor-root{
+    border-left: 20px solid $color-border-default;
+    max-width: 600px;
+    min-height: 100px;
+
+    .DraftEditor-root {
+      max-height: 400px;
+      overflow: auto;
+      padding: 10px;
+    }
+  }
+}
+
+//react toggle
+.react-toggle {
+  margin-left: 15px;
+}
+.react-toggle-track {
+  background: $grey-light !important;
+}
+.react-toggle--checked .react-toggle-track {
+  background: $primary !important;
+}
+.react-toggle-thumb {
+  border: none;
+  box-shadow: none !important;
+}
+
+.select:after {
+  border-width: 2px;
+  border-color: $black;
+}
+.select select:hover,
+.select select:focus {
+  border-color: $color-border-primary;
+  outline: none !important;
+}
+//Remove default dropdown arrow in ie11
+@include ie11() {
+  .select select {
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}

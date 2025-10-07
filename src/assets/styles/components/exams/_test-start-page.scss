@@ -1,0 +1,41 @@
+.test-start-page {
+  background-image: url('../images/bg_registration.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 1;
+  text-align: center;
+  
+  h1 {
+    color: $white;
+    font-size: 48px;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+  }
+
+  .button.is-primary.is-outlined {
+    border-color: white;
+    color: white;
+    position: absolute;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  a.back-link {
+    border: none;
+    color: $white;
+    display: inline-block;
+    position: absolute;
+    bottom: 120px;
+    transform: translateX(-50%);
+  }
+
+  .bg-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $primary;
+    opacity: 0.85;
+  }
+}

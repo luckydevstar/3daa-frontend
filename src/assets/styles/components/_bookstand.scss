@@ -1,0 +1,556 @@
+.bookstand-container {
+  padding: 0 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  // transition: max-width ease-out $speed-faster, opacity linear .1s;
+
+  .card-content {
+    min-height: 92px;
+    width: 100%;
+    padding: 0 10px 10px 10px;
+    line-height: 1.4;
+    position: absolute;
+    background: $white;
+    bottom: 0;
+
+    .card-separator {         
+        display: flex;          
+        align-items: center;        
+        height: 0;
+        z-index: 6;
+
+        .progress-badge {
+          position: absolute;
+          left: 10px;
+          padding: 5px;
+          background: white;
+          border-radius: 100px;
+          display: inline-block;          
+        }
+
+        .level-container {
+          width: 100%;
+          text-align: center;
+        }
+    }
+
+    .title {
+      margin-top: 25px;
+      font-family: $family-primary-Semibold;
+      font-size: 1.1rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .qualifications-card-view {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;   
+  
+    @media (min-width: 365px) {
+      max-width: 350px
+    }    
+  
+    @media (min-width: 715px) {
+      max-width: 700px
+    }   
+  
+    @media (min-width: 1065px) {
+      max-width: 1050px
+    }
+  
+    @media (min-width: 1415px) {
+      max-width: 1400px
+    }    
+  }
+
+  .unit-workbook-card-view {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;   
+  
+    @media (min-width: 255px) {
+      max-width: 240px;
+    }
+
+    @media (min-width: 544px) {
+      max-width: 529px;
+    }
+  
+    @media (min-width: 809px) {
+      max-width: 794px;
+    }   
+  
+    @media (min-width: 1074px) {
+      max-width: 1058px;
+    }
+  
+    @media (min-width: 1339px) {
+      max-width: 1324px;
+    }
+
+    .unit-workbook-card {
+      width: 234.5px;
+      height: 368px;
+      margin: 15px;
+      border-radius: 2px;
+      box-shadow: 0 0 10px 0 rgba(10, 10, 10, 0.3);
+    }
+  }
+
+  .qualification-card {
+    width: 310px;
+    height: 437px;
+    margin: 10px;
+    // border-radius: 3px;
+    overflow: hidden;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 0 0 10px 0 rgba(10, 10, 10, 0.3);
+
+    &.qualification-fixed-card {
+      perspective: 1000px;
+      top: 102px;
+      left: 15px;
+      position: fixed;
+    }
+  
+    .hover-capture {
+      height: 100%;
+  
+      .ui-component-flipper-container {
+        .toggle {
+          padding-top: 0;
+          font-size: 12px;
+    
+          svg {
+            width: 12px;
+            height: 12px;
+          }
+        }
+    
+        .front {
+          .qualification-card-front {
+            width: 100%;
+    
+            .card-image {
+              height: 310px;
+              width: 100%;
+              padding: 0;
+              background-color: $color-background-secondary;
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+
+              video {
+                object-fit: cover;
+                transform: scale(1.2);
+              }
+            }
+
+            .card-content {
+              padding: 0 15px 10px 15px;
+              .title {
+                margin-top: 45px;
+              }
+            }            
+          }
+        }
+      }
+  
+      .actions {
+        .qualification-status {
+          &:not(.opened) {
+            transition: max-height ease-out $speed-faster, opacity linear .1s;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+          }        
+          line-height: 1.5;
+  
+          li {
+            svg {
+              cursor: pointer;
+              use {
+                stroke: white;
+                fill: limegreen;
+              }
+              g {
+                stroke: white;
+              }
+            }
+  
+            &.state {
+              color: $grey-dark;
+  
+              .pathway {              
+                color: $black;
+                font-family: $family-primary-Semibold;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    } 
+  }
+
+  .workbooks {
+    margin-top: 17px;
+    width: 100%;
+    &.workbooks-right {
+      width: calc(100% - 360px);
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+  
+  .workbooks-card-view {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;    
+  
+    @media (min-width: 213px) {
+      max-width: 198px
+    }
+
+    @media (min-width: 411px) {
+      max-width: 396px
+    }
+  
+    @media (min-width: 609px) {
+      max-width: 594px
+    }    
+  
+    @media (min-width: 807px) {
+      max-width: 792px
+    }   
+  
+    @media (min-width: 1005px) {
+      max-width: 990px
+    }
+  
+    @media (min-width: 1203px) {
+      max-width: 1188px
+    }    
+  }
+
+  .workbook-card {
+    position: relative;    
+    // height: 350px;
+    // width: 200px;
+    // min-width: 200px;
+    // max-width: 200px;
+    height: 253px;
+    width: 188px;
+    min-width: 188px;
+    max-width: 188px;
+    margin: 15px 5px;
+
+    border-radius: 2px;
+    box-shadow: 0 0 10px 0 rgba(10, 10, 10, 0.3);
+    overflow: hidden;
+
+    .inner-image {
+      // height: 278px;
+      height: 173px;
+      width: 100%;
+      background-color: $color-background-secondary;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: -6px;
+    }
+    .book-item-ribbon {
+      position: absolute;
+      z-index: 10;
+      padding: 4px;
+      font-size: 16px;      
+      display: flex;      
+      justify-content: center;      
+      align-items: center;
+      text-transform: uppercase;
+      color: white;
+      background-color: #00B9EF;
+      transform: rotate(-45deg);
+      user-select: none;
+      width: 180px;
+      top: 35px;
+      left: -40px;
+    }
+    .card-content {
+      .description {
+        font-size: inherit;
+        color: $color-text-default;        
+        transition: max-height ease-out $speed-faster, opacity linear .1s;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+
+        .learning-hours {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.workbook-open-card {
+  width: 234.5px;
+  .book {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 316px;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    .progress-badge {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      z-index: 10;
+      width: 100%;
+      width: 80px;
+      height: 80px;
+      padding: 5px;
+      background: white;
+      box-shadow: 0 2px 4px 0 rgba(10, 10, 10, 0.5);
+      margin: auto;
+      border-radius: 100%;
+    }
+  }
+
+  .button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.is-desktop {
+  .qualification-card {
+    .hover-capture:hover {      
+      .actions {
+        .qualification-status {
+          opacity: 1;
+          max-height: 150px;
+          transition: max-height ease-out $speed-faster, opacity linear $speed-faster .3s;
+        }
+  
+        .front .user-type {
+          transform: translateX(-40px);
+        }
+  
+        .flip-toggle {
+          pointer-events: all;
+          opacity: 1;
+        }
+      }      
+    }
+  }
+
+  .workbook-card:hover {
+    .actions {
+      .description {
+        opacity: 1;
+        max-height: 50px;
+        transition: max-height ease-out $speed-faster, opacity linear $speed-faster .3s;
+      }     
+    }
+  }  
+}
+
+.is-mobile {
+  .qualification-card {
+    .hover-capture.touched {
+      .actions {
+        max-height: 150px;
+        opacity: 1;
+        transition: max-height ease-out $speed-faster, opacity linear $speed-faster .3s;
+      }
+      .front .user-type {
+        transform: translateX(-40px);
+      }
+      .flip-toggle {
+        pointer-events: all;
+        opacity: 1;
+      }
+    }
+  }
+  
+  .workbook-card:hover {
+    .actions {
+      .description {
+        opacity: 1;
+        max-height: 50px;
+        transition: max-height ease-out $speed-faster, opacity linear $speed-faster .3s;
+      }     
+    }
+  }
+}
+
+.active-qualification-container {
+  display: flex;
+
+  .qualification-card {
+    margin: 15px 0 15px auto;
+  }
+  .qualification-details {
+    max-width: 650px;
+    min-width: 650px;
+    min-height: 437px;
+    margin: 15px auto 15px 0;
+    background: lighten($grey-lighter, 8%);
+    box-shadow: 1px 1px 5px 0;
+    border-left: 1px solid lightgrey;
+    padding: 30px 15px 15px 30px;
+
+    .qualification-details-header {
+      position: relative;
+
+      .qualification-title {
+        color: $grey-dark;
+        text-align: left;
+      }
+      .close {
+        position: absolute;
+        right: 0;
+        top: -15px;
+        width: 40px;
+        text-align: center;
+        color: $grey-dark;
+        font-size: 16px;
+        line-height: 1.2;
+        cursor: pointer;
+      }
+    }
+    .overview {
+      max-height: 250px;
+      overflow-y: auto;
+    }
+  }
+}
+
+.animated {
+  -webkit-animation-duration: $speed-slower;
+  animation-duration: $speed-slower;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeSmall {
+  from {
+    opacity: 0;
+    min-width: 200%;
+    // -webkit-transform: translate3d(0, -100%, 0);
+    // transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeSmall {
+  from {
+    opacity: 0;
+    // min-width: 200%;
+    // -webkit-transform: translate3d(0, -100%, 0);
+    // transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeSmall {
+  -webkit-animation-name: fadeSmall;
+  animation-name: fadeSmall;
+}
+
+@-webkit-keyframes fadeBig {
+  from {
+    opacity: 0;
+    min-width: 0;
+    max-width: 0;
+    // -webkit-transform: translate3d(0, 100%, 0);
+    // transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeBig {
+  from {
+    opacity: 0;
+    min-width: 0;
+    max-width: 0;
+    // -webkit-transform: translate3d(0, 100%, 0);
+    // transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeBig {
+  -webkit-animation-name: fadeBig;
+  animation-name: fadeBig;
+}

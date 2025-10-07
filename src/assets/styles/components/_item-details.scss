@@ -1,0 +1,35 @@
+.item-edit-container {
+  padding: 0.75rem 0;
+  
+  b {
+    font-family: $family-primary-Semibold;
+    color: $black-bis;
+  } 
+
+  .select {
+    width: 100%;
+  
+    select {
+      width: 100%;
+    }
+  }
+
+  .is-started {
+    height: 100%;
+    align-items: flex-start;
+  }
+
+  .is-centered {
+    height: 100%;
+    align-items: center;
+  }
+
+  .is-ended {
+    height: 100%;
+    align-items: flex-end;
+  }
+
+  .bottom-border {
+    border-bottom: 1px solid $color-border-default;
+  }
+}

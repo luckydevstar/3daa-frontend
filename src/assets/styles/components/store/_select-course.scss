@@ -1,0 +1,60 @@
+.select-course {
+  .store-card-view-container {
+    background: $white;
+    min-height: calc(100vh - 360px);   
+
+    .store-cards {
+      display: flex;
+      flex-wrap: wrap;      
+      margin: auto;
+
+      .store-card {
+        // width: 330px;
+        // height: 534px;
+
+        width: 300px;
+        height: 400px;
+        margin: 10px;
+
+        .ui-component-flipper-container {
+          .front, .back {
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+          }
+
+          .front {
+            height: auto;
+          }
+          .back {
+            height: 0;
+          }
+
+          &.flipped {
+            .front {
+              height: 0;
+            }
+            .back {
+              height: auto;
+              position: relative;
+            }
+          }
+        }
+      }
+
+      @media (min-width: 320px) {
+        max-width: 320px
+      }    
+
+      @media (min-width: 640px) {
+        max-width: 640px
+      }   
+
+      @media (min-width: 960px) {
+        max-width: 960px
+      }
+
+      @media (min-width: 1280px) {
+        max-width: 1280px
+      }
+    }    
+  }
+}

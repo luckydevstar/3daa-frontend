@@ -1,0 +1,119 @@
+.evidence-edit {
+  font-size: $font-size-base-big;
+  color: $color-text-primary;
+  min-height: 400px;
+
+  .title {
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-family: $family-primary-Semibold;
+  }
+
+  .has-border-top {
+    border-top: 1px solid $border;
+  }
+  .has-border-bottom {
+    border-bottom: 1px solid $border;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .control {
+    width: 100%;
+
+    .select {
+      width: 100%;
+      select {
+        width: 100%;
+      }
+    }
+  }
+
+  .subtitle {    
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  b {
+    font-family: $family-primary-Semibold;
+  }
+
+  .is-border-bottom.Collapsible__trigger {
+    padding: 0 80px;    
+    &::after{
+      left: 50px;
+    }
+  }
+
+  .is-border-bottom.Collapsible__contentOuter {
+    padding: 0 80px;
+  }
+
+  .Collapsible__contentInner {
+    padding: 10px 0;
+    background: $white;
+  }
+
+  .pagination-container {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .evidence-slider {
+    height: 100px;
+    padding: 0 25px;
+    
+    .evidence-image {
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      padding: 4px;
+    }
+  }
+
+  .suggested-unit {
+    .unit-title {
+      font-size: 24px;    
+      font-family: $family-primary-Semibold;
+      padding: 5px 5px 5px 15px;
+      border-top: 1px solid $border;
+      border-bottom: 1px solid $border;
+    }
+
+    .outcomes {
+      & > div {
+        margin: 10px 0;
+        border-bottom: 1px solid $border;
+      }
+
+      .criteria-approved {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  .evidence-image-fixed {
+    // position: fixed;
+    // left: 0px;
+    // top: 50px;
+    // max-height: calc(100% - 100px);
+  }
+
+  .evidence-detail-unit {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease;
+
+    &.active {
+      max-height: 200px;
+      transition: max-height .5s ease;
+    }    
+  }
+
+  .evidence-tag {
+    background: #4a4a4a;
+  }
+}

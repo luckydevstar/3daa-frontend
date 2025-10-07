@@ -1,0 +1,183 @@
+// Definitions
+//------------------------
+
+@import "~brand/theme";
+
+// Third party
+//------------------------
+
+@import "~bulma/bulma";
+@import "~plyr/src/scss/plyr";
+@import "~draft-js/dist/Draft";
+@import "~font-awesome/scss/font-awesome";
+@import "~react-toggle/style";
+@import "~react-select/dist/react-select";
+@import "~react-redux-notify/dist/ReactReduxNotify";
+@import "~dragula/dist/dragula";
+@import "cropper.scss";
+
+// Globals
+//------------------------
+
+//CSS helper classes
+@import "globals/_helpers";
+
+//Helper mixins
+@import "globals/_mixins";
+
+//Bulma overwrites
+@import "globals/_overwrites";
+
+//General styling that goes near the root of the document,
+//html, body, app container, box-sizing etc.
+@import "globals/_root";
+@import "globals/_common";
+
+//General typography control
+@import "globals/_typography";
+
+//General form overwrites and control
+@import "globals/_forms";
+
+@import "./components/_material";
+
+// UI components
+//------------------------
+
+//Common UI elements, currently houses styling and overwrites for:
+// - Carets
+// - Dropdowns
+// - Notifications
+// - Course 'cards'
+// - 'Or' divider
+// - Progress badge
+// - Pagination
+// - Modals
+@import "user-interface/_common";
+
+//Header/sidebar/footer etc.
+@import "user-interface/_header";
+@import "user-interface/_footer";
+@import "user-interface/_sidebar";
+@import "user-interface/_content";
+@import "user-interface/_animations";
+@import "user-interface/_explorer-nav";
+
+// Content components
+//------------------------
+
+//Commons component
+@import "components/_common";
+
+//Videos component
+@import "components/_video";
+
+//Bookstand component
+@import "components/_bookstand";
+
+//Jobs component
+@import "components/_jobs";
+
+//Community component
+@import "components/_community/";
+
+//Notifications
+@import "components/_notifications";
+
+//Beacon
+@import "components/_beacon";
+
+//Workbooks component
+@import "components/_dashboard";
+
+//Workbooks component
+@import "components/_workbooks";
+
+// Workbooks builder
+@import "components/_workbooks-builder";
+
+// Qualifications
+@import "components/_qualifications";
+
+//Content slider component
+@import "components/_content-slider";
+
+//Content carousel
+@import 'components/_content-carousel';
+
+//Progress wheel
+@import 'components/_progress-wheel';
+
+//Units & Task management components
+@import "components/_unit";
+
+//Inline editor component
+@import "components/_inline-editor";
+
+//Data library component
+@import "components/_library";
+
+//Modals
+@import "components/modals/_groups";
+
+//Dropzone
+@import "components/_dropzone";
+
+//Profile component
+@import "components/profile/_profile";
+@import "components/profile/media-grid";
+@import "components/profile/media-modals";
+@import "components/profile/media-albums";
+@import "components/profile/media-documents";
+@import "components/profile/tabs/_tabs";
+@import "components/profile/blocks/_blocks";
+
+
+//User components
+@import "components/user/login.scss";
+@import "components/user/settings.scss";
+@import "components/user/settings-organization.scss";
+@import "components/user/social-authentication.scss";
+@import "components/user/registration/_registration";
+@import "components/user/registration/_registration-learner";
+@import "components/user/registration/_registration-educator";
+@import "components/user/registration/_registration-social-connected";
+@import "components/user/registration/_registration-voucher-check";
+@import "components/user/registration/register-other-uln";
+
+
+// Messaging
+@import "components/_messaging";
+
+// Test
+@import "components/_exams";
+
+// Customer
+@import "components/_customer";
+// Store
+@import "components/_store";
+
+// Info
+@import "components/_info";
+
+// News
+@import "components/_news";
+
+@import "components/item-panel";
+
+@import "components/item-details";
+
+// Sectors
+@import "components/_sectors";
+
+// Assessment
+@import "components/assessment";
+
+// Finance
+@import "components/finance";
+
+// Pairing Wheel
+@import "components/_pairing-wheel";
+
+// User Conflict
+@import "components/user-conflict";

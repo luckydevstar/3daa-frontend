@@ -1,0 +1,18 @@
+.is-border-bottom.Collapsible {
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.is-rounded.Collapsible__trigger:before {
+  content: "";
+  width: 30px;
+  height: 30px;  
+  border-radius: 50px;
+  position: absolute;
+  left: 0;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.is-border-bottom.Collapsible__trigger {
+  border-bottom: 1px solid $border;  
+}

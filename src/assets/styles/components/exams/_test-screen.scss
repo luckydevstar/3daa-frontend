@@ -1,0 +1,9 @@
+.test-screen {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .ui-progress-bar > div {
+        background: #84BC02;
+    }
+}

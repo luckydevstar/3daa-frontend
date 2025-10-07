@@ -1,0 +1,40 @@
+.chat .header {
+  display: flex;
+  padding: 10px 10px 10px 25px;
+  background: $white;
+
+  .subtitle {
+    font-size: 12px;
+    margin-top: 10px;
+    span {
+      display: inline-block;
+      margin-right: 8px;
+    }
+    
+  }
+  .status {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    
+    &.online {
+      background-color: #85bb23;
+    }
+    &.offline {
+      background-color: #ccc;
+    }
+  }
+  .show-panel div {
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: $primary;
+    font-size: 30px;
+  }
+
+  .chat-title {
+    flex: 1;
+  }
+}

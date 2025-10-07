@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "paths": {
+      "app": ["/src/app"]
+    },
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "typeAcquisition": {
+    "include": [
+      "ramda"
+    ]
+  }
+}

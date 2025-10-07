@@ -1,0 +1,68 @@
+.footer {
+  position: relative;
+  bottom: inherit;
+  width: 100%;
+  z-index: 5;
+  @include mobile {
+    font-size: 12px;
+    padding-top: 20px;
+  }
+}
+
+footer {
+  text-align: center;
+  ul li {
+    display: inline;
+  }
+	a, a:visited {
+    padding: 0 10px;
+		color: $primary !important;
+    border-bottom: none!important;
+		&:hover {
+			border-bottom: none !important;
+		}
+    @include mobile {
+      display: inline-flex;
+      margin-bottom: 5px;
+      border: none;
+    }
+	}
+
+  li:nth-child(1), li:nth-child(2) {
+    padding-left: 0;
+    padding-right: 0;
+    &::after {
+      content: " ";
+      display: inline-block;
+      position: relative;
+      width: 5px;
+      height: 11px;
+      border-left: 1px $color-border-default solid;
+    }
+  }
+
+	.copyright {
+		color: darken($grey-light, 17.5%);
+	}
+
+  .support-icon {
+    @include image('icon_support.svg');
+    height: 53px;
+    width: 53px;
+    position: absolute;
+    right: -5px;
+    top: 8px;
+    a {
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+//DASHBOARD
+.dashboard-container {
+  .footer {
+    position: relative;
+  }
+}

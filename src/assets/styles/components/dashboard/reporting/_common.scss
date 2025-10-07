@@ -1,0 +1,116 @@
+.dashboard-reporting {
+  background-color: $color-background-default;
+
+  .add-chart {
+    padding: 0 30px;
+    margin-top: 20px;
+
+    .isvg {
+      margin-top: 4px;
+      margin-right: 10px;
+    }
+
+    .isvg .fillable {
+      fill: $color-text-primary;
+    }
+
+    &:hover, &:focus {
+        .isvg .fillable {
+        fill: #ededed;
+        }
+    }
+  }
+    
+  .box {
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    height: 100%;
+  }
+
+  .navigation {
+    background-color: $white;
+    border-top: 1px solid $color-border-default;
+    border-bottom: 1px solid $color-border-default;
+    padding-left: 30px;
+    padding-right: 30px;
+    overflow: hidden;
+  }
+
+  .h-300 {
+    height: 300px;
+  }
+
+  .h-350 {
+    height: 350px;
+  }
+
+  .h-400 {
+    height: 400px;
+  }
+
+  .h-600 {
+    height: 600px;
+  }
+
+  .chart-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .block-header{
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+  .block-content {
+    display: flex;
+    flex: 1;
+  }
+
+  .p-legends {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #ededed;
+    }
+
+    .p-color {
+      flex: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .p-label {
+      p {
+        line-height: 1.1;
+      }
+      .reg-number {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+.dashboard-chart-dialog {
+  .modal-close {
+    top: 24px;
+  }
+
+  .modal-body {
+    padding: 10px;
+  }
+
+  .header {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+    padding: 10px;
+  }
+}

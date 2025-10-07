@@ -1,0 +1,23 @@
+
+<svg width="40px" height="39px" viewBox="0 0 40 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+            <stop stop-color="#000000" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-33.4%" y="-46.3%" width="166.8%" height="192.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="User---Job-application" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.-Jobs,-Apply---Search-Detail-Full-height" transform="translate(-1135.000000, -574.000000)">
+            <g id="Group-2-Copy-7" transform="translate(1136.000000, 574.000000)">
+                <path d="M13,33 C13,33 29.9126342,25.4422006 32.1038116,21.2096356 C34.2949889,16.9770706 30.2509908,13.5458988 23.0712891,13.5458988 C15.8915873,13.5458988 8.29498888,16.9770706 6.10381155,21.2096356 C3.91263423,25.4422006 13,33 13,33 Z" id="Oval-4" fill="url(#linearGradient-1)" opacity="0.699999988" filter="url(#filter-2)"></path>
+                <path d="M13,33 C13,33 26,20.1797017 26,13 C26,5.82029825 20.1797017,0 13,0 C5.82029825,0 0,5.82029825 0,13 C0,20.1797017 13,33 13,33 Z" id="Oval-4" fill="#003057"></path>
+                <circle id="Oval" fill="#F9F9F9" cx="13" cy="13" r="9"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

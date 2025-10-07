@@ -1,0 +1,153 @@
+
+/**
+ * Margin and padding helper - outputs a list of classes
+ * following a .{type}-{position}-{amount} pattern, e.g:
+ * .p-t-25 => padding-top: 25px
+ */
+@for $i from 0 to 11 {
+  $a: $i * 5;
+  .p-#{$a}    { padding:         #{$a}px !important; }
+  .p-t-#{$a}  { padding-top:     #{$a}px !important; }
+  .p-b-#{$a}  { padding-bottom:  #{$a}px !important; }
+  .p-l-#{$a}  { padding-left:    #{$a}px !important; }
+  .p-r-#{$a}  { padding-right:   #{$a}px !important; }
+  .m-#{$a}    { margin:          #{$a}px !important; }
+  .m-t-#{$a}  { margin-top:      #{$a}px !important; }
+  .m-b-#{$a}  { margin-bottom:   #{$a}px !important; }
+  .m-l-#{$a}  { margin-left:     #{$a}px !important; }
+  .m-r-#{$a}  { margin-right:    #{$a}px !important; }
+}
+
+/**
+ * Common font sizing helpers
+ */
+@for $i from 8 to 24 {
+  .fs-#{$i}{
+    font-size: #{$i}px !important;
+  }
+}
+
+
+/**
+ *  Align children left or right
+ */
+.align {
+  &-left {
+    justify-content: flex-start;
+  }
+  &-right {
+    justify-content: flex-end;
+  }
+}
+
+[class*="align-"] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  > * {
+    align-self: center;
+  }
+
+  &.top {
+    > * {
+      align-self: flex-start;
+    }
+  }
+}
+
+/**
+ * Flex helpers
+ */
+
+.no-grow {
+  flex-grow: 0;
+}
+
+.is-expanded {
+  flex-grow: 1
+}
+
+.no-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+/**
+ * Hoverable
+ */
+
+.hoverable {
+  transition: all $speed-slower $easing;
+  background: white;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 5px 13px rgba(0, 0, 0, 0.08);
+    transform: scale(1.024);
+    border-color: transparent !important;
+  }
+}
+
+/**
+ * Remove border
+ */
+
+.no-border {
+  border: none !important;
+}
+
+/**
+ * User related styling
+ */
+.user-bg-student {
+  background-color: $blue;
+}
+
+.user-bg-brand {
+  background-color: $blue;
+}
+
+/**
+ * Magic
+ */
+.clickable {
+  cursor: pointer;
+}
+
+/**
+ * A circle, yay
+ */
+
+.is-round {
+  border-radius: 50%;
+}
+
+/**
+ * Screen reader text (i.e. to accompany an icon with no label)
+ */
+
+.is-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/*
+* Fills parent and aligns chidlren to the middle
+*/ 
+
+.align-children-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

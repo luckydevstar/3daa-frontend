@@ -1,0 +1,153 @@
+.customer-logo, .customer-fonts, .customer-color, .customer-assets {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  .tab-bar {
+    display: flex;
+    width: 100%;
+    height: 84px;
+    z-index: 999;
+    box-shadow: 3px 14px 18px -8px rgba(0,0,0,0.3);
+
+    .column {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &.is-active {
+        background-color: #D8D8D8;
+        color: #000;
+      }
+    }
+  }
+
+  .customer-summary_error-text {
+    font-size: 17px;
+    text-align: center;
+    color: red;
+    margin-bottom: 10px;
+  }
+
+  .controller-container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px 20px;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+    .bottom-border {
+      border-bottom: 1px solid $color-border-default;
+    }
+
+    .logo-drop-zone {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      .drop-zone {
+        display: flex;
+        width: 180px;
+        height: 180px;
+        border: 2px dashed $color-border-default;
+        border-radius: 5px;
+        padding: 2px;
+        background: url('../images/bg-upload.png') center center no-repeat;
+
+        > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 100%;
+          position: relative;
+        }
+
+        .isvg {
+          position: absolute;
+          top: 10px; right: 10px;
+          cursor: pointer;
+          z-index: 10;
+        }
+
+        p {
+          color: $black;
+        }
+      }
+    }
+
+    .input {
+      border: 1px solid $color-border-default;
+    }
+
+    .columns {
+      flex: none;
+    }
+
+    .label {
+      &.secondary {
+        color: #8c8c8c;
+      }
+    }
+
+    .select {
+      width: 100%;
+      height: 45px;
+      border-radius: 0px;
+      border: 1px solid $color-border-default;
+      font-size: 1em;
+      background: #fff url('https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-128.png') no-repeat;
+      background-size: 20px;
+      background-position:  right 10px center;
+      padding-left: 10px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+    .font {
+      width: 100%;
+      height: 140px;
+      padding: 20px;
+      border: 1px solid $color-border-default;
+      background-color: #F6F9FA;
+      box-shadow: 0px 3px 20px -2px rgba(0, 0, 0, 0.1);
+      color: $black;
+      cursor: pointer;
+
+      .bar {
+        display: flex;
+        flex: 1;
+        .f-title {
+          display: flex;
+          width: 100%;
+        }
+        .f-checkbox {
+          display: flex;
+          width: 26px;
+          height: 26px;
+          border: 1px solid $color-border-default;
+          background-color: $white;
+          margin-bottom: 5px;
+        }
+      }
+
+      .f-text {
+        display: flex;
+        font-size: 1.2rem;
+        padding-top: 10px;
+      }
+    }
+
+    .btns {
+      display: flex;
+      justify-content: center;
+      .is-6 {
+        width: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.dashboard-latest-orders {
+  .orders {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .order {
+      display: flex;
+      width: 100%;
+      height: 50px;
+      padding-top: 10px;
+      border-bottom: 1px solid #dbdbdb;
+      .icon {
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-start;
+        svg {
+          width: 30px; height: 37px;
+        }
+      }
+      .desc {
+        flex: 3;
+        p {
+          line-height: 1;
+        }
+      }
+      .price {
+        flex: 1;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.dashboard-total-centres {
+  .n-card {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dbdbdb;
+    font-size: 2rem;
+    padding-top: 10px;
+  }
+}
+
+.dashboard-sales-table {
+  .block-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .sales-chart {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(#00B4BC, 0.1);
+  }
+  .sales-table {
+    padding-top: 20px;
+    .small {
+      font-size: 0.8rem;
+    }
+  }
+}

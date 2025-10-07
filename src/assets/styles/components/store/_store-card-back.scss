@@ -1,0 +1,38 @@
+.store-card-back {
+  text-align: center;
+  padding: 16px;
+
+  img {
+    height: 80px;
+  }
+  h4 {
+    margin-bottom: 16px;
+  }
+  .desc {
+    padding: 16px;
+    border-top: 2px solid $color-border-default;
+    border-bottom: 2px solid $color-border-default;
+
+    p {
+      min-height: 72px;
+      overflow: hidden;
+
+      &.more {
+        height: auto;
+      }
+    }
+  }
+  .view-more {
+    margin-top: -11px;
+
+    a {
+      background: white;
+      padding: 0 10px;
+      font-size: 0.8rem;
+    }
+  }
+  .price {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,294 @@
+$magnification: .35;
+$split-pages-padding-top: 10px;
+$split-pages-gutter: 10px;
+$split-pages-padding-bottom: 25px;
+
+.workbook-preview-container .book {
+  background: $grey-light;
+  display: flex;
+  flex-grow: 1;
+
+  .split-book {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .long-pages {
+    overflow: scroll;
+  }
+}
+
+.split-pages {
+  overflow: scroll;
+  padding: $split-pages-padding-top $split-pages-gutter $split-pages-padding-bottom;
+  width: 100%;
+
+  .spread {
+    border: 1px solid $color-border-default;
+    box-shadow: 0 1px 2px 0 $grey-dark;
+    display: flex;
+    flex-direction: row;
+    perspective: 1000px;
+    position: relative;
+    width: 100%;
+  }
+
+  .workbook-image {
+    height: auto;
+    width: 100%;
+
+    &-full-page {
+      background-position: center center;
+      background-size: cover;
+      height: 100%;
+    }
+  }
+
+  .workbook-iframe {
+    background-color: $grey-light;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .workbook-video {
+    padding: 4% 10%;
+    width: 100%;
+  }
+
+  .workbook-table {
+    margin: 2% 6%;
+    max-width: 80%;
+
+    td,
+    th {
+      padding: 5px;
+      text-align: left;
+		}
+
+    th {
+      border-bottom: 1px solid $color-border-default;
+      font-weight: bold;
+      vertical-align: bottom;
+		}
+	}
+
+  .workbook-paragraph {
+    padding: 2% 6%;
+  }
+
+  .workbook-list {
+    list-style-type: disc;
+    padding: 4% 10% 0;
+
+    &-title {
+      font-weight: bold;
+    }
+
+    &-item {
+      padding-bottom: 4%;
+    }
+  }
+
+  .workbook-simple-list {
+    list-style-type: disc;
+    padding: 4% 10% 0;
+  }
+
+  .workbook-blockquote {
+    border-left: 2px solid $color-border-default;
+    margin: 2% 6%;
+    padding: 10px 0 10px 15px;
+
+    &-footer {
+      font-style: italic;
+      height: auto;
+      margin-top: 10px;
+      padding-bottom: 0;
+      text-align: right;
+
+      &::before {
+        content: '~';
+      }
+    }
+	}
+
+  .workbook-activity-cta {
+    background-color: $blue;
+    border-radius: 4px;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 6% 6%;
+    overflow: hidden;
+    padding-bottom: 4%;
+    position: relative;
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 4% 4% 0;
+    }
+
+    &-title {
+      font-size: 20px;
+    }
+
+    &-body {
+      font-size: 14px;
+      margin: 20px 0 0;
+      padding-right: 15px;
+    }
+
+    &-button {
+      background-color: $yellow;
+      border: 0;
+      color: $primary;
+      font-weight: 500;
+      margin: 15px 4% 0 15px;
+      padding: 15px;
+      width: 130px;
+
+      &[disabled] {
+        background-color: transparent;
+        border: 1px solid $yellow;
+        color: $yellow;
+        opacity: 1;
+			}
+		}
+
+    &-image {
+      @include image('/illustrations/R-L23-U27-09.svg');
+      // @include image('/illustrations/CS-L2-U8-01.svg');
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      // border-radius: 4px 4px 0 0;
+      height: 0;
+      // padding-top: 66.64%;
+      // width: 100%;
+      padding-top: 53%;
+      margin-top: 10px;
+      width: 100%;
+		}
+
+    &-badge {
+      padding: 6px 45px;
+      position: absolute;
+      right: -36px;
+      text-transform: uppercase;
+      top: 15px;
+      transform: rotate(35deg);
+
+      &.submited {
+        background-color: $yellow;
+        color: $primary;
+			}
+
+      &.attempted {
+        background-color: $grey-light;
+        color: $green;
+			}
+
+      &.completed {
+        background-color: $primary;
+        color: white;
+			}
+		}
+
+  }
+
+  .left-page,
+  .right-page {
+    background-color: $white;
+    height: 100%;
+    padding: 50px 50px 5% 50px;
+    position: absolute;
+    top: 0;
+    transform-style: preserve-3d;
+    transition: all 1.2s ease, z-index 1.2s;
+    width: 50%;
+
+    &::before,
+    &::after {
+      background-color: $black;
+      content: '';
+      height: calc(100% + 2px);
+      position: absolute;
+      top: -1px;
+      width: 15px;
+    }
+
+    .page-number {
+      bottom: 2%;
+      color: $grey-dark;
+      font-family: $family-primary-Light;
+      font-size: 11px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      text-align: center;
+    }
+  }
+
+  .left-page {
+    backface-visibility: hidden;
+    left: 0;
+    transform-origin: center right;
+
+    &.unturned-left {
+      transform: rotate3d(0, 1, 0, 180deg);
+    }
+
+    &::after {
+      background-image: linear-gradient(to left, #F7F7F7, $black);
+      right: 0;
+    }
+  }
+
+
+  .right-page {
+    backface-visibility: hidden;
+    left: 50%;
+    transform: rotate3d(0, 1, 0, -180deg);
+    transform-origin: center left;
+
+    &.unturned-right {
+      transform: rotate3d(0, 1, 0, 0deg);
+    }
+
+    &::before {
+      background-image: linear-gradient(to right, #F7F7F7, $black);
+      left: 0;
+    }
+  }
+
+  .measuring-div {
+    background-color: $green;
+    left: 0;
+    // opacity: .5;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: scale($magnification, $magnification);
+    transform-origin: top left;
+    width: calc(50% - #{$book-container-padding} - #{$split-pages-gutter});
+    z-index: 1000;
+  }
+}
+
+.debug-page-controls {
+  background-color: $grey;
+  left: calc(50% - 100px);
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  z-index: 1;
+}
+
+
+.workbook-image {
+  padding: 0% 6%;
+}

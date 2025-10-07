@@ -1,0 +1,39 @@
+.quantity {
+  display: flex;
+  align-items: center;
+
+  .btn {
+    padding: 0 15px;
+    border: 1px solid $color-border-primary;
+    font-size: 24px;
+    height: 40px;
+    color: $color-text-default;
+
+    .fa {
+      margin-top: 5px;
+    }
+
+    &.left {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &.right {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+  .quantity-number {
+    padding: 0px 20px;
+    border-top: 1px solid $color-border-primary;
+    border-bottom: 1px solid $color-border-primary;
+    font-size: 18px;
+    margin: 0;
+    height: 40px;
+    line-height: 36px;
+    color: $primary;
+  }
+  .label {
+    width: 120px;
+  }
+}

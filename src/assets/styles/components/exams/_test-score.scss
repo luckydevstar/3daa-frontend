@@ -1,0 +1,41 @@
+.test-score {
+    background: $white;
+    flex: 1;
+    overflow: auto;
+    
+    .inner {
+        min-height: 540px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        text-align: center;
+    
+        > span {
+            margin-top: 80px;
+            font-size: 18px;
+            color: $primary;
+        }
+    }
+
+    h1 {
+        margin: 30px 0;
+    }
+
+    .score {
+        position: absolute;
+        top: 300px;
+        color: $primary;
+        
+        .value {
+            font-size: 72px;
+        }
+        .percent {
+            font-size: 48px;
+        }
+        .label {
+            color: $primary;
+            margin-top: 12px;
+        }
+    }
+}

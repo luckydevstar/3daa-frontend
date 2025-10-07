@@ -1,0 +1,15 @@
+.user-conflict__delete-modal {
+  padding: 50px;
+  h2 {
+    text-align: center;
+  }
+  .user-conflict__delete-modal__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    button {
+      margin: 0 20px;
+    }
+  }
+}

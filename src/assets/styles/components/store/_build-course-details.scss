@@ -1,0 +1,52 @@
+.build-course-details {
+  text-align: center;  
+  position: relative;
+  padding: 0 60px;
+  border-right: 1px solid $color-border-primary;
+  margin-right: 40px;
+  width: 370px;
+
+  .build-course-progress {
+    position: relative;
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    
+    .dashboard-progress-circle {
+      position: absolute;
+      z-index: 0;
+
+      .progress-line {
+        stroke: rgba($primary, .5);
+      }
+    }
+
+    .text {      
+      color: $primary;
+      font-family: $family-primary;
+      z-index: 1;
+      
+      span:first-child {
+        font-size: 4.25rem;
+      }
+      span:last-child {
+        font-family: $family-primary;
+        font-size: 2rem;
+      }
+    }
+  }  
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    color: $color-text-primary;
+
+    .value {
+      width: 30px;
+      text-align: left;
+    }
+  }
+}

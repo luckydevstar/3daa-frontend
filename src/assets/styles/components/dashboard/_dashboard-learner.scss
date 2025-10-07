@@ -1,0 +1,266 @@
+.dashboard-email-verification-popup {
+  padding: 10px 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #3367D6;
+  color: #fff;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.dashboard-container {
+  width: 100%;
+  height: 100%;
+  position: relative;  
+  display: flex;
+  flex-direction: column;
+  .dashboard {
+    position: relative;
+    flex: 1;
+    min-height: 870px;
+    // background-color: $grey-light;
+    background-color: $color-background-secondary; // NOTE cloud video fucking wrong background
+    @include desktop() {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+  .hero {
+    position: relative;
+    z-index: 2;
+    background-color: transparent !important;
+    border: none !important;
+    .title {
+      // color: $color-text-primary;
+      // @include desktop() {
+      //   font-size: 56px;
+      // }
+    }
+    .subtitle {
+      // color: $color-text-secondary;
+      margin-top: 0;
+      border: none !important;
+      // @include desktop() {
+      //   font-size: 20px;
+      // }
+    }
+  }
+  .dashboard-progress-container {
+    margin: auto;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include image('learner-dashboard-image.png');
+    background-position: center bottom;
+    background-size: 60%;
+    .dashboard-progress {
+      min-width: 270px;
+      max-width: 500px;
+      text-align: center;
+      &.multiple {
+        height: 300px;
+        position: relative;
+        width: 740px;
+        max-width: none;
+        overflow: hidden;
+        > .inner {
+          position: absolute;
+          left: -1000px;
+          top: 0;
+          right: 0;
+          right: -1000px;
+          margin: auto;
+        }
+        .progress-badge {
+          z-index: 5;
+          box-shadow: 0 5px 10px 0 $grey-lighter;
+          position: relative;
+          &:first-child, &:last-child {
+            box-shadow: 0 2px 10px 0 $grey-lighter;
+            transform: scale(.8);
+            z-index: 1;
+          }
+          &:last-child {
+            left: -50px;
+          }
+          &:first-child {
+            right: -50px;
+          }
+        }
+        .active-users .progress-number {
+          position: relative;
+          top: -15px;
+        }
+      }
+      .qualification-title {
+        display: block;
+        font-family: $family-secondary;
+        font-size: 20px;
+        font-weight: 500;
+        color: $primary;
+        margin-bottom: 20px;
+      }
+      .progress-badge {
+        padding: 10px;
+        background: white;
+        border-radius: 100%;
+        display: inline-block;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .dashboard-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    video {
+      width: 100%;
+      height: auto;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  .dashboard-body {
+    position: relative;
+    z-index: 5;
+    h4 {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin: 0;
+      display: block;
+    }
+    .your-qualifications-container {
+      .swiper-pagination {
+        padding: 20px;
+        position: relative;
+      }
+      .swiper-pagination-bullet {
+        width: 11px;
+        height: 11px;
+      }
+      .inner {
+        padding: 25px;
+        margin-bottom: 60px;
+      }
+      .qualification-title {
+        margin-bottom: 15px;
+      }
+      .qualification-cover {
+        min-width: 200px;
+        max-width: 200px;
+        position: relative;
+        margin: auto;
+        video {
+          height: 254px;
+          margin-bottom: -5px;
+        }
+        .progress-badge {
+          position: absolute;
+          bottom: 0;
+          transform: translateY(50%);
+          width: 100%;
+          .progress-badge-container {
+            margin: auto;
+            display: block;
+            border-radius: 200px;
+            background: white;
+            transform: translate3d(0,0,0);
+          }
+        }
+      }
+      .qualification-info {
+        padding: 45px 15px 0;
+      }
+    }
+  }
+  .your-qualifications-users {
+    margin-bottom: 25px;
+    .user {
+      padding: 20px;
+      &:nth-child(odd){
+        background: $grey-lighter;
+      }
+    }
+    .reg-number {
+      color: $color-text-primary;
+    }
+    .date-of-birth {
+      color: $color-text-secondary;
+    }
+  }
+}
+
+.centre-admin-dashboard-container {
+  .dashboard {
+    min-height: 740px;
+  }
+  .progress-label-wrapper {
+    flex-direction: column;
+  }
+}
+
+
+.assigned-course-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.75);
+  z-index: 100;
+  overflow: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1, .course.card-front, button {
+    opacity: 0;
+    transition: translate3d $speed-slower - .25s linear;
+    transform: translate3d(0,-15px,0);
+  }
+
+  h1 {
+    max-width: 460px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .course.card-front {
+    transition-delay: $speed-slower - .25s - .15s;
+    margin: 0 auto 25px;
+  }
+
+  button {
+    transition-delay: ($speed-slower - 0.25s) * 2 - .15s;
+  }
+
+  .inner {
+    display: inline-block;
+  }
+
+  &.reveal {
+    h1, .course.card-front, button {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+  }
+}

@@ -1,0 +1,45 @@
+
+.store-qualification-licence-card-front {
+  padding: 30px 15px 5px 15px;
+  max-width: 420px;
+  min-width: 420px;
+  height: 100%;
+  box-shadow: 10px 0px 20px -2px rgba(0, 0, 0, 0.3);
+
+  .card-content {
+    padding: 15px 0px;
+    font-size: $font-size-base-bigger;
+    .title {
+      font-family: $family-primary;
+      font-size: 1.1rem;
+      color: #4A4A4A;
+    }
+    .price {
+
+    }
+    .licences {
+      font-size: 0.9rem;
+      color: #4A4A4A;
+    }
+    .numbers {
+      font-family: $family-primary;
+      font-size: $font-size-base-biggest;
+      color: $black
+    }
+    .overview {
+      min-height: 50px;
+      // max-height: 150px;
+      // overflow-y: auto;
+      font-size: 0.9rem;
+    }
+  }
+
+  .no-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $black;
+    font-size: $font-size-base-bigger;
+    color: white;
+  }
+}

@@ -1,0 +1,21 @@
+.store.checkout {
+  .purchase-list {
+    padding: 30px 30px 30px 60px;
+  }
+  .auto-renewal .ui-component-check {
+    background-color: $white;
+    color: $white;
+    border-radius: 0;
+    border: 1px solid $color-border-primary;
+    
+    &.checked {
+      color: $primary;
+    }
+  }
+  .p-60 {
+    padding: 60px;
+  }
+  .b-r {
+    border-right: 1px solid $color-border-default;
+  }
+}

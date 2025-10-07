@@ -1,0 +1,29 @@
+.chat-actions {
+  ul {
+    margin-left: 25px;
+  }
+  
+  li {
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .leave-chat {
+    color: $red;
+  }
+
+  .separator {
+    border-bottom: 1px solid $color-border-default;
+    padding: 0;
+  }
+
+  .isvg {
+    margin-top: 6px;
+    margin-right: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 40px;
+  }
+}

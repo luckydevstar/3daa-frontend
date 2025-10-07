@@ -1,0 +1,180 @@
+/**
+ * Font declarations
+ */
+
+@font-face {
+  font-family: 'Roboto Black';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../font/Roboto-Black.ttf');
+}
+
+@font-face {
+  font-family: "Open Sans Regular";
+    src: url('../font/OpenSans-Regular.eot') format("eot");
+    src: url('../font/OpenSans-Regular.eot?#iefix') format("eot"),
+    url('../font/OpenSans-Regular.woff') format("woff"),
+    url('../font/OpenSans-Regular.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans Semibold";
+    src: url('../font/OpenSans-Semibold.eot') format("eot");
+    src: url('../font/OpenSans-Semibold.eot?#iefix') format("eot"),
+    url('../font/OpenSans-Semibold.woff') format("woff"),
+    url('../font/OpenSans-Semibold.ttf') format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url('../font/OpenSans-Bold.ttf') format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans Light";
+    src: url('../font/OpenSans-Light.eot') format("eot");
+    src: url('../font/OpenSans-Light.eot?#iefix') format("eot"),
+    url('../font/OpenSans-Light.woff') format("woff"),
+    url('../font/OpenSans-Light.ttf') format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+    src: url('../font/PlayfairDisplay-Regular.eot') format("eot");
+    src: url('../font/PlayfairDisplay-Regular.eot?#iefix') format("eot"),
+    url('../font/PlayfairDisplay-Regular.woff') format("woff"),
+    url('../font/PlayfairDisplay-Regular.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'NCFE Regualr';
+  src: url('../font/ncfefont-webfont.eot');
+  src: url('../font/ncfefont-webfont.eot?#iefix') format('embedded-opentype'),
+      //  url('../font/ncfefont-webfont.woff2') format('woff2'),
+       url('../font/ncfefont-webfont.woff') format('woff'),
+       url('../font/ncfefont-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Karbon Regualr";
+    src: url('../font/karbon-regular-webfont.eot') format("eot");
+    src: url('../font/karbon-regular-webfont.eot?#iefix') format("eot"),
+    url('../font/karbon-regular-webfont.woff') format("woff"),
+    url('../font/karbon-regular-webfont.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "Karbon Semibold";
+    src: url('../font/karbon-semibold-webfont.eot') format("eot");
+    src: url('../font/karbon-semibold-webfont.eot?#iefix') format("eot"),
+    url('../font/karbon-semibold-webfont.woff') format("woff"),
+    url('../font/karbon-semibold-webfont.ttf') format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "Karbon Medium";
+    src: url('../font/karbon-medium-webfont.eot') format("eot");
+    src: url('../font/karbon-medium-webfont.eot?#iefix') format("eot"),
+    url('../font/karbon-medium-webfont.woff') format("woff"),
+    url('../font/karbon-medium-webfont.ttf') format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "Karbon Bold";
+    src: url('../font/karbon-bold-webfont.eot') format("eot");
+    src: url('../font/karbon-bold-webfont.eot?#iefix') format("eot"),
+    url('../font/karbon-bold-webfont.woff') format("woff"),
+    url('../font/karbon-bold-webfont.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "Karbon Light";
+    src: url('../font/karbon-light-webfont.eot') format("eot");
+    src: url('../font/karbon-light-webfont.eot?#iefix') format("eot"),
+    url('../font/karbon-light-webfont.woff') format("woff"),
+    url('../font/karbon-light-webfont.ttf') format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+/**
+ * Body styling
+ */
+
+body {
+  color: $font-color-base;
+	font-size: $font-size-base;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * Headings
+ */
+
+h1 {
+  font-family: $family-primary;
+	font-size: $font-size-base-h1;
+	color: $primary;
+}
+
+h2 {
+	font-family: $family-secondary;
+  font-size: 30px;
+  color: rgb(32, 32, 32);
+}
+
+h3 {
+	font-family: $family-primary-Semibold;
+	color: $color-text-primary;
+	font-size: 22px;
+}
+
+h4 {
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.75;
+}
+
+.highlight {
+  background: $yellow;
+}
+
+/**
+ * Coloured text
+ */
+
+.is-text-info {
+  color: $blue;
+}
+
+.is-text-danger {
+ color: $danger;
+}
+
+.is-text-success {
+ color: $success;
+}

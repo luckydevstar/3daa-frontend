@@ -1,0 +1,346 @@
+$profile-avatar-size:       90px;
+
+@import "hero";
+@import "tabs";
+@import "media";
+
+
+.bio-form {
+  position: relative;
+
+  .dropzone {
+    max-height: 200px;
+    min-height: 200px;
+    padding: 0;
+    border: 0;
+
+    img {
+      max-width: 90px;
+      max-height: 90px;
+    }
+
+    .is-fullwidth {
+      display: none;
+
+      + .button {
+        margin-top: 110px;
+      }
+    }
+
+    .button {
+      margin-top: 110px;
+    }
+
+    &[value^='testing/'] {
+      img {
+        display: none;
+      }
+    }
+
+    &[value^='[object FileList]'] {
+      .button {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__preview-img {
+    @include image('icon_camera.svg');
+    background-color: $color-background-primary;
+    background-position: center center;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 155px;
+    left: 50%;
+    margin-left: -45px;
+    background-size: cover;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  &__logo-label {
+    display: block;
+  }
+
+  &__title {
+    font-size: 24px;
+    text-align: center;
+    color: $primary;
+    margin-bottom: 5px;
+  }
+
+  &__subtitle {
+    color: $grey-dark;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &__submit-btn,
+  &__cancel-btn {
+    font-size: 16px !important;
+  }
+}
+
+.timeline {
+  &__title-row {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  &__title {
+    margin-bottom: 0 !important;
+  }
+
+  &__add-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &.is-link {
+      color: $font-color-link;
+
+      &:hover {
+        color: $font-color-link;
+        background: white;
+      }
+
+      &:active {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+
+.profile-bio {
+  position: relative;
+
+  &:hover {
+    .profile-bio__controls {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    opacity: 0;
+    transform: translateX(5px);
+    transition: 200ms ease-in;
+  }
+
+  &__delete-btn.button {
+    color: $red;
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  &__title {
+    margin-bottom: 6px;
+    font-size: 16px;
+    color: $grey-darker;
+  }
+
+  &__logo {
+    border-radius: 50%;
+  }
+
+  &__description {
+    margin-top: 10px;
+  }
+}
+
+
+
+.profile-container {
+  .sidebar-left {
+    min-width: 300px;
+  }
+
+  .profile-section-right {
+    position: relative;
+
+    @include touch {
+      display: block;
+    }
+
+    // &.black::after {
+    //   content: '';
+    //   position: absolute;
+    //   background: $black;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   opacity: 0.2;
+    // }    
+  }
+
+  .sidebar-right,
+  .content-middle {
+    @include touch {
+      display: block;
+      flex: none;
+      width: 100%;
+    }
+  }
+
+  .sidebar-right {
+    @include desktop {
+      min-width: 355px;
+    }
+  }
+
+  .profile-navigation {
+    background: $color-background-default;
+  }
+
+  .navigation-section .is-one-quarter {
+    min-width: 300px;
+  }
+}
+
+.profile-content {
+  background: $color-background-default;
+  position: relative;
+  z-index: 10;
+
+  //Outermost columns
+  > .container > .columns {
+    margin-top: 0;
+    padding-top: 10px;
+  }
+
+  .profile-section {
+    margin-bottom: 25px;
+    // padding: 30px;
+    padding: 1.25rem;
+    background: white;
+    border: 1px solid $color-border-default;
+    box-shadow: 0 2px 11px 0 rgba(black, 0.03);
+  }
+
+  .section-title {
+    font-size: 15px;
+    font-family: $family-primary-Semibold;
+    color: $primary;
+    margin-bottom: 15px;
+  }
+
+  .profile-title {
+    margin-top: -1.25rem;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    border-bottom: 1px solid $color-border-default;
+    color: $primary;
+    font-family: $family-primary;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+
+    .link {
+      align-self: center;
+      font-size: 14px;
+    }
+  }
+
+
+  .personal-statement {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $color-border-default;
+    .description {
+      max-height: 150px;
+      position: relative;
+      overflow: hidden;
+      transition: max-height 1s ease;
+      &.expand {
+        max-height: 800px;
+        transition: max-height 1s ease;
+        overflow: scroll;
+      }
+    }
+  }
+  .personal-statement, .experience, .education {
+    position: relative;
+  }
+
+  .experience, .education {
+    transition: max-height $speed ease;
+    overflow: hidden;
+  }
+
+  .edit {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    @include image('icon_pencil.svg');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    &-save {
+      right: 20px;
+      @include image('icon_save.svg');
+    }
+    &-close {
+      @include image('icon_delete.svg');
+    }
+  }
+
+  .experience {
+    margin-bottom: 20px;
+    li {
+      font-size: 12px;
+      &::after {
+        content: ";";
+      }
+
+    }
+  }
+  .experience, .education {
+    .media-left {
+      background-color: $grey-lighter;
+      background-size: cover;
+      background-position: center center;
+      width: 50px;
+      height: 50px;
+      margin-right: 25px;
+    }
+    .media {
+      border: none;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .title, .subtitle, .date {
+      margin-bottom: 5px;
+      margin-top: 0;
+    }
+    .title {
+      font-size: 15px;
+    }
+    .subtitle {
+      font-size: 14px;
+    }
+    .date {
+      font-size: 12px;
+    }
+  }
+
+}
+
+.profile-thumbnail {
+  background-color: $color-background-light;
+  background-size: cover;
+  background-position: center center;
+}

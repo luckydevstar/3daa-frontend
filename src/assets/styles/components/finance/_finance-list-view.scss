@@ -1,0 +1,85 @@
+.finance-list-view {
+  .finance-list-item {
+    .centre-badge {
+      width: 60px;
+      height: 60px;
+      background-color: salmon;
+      border-radius: 50%;      
+      margin-right: 1.5rem;
+    }      
+  }
+  
+  table {
+    width: 100%;
+    margin: 0;
+
+    tr {
+      border-left: 4px solid transparent;
+
+      &.selected {
+        border-left-color: #825AA4;
+        box-shadow: -10px 0 10px 0 $color-background-default;
+        border-top: 1px solid $color-background-default;
+        border-bottom: 1px solid $color-background-default;
+        background: #f9f9f9;
+      }
+    }
+
+    th {
+      border-bottom: none;
+      background: $color-background-default;
+      padding: 0.75rem;
+    }
+
+    td {
+      vertical-align: middle;
+      padding: 0.75rem;
+    }
+
+    .heading {
+      &-revenue_outstanding,
+      &-total_revenue {        
+        max-width: 150px;        
+      }
+
+      &-message,
+      &-profile {
+        min-width: 100px;
+        max-width: 100px;
+        width: 100px;
+      }
+
+      &-status {
+        min-width: 200px;
+        max-width: 200px;
+        width: 200px;
+      }
+    }
+  }
+
+  .arrow {
+    @include desktop(){
+      height: 10px;
+      width: 10px;
+      border-bottom: 2px solid $black;
+      float: right;
+      transition: all $speed;
+      margin-top: 4px;
+      cursor: pointer;
+    }
+    &.asc{
+      border-left: 2px solid $black;
+      transform: rotate(-45deg);
+      transition: transform $speed;
+    }
+    &.desc{
+      border-left: 2px solid $black;
+      transition: transform $speed;
+      transform: rotate(135deg);
+    }
+    &.active{
+      border-bottom: 4px solid $primary;
+      border-left: 4px solid $primary;
+    }
+  }
+}

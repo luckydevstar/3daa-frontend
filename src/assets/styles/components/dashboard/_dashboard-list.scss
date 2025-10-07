@@ -1,0 +1,58 @@
+.dashboard-list {
+  background-color: $white;
+}
+
+.dashboard-list-item-container {
+  display: table;
+  &:hover {
+    background-color: $color-background-default;
+
+  }
+  &.centre-seat {
+    circle:first-child {
+      stroke: none;
+    }
+  }
+}
+
+.dashboard-list-item {
+  display: table-cell;
+  vertical-align: middle;
+  color: $color-text-default;
+  word-wrap: break-word;
+  border-bottom: 1px solid $color-border-default;
+  font-family: $family-serif;
+
+  &.progress-badge {
+    width: 10%;
+    padding: 4px;
+  }
+
+  &.name {
+    width: 30%;
+    padding-left: 15px;
+    font-size: $font-size-base-big;
+
+    .border-wrapper {
+      color: $blue;
+      padding: 10px;
+      border-right: 1px solid $color-border-default;
+    }
+  }
+
+  &.sector {
+    padding-left: 14px;
+    width: 50%;
+
+  }
+
+  &.list-progress {
+    width: 10%;
+    text-align: center;
+  }
+
+  &.seat-info {
+    padding-left: 20px;
+  }
+}
+

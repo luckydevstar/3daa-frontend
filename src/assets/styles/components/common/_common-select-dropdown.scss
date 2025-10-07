@@ -1,0 +1,79 @@
+.ui-select-dropdown {
+    width: 100%;
+    display: flex;
+    position: relative;
+
+    .dropdown-display {
+        display: flex;
+        width: 100%;
+        height: 44px;
+        border: 1px solid $color-border-primary;
+        border-radius: $forms-border-radius;
+        background-color: white;
+        padding: 10px;
+        cursor: pointer;
+
+        .display {
+            flex: 9;
+        }
+        .icon {
+            flex: 1;
+        }
+    }
+}
+
+.ui-select-dropdown-list {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1022;
+
+    .dropdown-list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid $primary;
+        border-radius: $forms-border-radius;
+        background-color: $white;        
+        z-index: 1;
+        overflow: hidden;
+        max-height: 250px;        
+
+        .dropdown-list-content {
+          width: 100%;
+          height: 100%;
+          padding: 0 10px;
+          overflow-y: auto;
+
+          .d-list {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 40px;
+            min-height: 40px;
+            border-bottom: 1px solid $color-border-default;
+            cursor: pointer;
+
+            .txt {
+                display: flex;
+                flex: 9;
+            }
+            .icon-checked {
+                display: flex;
+                flex: 1;
+
+                .svg-checked {
+                    fill: $primary;
+                }
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+          }
+        }        
+    }
+}

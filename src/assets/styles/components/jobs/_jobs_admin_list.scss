@@ -1,0 +1,37 @@
+.jobs-admin-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid $color-border-default;
+
+    &:hover {
+        background-color: $color-background-default;
+    }
+
+    .photo {
+        flex: 1;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        img {
+            width: 60px;
+            border-radius: 50%;
+        }
+    }
+    .name {
+        flex: 2;
+    }
+    .icon {
+        flex: 1;
+        border-right: 1px solid $color-border-default;
+        cursor: pointer;
+    }
+    .btns {
+        flex: 3;
+        display: flex;
+        justify-content: space-around;
+    }
+}

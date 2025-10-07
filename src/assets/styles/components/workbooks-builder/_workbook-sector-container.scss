@@ -1,0 +1,67 @@
+.workbook-sector-container {
+  position: relative;
+  
+  .hero {
+    background: $color-background-default;
+    word-wrap: normal;
+  }
+
+  .separated {
+    margin-bottom: 50px;
+  }
+
+  .courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-bottom: 50px;
+    padding-top: 20px;
+
+    .no-qualification {
+      padding: 50px;
+    }
+
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+
+  .qualification-panel {
+    background: $color-background-primary;
+    flex-grow: 1;
+    margin: 10px;
+    padding: 0.75rem;
+    width: calc(50% - 20px);
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(10, 10, 10, 0.3);
+    
+    @include mobile() {
+      width: 100%;
+    }
+    
+    .download-spec {
+      font-size: 13px;
+      color: $blue;
+    }
+
+    .course-name {
+      display: block;
+      margin-bottom: 10px;
+      color: $blue;
+    }
+
+    .file-icon {
+      float: left;
+      height: 45px;
+      margin-right: 15px;
+      width: 35px;
+
+      &.pdf {
+        @include image('icon_pdf.svg');  
+        cursor: pointer;
+      }
+    }
+  }
+
+}
+

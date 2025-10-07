@@ -1,0 +1,58 @@
+.store-checkout-table {
+
+  .border-bottom {
+    border-bottom: 1px solid $color-border-default;
+  }
+
+  .store-checkout-table-header {
+    display: flex;
+    font-size: $font-size-base-bigger;
+    color: $primary;
+  }
+
+  .store-checkout-table-row {
+    display: flex;
+    align-items: center;
+    color: $black;
+    padding: 15px 0px;
+
+    h2 {
+      color: $black;
+    }
+  }
+  
+  .checkout-description {
+    width: 100%;
+    min-width: 150px;
+  }
+  .price {
+    width: 15%;
+    min-width: 80px;
+    max-width: 100px;
+  }
+  .checkout-quantity {
+    width: 25%;
+    min-width: 140px;
+    max-width: 200px;
+  }
+  
+  .total {
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+  }
+  .remove-button-box {
+    width: 40px;
+    min-width: 40px;
+    max-width: 40px;
+  }
+
+  .button.is-round {
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    // margin-top: 6px;
+  }
+
+}

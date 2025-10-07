@@ -1,0 +1,55 @@
+.assign-license-modal {
+  .modal-content {
+    width: 1000px;
+  }
+}
+
+.assign-license {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .selected-info {
+    padding: 50px 18%;
+    h1 {
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+    .select {
+      width: 100%;
+      select {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.assign-licences {
+  .selected-members {
+    font-size: $font-size-base-bigger;
+    margin-left: 0;
+    margin-right: auto;
+    .numbers {
+      color: $black;
+    }
+  }  
+}
+
+.oops {
+  color: #4A4A4A;
+  .oops-header {
+    color: #9013FE;
+    font-family: $family-third;
+    font-size: 3rem;
+  }
+  .oops-desc {
+    line-height: 1.2;
+  }
+  .oops-link {
+    padding: 0 5px;
+    color: #4A90E2;
+    text-decoration: underline;
+  }
+}

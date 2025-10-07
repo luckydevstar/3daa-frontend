@@ -1,0 +1,40 @@
+.my-community {
+  &__empty-icon {
+    min-height: 150px;
+    min-width: 150px;
+    @include image('icon_community.svg');
+    background-position: center center;
+  }
+
+  &__empty-message {
+    color: $primary;
+    font-size: 1.3rem;
+  }
+
+  &__empty-cta.button {
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: -5px;
+  }
+  .grid-item {
+    width: $profile-avatar-size;
+    height: $profile-avatar-size;
+    background-color: $grey-lighter;
+    background-size: cover;
+    background-position: center center;
+    margin: 5px;    
+  }  
+
+}
+.my-community {
+  .grid-item {
+    border-radius: 100px;
+  }
+}

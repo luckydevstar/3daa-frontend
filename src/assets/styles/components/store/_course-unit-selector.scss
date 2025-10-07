@@ -1,0 +1,22 @@
+.course-unit-selector {
+  .ui-component-check {
+    margin-top: 0;
+    border: 1px solid $primary;
+    background: $white;
+    color: $white;
+
+    &.checked {
+      background: $primary;
+    }
+  }
+
+  ul {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+
+  li {
+    display: flex;
+    padding: 5px 0;
+  }
+}

@@ -1,0 +1,15 @@
+.add-logo-modal {
+  .add-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+
+    > div {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+.pane-chats {
+  display: flex;
+  flex-flow: column nowrap;
+
+  header { flex-shrink: 0; }
+}
+
+.chats {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+
+  ul {
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  li {
+    padding: 20px;
+    border-bottom-width: 1px;
+  }
+
+  .media-left,
+  .image,
+  .user-badge {
+    width: 56px;
+    height: 56px;
+    margin-right: 15px;
+  }
+
+  .content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  time {
+    text-align: right;
+  }
+
+  .recent-message {
+    overflow: hidden;
+    flex: 0 1 218px;
+    max-width: 218px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .chat-unread {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .last-chat {
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+
+/**
+ * colour, shape & type */
+  li {
+    border-bottom-style: solid;
+    border-bottom-color: $form-border-color;
+    background-color: white;
+    font-size: 13px;
+  }
+
+  .image img {
+    border-radius: 50%;
+  }
+
+  b,
+  .chat-title {
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  time,
+  .chat-stamp {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .chat-unread {
+    border-radius: 50%;
+    font-weight: 600;
+    background-color: $red;
+    color: white;
+  }
+
+  .group-chats {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+.chats--empty {
+  @extend .chats;
+  @include image('icon-nomessage.svg');
+  justify-content: flex-start;
+  padding-top: 160px;
+  background-position: 50% 50px;
+  text-align: center;
+}

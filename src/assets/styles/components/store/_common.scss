@@ -1,0 +1,38 @@
+.store {
+  .flex-none {
+    flex: none;
+  }
+  span.is-primary {
+    color: $primary;
+  }
+  h2 {
+    font-family: $family-primary;
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-family: $family-primary;
+    font-size: 18px;
+  }
+  .total-price {
+    font-family: $family-primary;
+    font-size: 40px;
+    color: $primary;
+  }
+  .em {
+    color: $color-text-primary;
+    font-size: .85rem;
+  }
+  .speech {
+    background: #0097FF;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 25px 5px;
+
+    .fillable {
+      fill: $white;
+    }
+  }
+  .box .button {
+    width: 100%;
+  }
+}

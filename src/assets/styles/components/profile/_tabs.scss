@@ -1,0 +1,17 @@
+.profile-tabs {
+  border-bottom: 1px solid $color-border-default;
+
+  li.profile-tabs__item {
+    margin-left: 0;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+
+    a:hover {
+      border-color: $color-border-default;
+    }
+  }
+}

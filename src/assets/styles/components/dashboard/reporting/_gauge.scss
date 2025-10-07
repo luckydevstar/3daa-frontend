@@ -1,0 +1,11 @@
+.dashboard-gauge {
+  position: relative;
+
+  .gauge-label {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    font-size: 1.3rem;
+    transform: translateX(-50%);
+  }
+}

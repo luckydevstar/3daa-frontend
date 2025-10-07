@@ -1,0 +1,1305 @@
+// .qualification-manager-route {
+//   @media (max-height: 838px) {
+//     .card-image {
+//       overflow: hidden;
+//       height: 115px;
+//     }
+//   }
+// }
+
+// .workbooks-explorer-container {
+//   @media (max-height: 820px) {
+//     .card-image {
+//       overflow: hidden;
+//       height: 200px;
+//     }
+//   }
+// }
+  
+// .book-item-ribbon {
+//   position: absolute;
+//   z-index: 10;
+//   padding: 4px;
+//   font-size: 16px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   text-transform: uppercase;
+//   color: $white;
+//   background-color: $primary;
+//   transform: rotate(-45deg);
+//   user-select: none;
+//   width: 180px;
+//   top: 34px;
+//   left: -44px;
+// }
+// .workbooks-explorer-container {
+//   min-height: calc(100vh - 341px);
+//   padding: 0 0 40px;
+
+//   .fallback-background {
+//     background: linear-gradient(45deg, $blue, $turquoise);
+//   }
+
+//   .loading-overlay {
+//     background: rgba(249, 249, 249, .5);
+//     padding-top: 0;
+//   }
+
+//   /**
+//   * Card view styles
+//   */
+//   // .card-view .units {
+//   //   font-size: 0;
+//   // }
+//   .workbooks-list-view {
+//     display: flex;
+//     flex-wrap: wrap;
+//     .book-item-ribbon {
+//       height: 25px;
+//       width: 120px;
+//       top: 15px;
+//       left: -30px;
+//       font-size: 11px;
+//     }
+//     .progress-badge {
+//       margin-right: 20px;
+//     }
+//   }
+//   .workbooks-card-view,
+//   .workbooks-list-view {
+//     height: 100%;
+//     position: relative;
+//     align-content: flex-start;
+    
+//     .progress-badge {
+//       .content-manager-badge {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         width: 35px;
+//         height: 35px;
+//         border-radius: 50%;
+//         border: 2px solid $color-border-default;
+//         background-color: $white;
+//         box-shadow: 0 0 0 2px $white;
+//         .fa {
+//           color: $grey-lighter;
+//         }
+//         &.selected {
+//           background-color: $primary;
+//           border: 2px solid $primary;
+//           .fa {
+//             color: $white;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .course.card-front {
+//     .card-content {
+//       .specification {
+//         display: flex;
+//         flex-direction: column;
+//         align-content: space-around;
+//       }
+//     }
+//   }
+//   .workbooks-card-view {
+//     min-height: 160px;
+//     margin: -12.5px;
+//     .complete-badge {
+//       height: 35px;
+//       width: 150px;
+//       top: 25px;
+//       left: -35px;
+//       font-size: 18px;
+//     }
+//     .book-item {
+//       width: 100%;
+//       position: relative;
+//       // margin: 12.5px;
+//       display: inline-block;
+//       cursor: pointer;
+//       transition: transform .5s ease, box-shadow .5s ease;
+//       overflow: hidden;
+//       &.is-disabled {
+//         opacity: .5;
+//       }
+//       height: 250px;
+//       @include tablet {
+//         height: 300px;
+//       }
+//       .inner-image {
+//         height: 240px;
+//         width: 100%;
+//         background-position: bottom;
+//         background-repeat: no-repeat;
+//         background-size: cover;
+//         top: 0;
+//         @include mobile {
+//           width: 100%;
+//           position: relative;
+//         }
+//         @include ie11() {
+//           height: 318px;
+//           top: -90px;
+//         }
+//       }
+//       .title {
+//         align-items: center;
+//         padding: 20px 18px 15px;
+//         margin: 0;
+//         font-size: 16px;
+//         color: $color-text-primary;
+//         font-family: $family-secondary;
+//         line-height: 1.15;
+//         background: $white;
+//         &:after {
+//           content: '';
+//           left: 18px;
+//           right: 18px;
+//           height: 1px;
+//           background: $grey-lighter;
+//           position: absolute;
+//           bottom: 0;
+//           opacity: 0;
+//         }
+//         @include mobile {
+//           font-size: $font-size-base-bigger;
+//           height: 140px;
+//           display: block;
+//         }
+//         @include tablet {
+//           height: 115px;
+//           transition: all $speed-slower $easing;
+//           transform: translateY(-100%);
+//           &:after {
+//             transition: all $speed-slower $easing;
+//           }
+//         }
+//         @include widescreen {
+//           height: 90px;
+//         }
+//         .progress-badge {
+//           position: absolute;
+//           left: 18px;
+//           top: -20px;
+//           padding: 3px;
+//           background-color: white;
+//           border-radius: 50%;
+//         }
+//       }
+//       .info {
+//         background: $white;
+//         width: 100%;
+//         z-index: 1;
+//         @include tablet {
+//           transform: translateY(100%);
+//           bottom: 0;
+//           position: absolute;
+//           transition: all $speed-slower $easing;
+//         }
+//       }
+//       .description {
+//         padding: 18px;
+//         // background-color: $white;
+//         .learning-hours,
+//         .credit-value {
+//           font-size: 10px;
+//           line-height: 2;
+//           @include tablet-large {
+//             font-size: $font-size-base;
+//           }
+//         }
+//         .learning-hours {
+//           color: $grey;
+//         }
+//         .credit-value {
+//           color: $color-text-primary;
+//         }
+//       }
+
+      
+//       @include tablet {
+//         &:hover {
+//           // transform: scale(1.05) translate3d(0, 0, 0);
+//           // box-shadow: $box-shadow-hover;
+
+//           .info, .title {
+//             transform: translateY(0)
+//           }
+
+//           .title:after {
+//             opacity: 1;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .default-cover {
+//     background: linear-gradient(45deg, $blue, $turquoise);
+//   }
+  
+//   /**
+//   * List view styles
+//   */
+
+//   .list-view .units {
+//     flex-wrap: wrap;
+//     display: flex;
+//     margin-top: -20px;
+//   }
+  
+//   .list-item {
+//     position: relative;
+//     margin: 0;
+//     padding: 20px;
+//     border-bottom: 2px solid darken($color-border-default, 7.5%);
+//     width: 100%;
+//     height: 150px;
+//     cursor: pointer;
+//     &.is-disabled {
+//       opacity: .5;
+//     }
+//     .media-left {
+//       overflow: hidden;
+//       position: relative;
+//     }
+//     &:hover {
+//       background-color: rgba($grey, .05);
+//     }
+//     .progress-badge {
+//       top: auto;
+//       bottom: 15px;
+//       right: 0;
+//     }
+//     .book {
+//       width: 78px;
+//       height: 105px;
+//       background-position: center;
+//       background-repeat: no-repeat;
+//       background-size: cover;
+//     }
+//     @include desktop {
+//       width: calc(50% - #{25px/2});
+//       &:nth-child(odd) {
+//         margin-right: 25px;
+//       }
+//     }
+//     .title {
+//       font-size: 15px;
+//       line-height: 1.6;
+//       color: black;
+//     }
+//     .time {
+//       font-size: 12px;
+//       color: $grey;
+//     }
+//     .value {
+//       font-size: 12px;
+//       color: $primary;
+//     }
+//   }
+// }
+
+
+// /**
+// * Workbook Unit Overview modal
+// */
+
+// .unit-overview-modal {
+//   .modal-body {
+//     padding: 25px;
+//     @include desktop {
+//       padding: 50px;
+//     }
+//   }
+
+//   .modal-content-inner {
+//     overflow: hidden;
+    
+//     .modal-body, 
+//     .modal-body > div {
+//       height: 100%;
+//     }
+
+//     .modal-body > div {
+//       overflow: auto;
+//     }
+//   }
+// }
+
+// .unit-overview-modal-container {
+//   max-height: calc(100vh - 100px - 72px);
+//   min-height: 521px;
+//   overflow: auto;
+//   .default-cover {
+//     background: linear-gradient(45deg, $blue, $turquoise);
+//   }
+//   .sidebar {
+//     width: 234.5px;
+//     margin: auto;
+//     @include tablet {
+//       position: absolute;
+//       margin: 0;
+//     }
+//     .button {
+//       width: 100%;
+//       margin-bottom: 10px;
+//     }
+//   }
+//   .book {
+//     // background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     width: 100%;
+//     height: 316px;
+//     position: relative;
+//     margin-bottom: 10px;
+//     overflow: hidden;
+//     .progress-badge {
+//       position: absolute;
+//       right: 0;
+//       left: 0;
+//       bottom: 0;
+//       top: 0;
+//       z-index: 10;
+//       width: 100%;
+//       width: 80px;
+//       height: 80px;
+//       padding: 5px;
+//       background: white;
+//       box-shadow: $box-shadow;
+//       margin: auto;
+//       border-radius: 100%;
+//     }
+//     .workbooks-cover-label {
+//       left: 10px;
+//       position: absolute;
+//       top: 10px;
+//     }
+//   }
+//   .overview {
+//     padding-bottom: 50px;
+//   }
+//   .inner-padding {
+//     @include tablet {
+//       padding-left: 300px;
+//     }
+//     @include widescreen {
+//       padding-right: 150px;
+//     }
+//   }
+//   .description {
+//     color: $grey;
+//     font-size: 15px;
+//   }
+//   .title {
+//     font-family: $family-secondary;
+//     color: $blue;
+//     margin-bottom: 35px;
+//     font-size: 36px;
+//   }
+//   .subtitle {
+//     font-size: 22px;
+//     color: $blue;
+//     font-weight: 200;
+//     line-height: 1.6;
+//   }
+//   .value {
+//     margin-bottom: 25px;
+//   }
+//   h4 {
+//     margin-top: 35px;
+//   }
+// }
+
+
+// /**
+// * Workbook
+// */
+
+// .list-item {
+//   .progress-badge {
+//     padding: 2px;
+//     display: inline-block;
+//     background: $white;
+//     border-radius: 100%;
+//     position: absolute;
+//     bottom: -15px;
+//     right: 70px;
+//     z-index: 10;
+//     box-shadow: 0 0 20px rgba($black, .3);
+//   }
+// }
+
+// /* Single Qualification View fixed scrolling styles and responsiveness */
+
+// .single-qualification-view {
+  
+//   //Column sizing, for when page is scrolled
+//   //and card becomes fixed
+//   .qualification-card-container {
+//     width: 320px;
+//     @include desktop {
+//       width: 370px;
+//     }
+//     .course.card-front {
+//       width: 100%;
+//     }
+//     // Actual fixed card sizing
+//     .card-container {
+//       width: 300px;
+//       @include desktop {
+//         width: 350px;
+//       }
+//     }
+//   }
+  
+//   .workbooks-card-view {
+//     .book-item {
+
+//       // width: 100%;
+
+//       /* Normal book item sizing */
+//       // @include tablet {
+//       //   width: calc(50% - 25px);
+//       // }
+//       // @include desktop-large {
+//       //   width: calc(33% - 25px);
+//       // }
+//       // @include widescreen {
+//       //   width: calc(25% - 25px);
+//       // }
+
+//       // /* Sidebar open sizing */
+//       // .app-sidebar-open & {
+//       //   @include tablet {
+//       //     width: calc(50% - 25px);
+//       //   }
+//       //   @include desktop-large {
+//       //     width: calc(33% - 25px);
+//       //   }
+//       //   @include widescreen {
+//       //     width: calc(25% - 25px);
+//       //   } 
+//       // }
+//     }
+//   }
+// }
+
+// /* Multiple Qualification View fixed scrolling styles and responsiveness */
+
+// .multiple-qualification-view {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-end;
+//   width: 100%;
+
+//   .course.card-front {
+//     width: 100%;
+//   }
+
+//   .workbooks-card-view {
+//     // .book-item {
+//     //   width: calc(50% - 25px);
+//     //   @include tablet {
+//     //     width: calc(33% - 25px);
+//     //   }
+//     //   @include desktop-large {
+//     //     width: calc(25% - 25px);
+//     //   }
+//     //   @include widescreen {
+//     //     width: calc(20% - 25px);
+//     //   }
+//     // }
+//   }
+  
+//   .separator,
+//   .qualification-carousel {
+//     justify-content: center;
+//     width: 100%;
+//     z-index: 5;
+//   }
+
+//   .qualification-carousel {
+//     transition: opacity $speed linear;
+//   }
+
+//   .qualification-fixed {
+//     pointer-events: none;
+//     z-index: 1;
+//     position: fixed;
+//     width: 300px;
+//     @include desktop {
+//       width: 350px;
+//     }
+//     //Header height + padding + nav height
+//     perspective: 1000px;
+//     top: $header-height + 20px;
+//     left: 20px;
+//     @include widescreen {
+//       left: calc((100% - #{$widescreen-no-padding}) / 2);
+//     }
+//     .card-container {
+//       width: 100%;
+//       transform-origin: left center;
+//       transform: translate3d(-50px,0,0);
+//       opacity: 0;
+//     }
+//   }
+// }
+
+// /* Scrolled styles */
+
+// .fixed-nav {
+//   .explorer-nav .position-container {
+//     left: 0;
+//     right: 0;
+//     position: fixed;
+//     top: $header-height;
+//     height: 77px;
+//   }
+// }
+
+// .fixed-card {
+  
+//   .qualification-carousel {
+//     opacity: 0;
+//   }
+
+//   /* Single qualification view */
+  
+//   .single-qualification-view { 
+//     .card-container {
+//       position: fixed;
+//       //Header height + nav height
+//       top: $header-height + 20px;
+//       z-index: 1000;
+//     }
+//   }
+  
+//   /* Multiple qualification view */
+  
+//   .multiple-qualification-view { 
+  
+//     /* Fixed card */
+//     .qualification-fixed {
+//       pointer-events: all;
+//       z-index: 100;
+//       .card-container {
+//         opacity: 1;
+//         transition: all $speed-slower $easing;
+//         transform: translate3d(0,0,0);
+//       }
+//     }
+    
+//     /* Content */
+//     .separator {
+//       width: calc(100% - 300px - 20px);
+//       @include desktop {
+//         width: calc(100% - 350px - 20px);
+//       }
+//     }
+    
+//     .workbooks-card-view {
+//       // .book-item {
+//       //   width: 100%;
+//       //   @include tablet {
+//       //     width: calc(50% - 25px);
+//       //   }
+//       //   @include desktop-large {
+//       //     width: calc(33% - 25px);
+//       //   }
+//       //   @include widescreen {
+//       //     width: calc(25% - 25px);
+//       //   }
+//       // }
+//     }
+//   }
+// }
+
+
+.qualification-manager-route {
+  @media (max-height: 838px) {
+    .card-image {
+      overflow: hidden;
+      height: 115px;
+    }
+  }
+}
+
+.workbooks-explorer-container {
+  @media (max-height: 820px) {
+    .card-image {
+      overflow: hidden;
+      height: 200px;
+    }
+  }
+}
+  
+.book-item-ribbon {
+  position: absolute;
+  z-index: 10;
+  padding: 4px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $primary;
+  transform: rotate(-45deg);
+  user-select: none;
+  width: 180px;
+  top: 34px;
+  left: -44px;
+}
+.workbooks-explorer-container {
+  min-height: calc(100vh - 341px);
+  padding: 0 0 40px;
+
+  .fallback-background {
+    background: linear-gradient(45deg, $blue, $turquoise);
+  }
+
+  .loading-overlay {
+    background: rgba(249, 249, 249, .5);
+    padding-top: 0;
+  }
+
+  /**
+  * Card view styles
+  */
+  // .card-view .units {
+  //   font-size: 0;
+  // }
+  .workbooks-list-view {
+    display: flex;
+    flex-wrap: wrap;
+    .book-item-ribbon {
+      height: 25px;
+      width: 120px;
+      top: 15px;
+      left: -30px;
+      font-size: 11px;
+    }
+    .progress-badge {
+      margin-right: 20px;
+    }
+  }
+  .workbooks-card-view,
+  .workbooks-list-view {
+    height: 100%;
+    position: relative;
+    align-content: flex-start;
+    
+    .progress-badge {
+      .content-manager-badge {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 2px solid $color-border-default;
+        background-color: $white;
+        box-shadow: 0 0 0 2px $white;
+        .fa {
+          color: $grey-lighter;
+        }
+        &.selected {
+          background-color: $primary;
+          border: 2px solid $primary;
+          .fa {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .course.card-front {
+    .card-content {
+      .specification {
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+      }
+    }
+  }
+
+  .workbooks-card-view {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;    
+  
+    @media (min-width: 213px) {
+      max-width: 198px
+    }
+
+    @media (min-width: 411px) {
+      max-width: 396px
+    }
+  
+    @media (min-width: 609px) {
+      max-width: 594px
+    }    
+  
+    @media (min-width: 807px) {
+      max-width: 792px
+    }   
+  
+    @media (min-width: 1005px) {
+      max-width: 990px
+    }
+  
+    @media (min-width: 1203px) {
+      max-width: 1188px
+    }    
+  }
+
+  .workbook-card {
+    position: relative;    
+    // height: 350px;
+    // width: 200px;
+    // min-width: 200px;
+    // max-width: 200px;
+    height: 253px;
+    width: 188px;
+    min-width: 188px;
+    max-width: 188px;
+    margin: 15px 5px;
+
+    border-radius: 2px;
+    box-shadow: 0 0 10px 0 rgba(10, 10, 10, 0.3);
+    overflow: hidden;
+
+    .inner-image {
+      // height: 278px;
+      height: 173px;
+      width: 100%;
+      background-color: $color-background-secondary;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: -6px;
+    }
+    .book-item-ribbon {
+      position: absolute;
+      z-index: 10;
+      padding: 4px;
+      font-size: 16px;      
+      display: flex;      
+      justify-content: center;      
+      align-items: center;
+      text-transform: uppercase;
+      color: white;
+      background-color: #00B9EF;
+      transform: rotate(-45deg);
+      user-select: none;
+      width: 180px;
+      top: 35px;
+      left: -40px;
+    }
+    .card-content {
+      .description {
+        font-size: inherit;
+        color: $color-text-default;        
+        transition: max-height ease-out $speed-faster, opacity linear .1s;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+
+        .learning-hours {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .workbooks-card-view {
+    min-height: 160px;
+    margin: -12.5px;
+
+    .complete-badge {
+      height: 35px;
+      width: 150px;
+      top: 25px;
+      left: -35px;
+      font-size: 18px;
+    }
+
+    .book-item {
+      width: 100%;
+      position: relative;
+      // margin: 12.5px;
+      display: inline-block;
+      cursor: pointer;
+      height: 253px;
+      transition: transform .5s ease, box-shadow .5s ease;
+      overflow: hidden;
+      &.is-disabled {
+        opacity: .5;
+      }
+
+      .title {
+        position: relative;
+        align-items: center;
+        padding: 20px 18px 5px;
+        margin: 0;
+        font-size: 16px;
+        color: $color-text-primary;
+        font-family: $family-secondary;
+        line-height: 1.15;
+        background: $white;
+        height: 95px;
+
+        &:after {
+          content: '';
+          left: 18px;
+          right: 18px;
+          height: 1px;
+          background: $grey-lighter;
+          position: absolute;
+          bottom: 0;          
+        }
+
+        .progress-badge {
+          position: absolute;
+          left: 18px;
+          top: -20px;
+          padding: 3px;
+          background-color: white;
+          border-radius: 50%;
+        }
+      }
+      .info {
+        background: $white;
+        width: 100%;        
+        z-index: 1;
+
+        transform: translateY(100%);
+        bottom: 86px;
+        position: absolute;
+        transition: all $speed-slower $easing;        
+      }
+      .description {
+        padding: 5px 18px 15px;
+        // background-color: $white;
+        .learning-hours,
+        .credit-value {
+          font-size: 10px;
+          line-height: 2;
+          // @include tablet-large {
+          //   font-size: $font-size-base;
+          // }
+        }
+        .learning-hours {
+          color: $grey;
+        }
+        .credit-value {
+          color: $color-text-primary;
+        }
+      }
+
+      &:hover {
+        // transform: scale(1.05) translate3d(0, 0, 0);
+        // box-shadow: $box-shadow-hover;
+
+        .info {
+          transform: translateY(100px)
+        }
+
+        .title:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .default-cover {
+    background: linear-gradient(45deg, $blue, $turquoise);
+  }
+  
+  /**
+  * List view styles
+  */
+
+  .list-view .units {
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: -20px;
+  }
+  
+  .list-item {
+    position: relative;
+    margin: 0;
+    padding: 20px;
+    border-bottom: 2px solid darken($color-border-default, 7.5%);
+    width: 100%;
+    height: 150px;
+    cursor: pointer;
+    &.is-disabled {
+      opacity: .5;
+    }
+    .media-left {
+      overflow: hidden;
+      position: relative;
+    }
+    &:hover {
+      background-color: rgba($grey, .05);
+    }
+    .progress-badge {
+      top: auto;
+      bottom: 15px;
+      right: 0;
+    }
+    .book {
+      width: 78px;
+      height: 105px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    @include desktop {
+      width: calc(50% - #{25px/2});
+      &:nth-child(odd) {
+        margin-right: 25px;
+      }
+    }
+    .title {
+      font-size: 15px;
+      line-height: 1.6;
+      color: black;
+    }
+    .time {
+      font-size: 12px;
+      color: $grey;
+    }
+    .value {
+      font-size: 12px;
+      color: $primary;
+    }
+  }
+}
+
+
+/**
+* Workbook Unit Overview modal
+*/
+
+.unit-overview-modal {
+  .modal-body {
+    padding: 25px;
+    @include desktop {
+      padding: 50px;
+    }
+  }
+
+  .modal-content-inner {
+    overflow: hidden;
+    
+    .modal-body, 
+    .modal-body > div {
+      height: 100%;
+    }
+
+    .modal-body > div {
+      overflow: auto;
+    }
+  }
+}
+
+.unit-overview-modal-container {
+  max-height: calc(100vh - 100px - 72px);
+  min-height: 521px;
+  overflow: auto;
+  .default-cover {
+    background: linear-gradient(45deg, $blue, $turquoise);
+  }
+  .sidebar {
+    width: 234.5px;
+    margin: auto;
+    @include tablet {
+      position: absolute;
+      margin: 0;
+    }
+    .button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  .book {
+    // background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 316px;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+    .progress-badge {
+      position: absolute;
+      right: 10px;
+      left: initial;
+      bottom: initial;
+      top: 10px;
+      z-index: 10;
+      width: 100%;
+      width: 80px;
+      height: 80px;
+      padding: 5px;
+      background: white;
+      box-shadow: $box-shadow;
+      margin: auto;
+      border-radius: 100%;
+    }
+    .workbooks-cover-label {
+      left: 10px;
+      position: absolute;
+      top: 10px;
+    }
+  }
+  .overview {
+    padding-bottom: 50px;
+  }
+  .inner-padding {
+    @include tablet {
+      padding-left: 300px;
+    }
+    @include widescreen {
+      padding-right: 150px;
+    }
+  }
+  .description {
+    color: $grey;
+    font-size: 15px;
+  }
+  .title {
+    font-family: $family-secondary;
+    color: $blue;
+    margin-bottom: 35px;
+    font-size: 36px;
+  }
+  .subtitle {
+    font-size: 22px;
+    color: $blue;
+    font-weight: 200;
+    line-height: 1.6;
+  }
+  .value {
+    margin-bottom: 25px;
+  }
+  h4 {
+    margin-top: 35px;
+  }
+}
+
+
+/**
+* Workbook
+*/
+
+.list-item {
+  .progress-badge {
+    padding: 2px;
+    display: inline-block;
+    background: $white;
+    border-radius: 100%;
+    position: absolute;
+    bottom: -15px;
+    right: 70px;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba($black, .3);
+  }
+}
+
+/* Single Qualification View fixed scrolling styles and responsiveness */
+
+.single-qualification-view {
+  
+  //Column sizing, for when page is scrolled
+  //and card becomes fixed
+  .qualification-card-container {
+    width: 320px;
+    @include desktop {
+      width: 370px;
+    }
+    .course.card-front {
+      width: 100%;
+    }
+    // Actual fixed card sizing
+    .card-container {
+      width: 300px;
+      @include desktop {
+        width: 350px;
+      }
+    }
+  }
+  
+  .workbooks-card-view {
+    .book-item {
+
+      // width: 100%;
+
+      /* Normal book item sizing */
+      // @include tablet {
+      //   width: calc(50% - 25px);
+      // }
+      // @include desktop-large {
+      //   width: calc(33% - 25px);
+      // }
+      // @include widescreen {
+      //   width: calc(25% - 25px);
+      // }
+
+      // /* Sidebar open sizing */
+      // .app-sidebar-open & {
+      //   @include tablet {
+      //     width: calc(50% - 25px);
+      //   }
+      //   @include desktop-large {
+      //     width: calc(33% - 25px);
+      //   }
+      //   @include widescreen {
+      //     width: calc(25% - 25px);
+      //   } 
+      // }
+    }
+  }
+}
+
+/* Multiple Qualification View fixed scrolling styles and responsiveness */
+
+.multiple-qualification-view {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+
+  .course.card-front {
+    width: 100%;
+  }
+
+  .workbooks-card-view {
+    // .book-item {
+    //   width: calc(50% - 25px);
+    //   @include tablet {
+    //     width: calc(33% - 25px);
+    //   }
+    //   @include desktop-large {
+    //     width: calc(25% - 25px);
+    //   }
+    //   @include widescreen {
+    //     width: calc(20% - 25px);
+    //   }
+    // }
+  }
+  
+  .separator,
+  .qualification-carousel {
+    justify-content: center;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .qualification-carousel {
+    transition: opacity $speed linear;
+  }
+
+  .qualification-fixed {
+    pointer-events: none;
+    z-index: 1;
+    position: fixed;
+    width: 300px;
+    @include desktop {
+      width: 350px;
+    }
+    //Header height + padding + nav height
+    perspective: 1000px;
+    top: $header-height + 20px;
+    left: 20px;
+    @include widescreen {
+      left: calc((100% - #{$widescreen-no-padding}) / 2);
+    }
+    .card-container {
+      width: 100%;
+      transform-origin: left center;
+      transform: translate3d(-50px,0,0);
+      opacity: 0;
+    }
+  }
+}
+
+/* Scrolled styles */
+
+.fixed-nav {
+  .explorer-nav .position-container {
+    left: 0;
+    right: 0;
+    position: fixed;
+    top: $header-height;
+    height: 77px;
+  }
+}
+
+.fixed-card {
+  
+  .qualification-carousel {
+    opacity: 0;
+  }
+
+  /* Single qualification view */
+  
+  .single-qualification-view { 
+    .card-container {
+      position: fixed;
+      //Header height + nav height
+      top: $header-height + 20px;
+      z-index: 1000;
+    }
+  }
+  
+  /* Multiple qualification view */
+  
+  .multiple-qualification-view { 
+  
+    /* Fixed card */
+    .qualification-fixed {
+      pointer-events: all;
+      z-index: 100;
+      .card-container {
+        opacity: 1;
+        transition: all $speed-slower $easing;
+        transform: translate3d(0,0,0);
+      }
+    }
+    
+    /* Content */
+    .separator {
+      width: calc(100% - 300px - 20px);
+      @include desktop {
+        width: calc(100% - 350px - 20px);
+      }
+    }
+    
+    .workbooks-card-view {
+      // .book-item {
+      //   width: 100%;
+      //   @include tablet {
+      //     width: calc(50% - 25px);
+      //   }
+      //   @include desktop-large {
+      //     width: calc(33% - 25px);
+      //   }
+      //   @include widescreen {
+      //     width: calc(25% - 25px);
+      //   }
+      // }
+    }
+  }
+}

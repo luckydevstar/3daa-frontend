@@ -1,0 +1,23 @@
+.assessment-route {
+  position: relative;
+  height: 100%;
+  .navigation-section {
+    width: 100%;    
+  }
+
+  &.fixed-card {
+    .navigation-section {
+      position: fixed;
+      top: 5.4em;
+      z-index: 29;
+    }    
+    .gallery-evidence-content-section {
+      margin-top: 47px;
+      max-height: calc(100% - 220px);
+    }
+  }
+  .gallery-evidence-content-section {
+    height: calc(100% - 208px);
+    max-height: calc(100% - 208px);
+  }
+}

@@ -1,0 +1,203 @@
+.qualification-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  &-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: no-wrap;
+    .carousel-card {
+      display: flex;
+      transition: all $speed-slower $easing;
+      // overflow: hidden;
+      &.faded,
+      &.hidden {
+        filter: grayscale(100%);
+        transform: scale(0.8);
+        overflow: hidden;
+        .carousel-data {
+          max-width: 0 !important;
+          min-width: 0 !important;
+          padding: 0;
+        }
+        .progress-badge {
+          transform: scale(0) translate3d(0, 0, 0);
+          opacity: 0;
+          transition: transform $speed-slower $easing, opacity $speed-slower $easing;
+        }
+        .carousel-media {
+          // min-width: 210px;
+          // max-width: 210px;
+          transition: all $speed-slower $easing;
+          .title {
+            transform: scale(1) translate3d(0, 0, 0);
+            opacity: 1;
+          }
+        }
+      }
+      &.hidden {
+        .carousel-media {
+          max-width: 0 !important;
+          min-width: 0 !important;
+        }
+      }
+      .carousel-media {
+        position: relative;
+        background: linear-gradient(45deg, $primary, #12B2A6);
+        video {
+          object-fit: cover;
+          // max-width: inherit;
+        }
+        .title {
+          // width: 210px;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          transform: scale(0) translate3d(0, 0, 0);
+          transition: transform $speed-slower $easing, opacity $speed-slower $easing;
+          opacity: 0;
+          background-color: $white;
+          font-family: $family-secondary;
+          text-align: center;
+          font-size: 12px;
+          padding: 20px 5px;
+          overflow: hidden;
+        }
+      }
+      .carousel-separator {
+        width: 0;
+        position: relative;
+        .progress-badge {
+          padding: 5px;
+          background-color: $white;
+          border-radius: 100%;
+          position: absolute;
+          left: -40px;
+          top: 25px;
+          transform: scale(1) translate3d(0, 0, 0);
+        }
+      }
+      .carousel-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: $white;
+        max-width: 500px;
+        transition: max-width $speed-slower $easing, padding $speed-slower $easing;
+        overflow: hidden;
+        padding: 10px;
+        padding-left: 40px;
+        .carousel-data-header {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          .qualification-title {
+            font-family: $family-secondary;
+            color: $blue;
+            font-size: 22px;
+            max-width: 280px;
+          }
+          .level-badge {
+            background-color: $turquoise;
+            padding: 7.5px 15px;
+            display: inline-block;
+            color: $white;
+            border-radius: 50px;
+            line-height: 1;
+            text-align: center;
+            min-width: 110px;
+            height: 30px;
+          }
+          .level-badge {
+            background-color: $turquoise;
+            padding: 7.5px 15px;
+            display: inline-block;
+            color: $white;
+            border-radius: 50px;
+            line-height: 1;
+            text-align: center;
+            min-width: 110px;
+            height: 30px;
+          }
+        }
+        .overview {
+          font-size: 12px;
+          margin: 10px 0;
+          max-height: 80px;
+          overflow-y: auto;
+        }
+        .assigned-groups {
+          font-size: 14px;
+          color: $blue;
+          font-weight: bold;
+        }
+        .pathway-controls {
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .control {
+            width: 100%;
+            margin-bottom: 0;
+            .select {
+              width: 100%;
+              select {
+                width: 100%;
+              }
+            }
+          }
+          .cta {
+            margin-left: 20px;
+            display: flex;
+            &-wrapper {
+              display: flex;
+              .fa {
+                font-size: 24px;
+                margin-right: 10px;
+              }
+              .fa-trash-o {
+                color: $red;
+              }
+              .fa-pencil {
+                color: $primary;
+              }
+            }
+            .add-button {
+              cursor: pointer;
+              user-select: none;
+              color: white;
+              background-color: $green;
+              font-weight: bold;
+              padding: 0px 9px;
+              width: 26px;
+              font-size: 18px;
+              border-radius: 50%;
+            }
+            .edit-button {}
+            .delete-button {}
+          }
+        }
+        .workbooks-qualification-status {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          align-items: center;
+          .selected-units,
+          .full-spec,
+          h3 {
+            font-size: 14px;
+          }
+          .fa {
+            color: $primary;
+            vertical-align: middle;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}

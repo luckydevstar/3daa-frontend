@@ -1,0 +1,117 @@
+.sidechat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .messaging-header {
+    height: 50px;
+    padding: 0;
+    box-shadow: 0 0 5px 5px $color-border-default;
+    border-bottom: none;
+    flex: none;
+
+    .navigation {
+      margin-bottom: -4px;
+      margin-left: 12px;
+    }
+  }
+
+  .tab {
+    padding: 5px 0 100px;
+    flex: 1;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+
+  .last-chat {
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .new-chat {
+    height: 100%;
+    position: relative;
+  }
+
+  .new-chat-header {
+    display: flex;
+    margin-left: 15px;
+  }
+
+  .new-chat-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .new-chat-btn {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .new-chat-title-container {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .start-chat-btn-container {
+    z-index: 99;
+    position: fixed;
+    bottom: 10px;
+    width: calc(100% - 10px);
+    text-align: center;
+    button {
+      width: 90%;
+    }
+  }
+
+  .upload-avatar {
+    width: 100px;
+    height: 100px;
+    background: transparent url('../images/icon_community.svg') no-repeat center;
+    display: flex;
+    border: 1px;
+    border-style: dashed;
+    border-radius: 50%;
+    padding: 0;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  .photo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-bottom: 5px;
+    .media-left {
+      display: inline-block;
+      .image {
+        width: 90px;
+        height: 90px;
+        // background-position: center, center;
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        border: 1px;
+        border-style: dashed;
+        border-radius: 50%;
+        padding: 0;
+      }
+      &+figure.photo__default {
+        display: none;
+      }
+    }
+  }
+
+  .fileUploader {
+    margin-right: 20px;
+  }
+
+  .side-chat-contacts {
+    height: 100%;
+  }
+}

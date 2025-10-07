@@ -1,0 +1,37 @@
+.workbooks-outcomes-tray {
+  overflow: scroll;
+  bottom: 80px;
+  position: absolute;
+  width: 70vw;
+  right: -70vw;
+  top: 0;
+  transition: right .6s ease-out;
+  box-shadow: -1px 0 13px rgba(0, 0, 0, .1);
+  z-index: 1;
+  background-color: white;
+  @include desktop {
+    width: 40vw;
+    right: -40vw;
+  }
+  // &::before {
+  //   background-color: $grey-lighter;
+  //   content: '';
+  //   height: 100%;
+  //   left: 0;
+  //   position: absolute;
+  //   top: 0;
+  //   width: 10px;
+  // }
+
+  .outcomes-header {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-right: 0;
+    padding: 20px;
+
+    .total {
+      flex: none;
+      width: 20%;
+    }
+  }
+}

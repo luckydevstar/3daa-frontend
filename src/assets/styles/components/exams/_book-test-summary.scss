@@ -1,0 +1,44 @@
+.book-test-summary {
+    h5 {
+        color: black;
+    }
+
+    .centre-location {
+        height: 160px;
+        margin: 20px 0;
+
+        .is-7 {
+            margin-right: 8px;
+        }
+
+        .map {
+            background-image: url(../images/bg_registration.png)
+        }
+
+        .centre-img {
+            background-image: url(../images/bg_registration.png)
+        }
+    }
+
+    .highlighted {
+        display: inline-block;
+        color: $primary;
+        font-size: 15px;
+        margin-top: 16px;
+    }
+
+    i.highlighted {
+        font-size: 20px;
+        margin-right: 8px;
+    }
+
+    .invigilator .highlighted {
+        margin-top: 0;
+    }
+
+    .candidate figure {
+        border-radius: 50%;
+        border: 2px solid $primary;
+        padding: 3px;
+    }
+}

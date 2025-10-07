@@ -1,0 +1,86 @@
+.basket-button {
+  position: relative;
+  .fillable {
+    fill: $primary;
+  }
+
+  .button.is-primary {
+    .isvg {
+      display: flex;
+    }
+
+    &:hover, &:focus {
+      .fillable {
+        fill: $white;
+      }
+    }
+  }
+  
+  .basket-panel {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: 999;
+  }
+
+  .panel-content {
+    background: white;
+    border: 1px solid $primary;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 330px;
+    z-index: 999;
+
+    .list {
+      padding: 20px 30px;
+      border-bottom: 1px solid $color-border-default;
+    }
+
+    .total {
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .price {
+        font-family: $family-primary;
+        font-size: 22px;
+      }
+    }
+
+    .checkout {
+      margin: 20px 30px;
+      background: $color-background-default;
+      .button {
+        width: 100%;
+      }
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: $white;
+    transform: rotate(45deg); /* Prefixes... */
+    top: -5px;
+    right: 40px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid $primary;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      background: white;
+      top: 0px;
+      right: -5px;
+    }
+  }
+
+  .my-basket {
+    display: flex;
+    color: $primary;
+  }
+}

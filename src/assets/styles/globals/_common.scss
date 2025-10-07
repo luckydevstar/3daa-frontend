@@ -1,0 +1,337 @@
+.is-centered {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.tooltip {
+  margin-left: 5px;
+  i {
+    font-size: 17px;
+    color: $blue;
+  }
+  &:hover .tooltiptext {
+    visibility: visible;
+  }
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: $black;
+  color: $white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  margin-left: 4px;
+  position: absolute;
+  z-index: 1;
+}
+
+.star::after {
+  content: "*";
+  color: $red;
+}
+
+.button-navigation {
+  background: $white;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 0 rgba($black, .1);
+  display: block;
+  height: 45px;
+  padding-top: 15px;
+  width: 45px;
+  cursor: pointer;
+  flex-shrink: 0;
+  &-next {
+    padding-left: 13px;
+    &:after {
+      content: '';
+      @include arrow(15px, 'right', $primary);
+      display: block;
+      border-width: 2px;
+    }
+  }
+  &-previous {
+    padding-left: 17px;
+    &:after {
+      content: '';
+      @include arrow(15px, 'left', $primary);
+      display: block;
+      border-width: 2px;
+    }
+  }
+  &[disabled] {
+    user-select: none;
+    cursor: default;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+
+/**
+ * `MediaUpload` component
+ */
+
+.media-upload__step {
+  .select,
+  .select>select {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+.media-upload__modal-footer {
+  position: relative;
+}
+
+.media-upload__cover-label {
+  width: 100%;
+}
+
+.media-upload__submit-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.media-upload__pagination {
+  flex: 1;
+}
+
+.media-upload__pagination-btn-icon {
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  font-size: 21px;
+  .media-upload__pagination--previous & {
+    margin-right: 7px;
+    display: flex;
+    align-items: center;
+  }
+  .media-upload__pagination--next & {
+    margin-left: 7px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+/**
+ * `MediaLightbox` component
+ */
+
+.media-lightbox {
+  min-height: 250px;
+  &__media-column,
+  &__details-column {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  &__media-column {
+    text-align: center;
+  }
+  &__media-body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 10px;
+      bottom: 0;
+      left: 0;
+      z-index: -2;
+      background: $black;
+    }
+  }
+  &__spinner {
+    @include loading-spinner();
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+  }
+  &__img,
+  &__video {
+    position: relative;
+  }
+  &__details-body {
+    position: relative;
+    padding: 30px 10px;
+  }
+  &__media-title {
+    @include title(24px);
+    padding-right: 20px;
+  }
+  &__meta {
+    margin-top: 30px;
+    padding-bottom: 70px;
+    font-size: 16px;
+  }
+  &__meta-title {
+    min-width: 100px;
+    margin-bottom: 15px;
+    float: left;
+    clear: left;
+    color: rgba($primary, 0.5);
+  }
+  &__meta-value {
+    margin-bottom: 15px;
+    color: $primary;
+  }
+  &__meta-description {
+    clear: both;
+    margin-bottom: 30px;
+    color: $black;
+  }
+  &__meta-category {
+    .select,
+    .select>select {
+      width: 100%;
+    }
+  }
+  &__delete-btn.button {
+    color: $red;
+  }
+  &__form-label {
+    width: 100%;
+  }
+  &__edit-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: left;
+  }
+  &__save-btn,
+  &__cancel-btn {
+    width: 100%;
+  }
+  &__save-btn {
+    margin-left: 5px;
+  }
+  &__cancel-btn {
+    margin-right: 5px;
+  }
+
+  .add-evidence-option {
+    .custom.checkbox {
+      background: #5AC8FA;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .ui {
+        width: 35px;
+        height: 35px;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+/* Common 'Flipping' UI component */
+
+.ui-component-flipper-container {
+  perspective: 1000px;
+  height: 100%;
+  .front,
+  .back {
+    backface-visibility: hidden;
+    transition: all $speed-slower $easing;
+  }
+  .toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    z-index: 10;
+    cursor: pointer;
+    padding-top: 25px;
+    text-align: center;
+    padding-bottom: 5px;
+    background-position-x: center;
+    background-position-y: 5px;
+    transform: translate3d(0,0,0);
+    color: $white;
+    span {
+      display: block;
+    }
+    svg .flip-g {
+      fill: $white;
+    }
+  }
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: white;
+    transform: rotateY(180deg);
+    transform: rotateY(180deg) translate3d(0, 0, 0);
+  }
+  .front {
+    background: white;
+    transform: rotateY(0deg);
+    transform: rotateY(0deg) translate3d(0, 0, 0);
+    height: 100%;
+    z-index: 1;
+    .inner {
+      z-index: 1;
+      position: relative;
+      padding-bottom: 35px;
+    }
+  }
+  &.flipped {
+    .toggle {
+      color: $primary;
+      svg .flip-g {
+        fill: $primary;
+      }
+    }
+    .back {
+      transform: rotateY(0);
+      transform: rotateY(0) translate3d(0, 0, 0);
+    }
+    .front {
+      transform: rotateY(-180deg);
+      transform: rotateY(-180deg) translate3d(0, 0, 0);
+    }
+  }
+}
+
+.isvg.loaded .fillable {
+  fill: $primary;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.semibold {
+  font-family: $family-primary-Semibold !important;
+}
+
+.opensans-regular {
+  font-family: "Open Sans Regular" !important;
+}
+
+.opensans-semibold {
+  font-family: "Open Sans Semibold" !important;
+}

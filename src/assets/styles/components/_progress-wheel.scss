@@ -1,0 +1,80 @@
+.radial-progress {
+  $circle-size: 240px;
+  $inset-size: 180px;
+  $transition-length: 0.5s;
+  $percentage-color: $blue;
+  $percentage-font-size: 30px;
+  $percentage-text-width: 57px;
+  width: $circle-size;
+  height: $circle-size;
+  position: relative;
+  background-color: $grey-light;
+  border-radius: 50%;
+  .circle {
+    .mask,
+    .fill {
+      width: $circle-size;
+      height: $circle-size;
+      position: absolute;
+      border-radius: 50%;
+    }
+    .mask,
+    .fill {
+      -webkit-backface-visibility: hidden;
+      transition: transform $transition-length;
+      border-radius: 50%;
+    }
+    .mask {
+      clip: rect(0px, $circle-size, $circle-size, $circle-size/2);
+      .fill {
+        clip: rect(0px, $circle-size/2, $circle-size, 0px);
+        background-color: $blue;
+      }
+    }
+  }
+  .inset {
+    width: $inset-size;
+    height: $inset-size;
+    position: absolute;
+    margin-left: ($circle-size - $inset-size)/2;
+    margin-top: ($circle-size - $inset-size)/2;
+    background-color: $white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .percentage {
+      height: $percentage-font-size;
+      width: $percentage-text-width;
+      position: absolute;
+      top: ($inset-size - $percentage-font-size) / 2;
+      left: ($inset-size - $percentage-text-width) / 2;
+      line-height: 1;
+      .numbers {
+        transition: width $transition-length;
+        span {
+          width: $percentage-text-width;
+          display: inline-block;
+          font-size: $percentage-font-size;
+          color: $percentage-color;
+        }
+      }
+    }
+  }
+  $increment: 180deg / 100;
+  @for $i from 0 through 100 {
+    &[data-progress="#{$i}"] {
+      .circle {
+        .mask.full, .fill {
+          transform: rotate($increment * $i);
+        }
+        .fill.fix {
+          transform: rotate($increment * $i * 2);
+        }
+      }
+      .inset .percentage .numbers {
+        width: $i * $percentage-text-width + $percentage-text-width;
+      }
+    }
+  }
+}

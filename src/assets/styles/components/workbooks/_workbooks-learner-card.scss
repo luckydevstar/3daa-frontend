@@ -1,0 +1,76 @@
+.workbooks-learner-card {
+  min-height: 80px;
+  width: 300px;
+  padding: 10px;
+  padding-right: 30px;
+  display: flex;
+  position: relative;
+  align-items: stretch;
+  background-color: $white;
+  box-shadow: 0 1px 2px 0 rgba($black, .2);
+
+  .badge-container {
+    display: flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  .data-container {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .full-name {
+    font-size: 14px;
+    font-weight: 300;
+    color: $black;
+  }
+
+  .centre-name {
+    font-size: 11px;
+    line-height: 1.09;
+    color: $blue;
+  }
+
+  .qualification-progress {
+    color: $grey-dark;
+    font-size: 11px;
+  }
+
+  .button-close {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    transition: background-color .5s ease;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba($grey-dark, .1);
+    }
+
+    &::after, &::before {
+      content: "";
+      width: 16px;
+      height: 2px;
+      background-color: $black;
+      position: absolute;
+      top: calc(50% - 1px);
+      left: calc(50% - 8px);
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.course-progress {
+  position: relative;
+  min-height: 482px;
+
+  .progress-badge-inner {
+    opacity: 0;
+    background: $color-background-default;
+    transition: 110ms ease-in;
+  }
+
+  .progress-badge:hover {
+    .progress-badge-inner {
+      opacity: 1;
+    }
+  }
+
+  &__avatar {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    margin-top: -90px;
+    margin-left: -90px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+  }
+
+  &__badge {
+    position: relative;
+    display: block;
+    width: 190px;
+    padding: 5px;
+    background: $white;
+    border-radius: 100px;
+    box-shadow: 0 -7px 14px rgba(0, 0, 0, 0.07);
+
+    &--is-photo {
+      .progress-badge-inner {
+        background-color: rgba($color-progress-badge-primary, 0.7);
+      }
+
+      .progress-number {
+        color: $white !important;
+      }
+    }
+
+    @media screen and (min-width: 980px) {
+      margin: -140px auto 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__screen-name {
+    @include title(24px);
+  }
+
+  &__qualification {
+    font-size: 17px;
+    font-family: $family-primary;
+    color: $blue;
+  }
+
+  &__details {
+    margin-top: 30px;
+    font-size: 17px;
+  }
+
+  &__details-title {
+    min-width: 110px;
+    margin-bottom: 15px;
+    float: left;
+    clear: left;
+    color: $grey;
+
+    &:after {
+      content: ":";
+      margin-right: 5px;
+    }
+  }
+
+  &__details-value {
+    margin-bottom: 15px;
+    color: $blue;
+  }
+
+  &__identification {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    color: rgba($primary, 0.5);
+    font-size: 17px;
+  }
+}

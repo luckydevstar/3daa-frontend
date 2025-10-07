@@ -1,0 +1,93 @@
+.messaging {
+  &:not(.app-sidebar-feature) {
+    height: 100%;
+    display: flex;
+  }
+  overflow: hidden;
+  flex-direction: column;
+
+  .footer {
+    padding: 20px 0;
+  }
+}
+
+.messaging-header {
+  display: flex;
+  flex: none;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 17px;
+  border-bottom: 1px solid $color-border-default;
+  background-color: $white;
+  height: 80px;
+
+  .navigation {
+    margin-bottom: -30px;
+    margin-left: 25px;
+  }
+}
+
+.messaging-content {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-grow: 1;
+  height: calc(100vh - 242px);
+  border-bottom: 1px solid $color-border-default;
+
+  .left {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: $sidebar-width;
+    width: $sidebar-width;
+    height: 100%;
+    background-color: $white;
+    border-right: 1px solid $color-border-default;
+  }
+
+  .main {
+    flex-grow: 1;
+    width: auto;
+    @include image('sidebar_bg.png');
+    background-repeat: repeat;
+    display: flex;
+
+    .messages {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .right-pane {
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    width: $sidebar-width;
+    background-color: $white;
+    border-left: 1px solid $color-border-default;
+
+    &.close {
+      width: 0;
+    }
+  }
+}
+
+.directions {
+  margin: 130px auto 0;
+  width: 268px;
+  font-family: $family-primary;
+  font-size: 22px;
+  text-align: center;
+
+  p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+}
+
+.mini-avatar {
+  display: inline-block;
+  margin: 0 0 0 -5px;
+  cursor: pointer;
+}

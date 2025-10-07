@@ -1,0 +1,129 @@
+@media print {
+  @page { margin: 0.5cm } 
+  @page :left {
+    margin-left: 0cm;
+    margin-right: 0cm;
+  }
+  @page :right {
+    margin-left: 0cm;
+    margin-right: 0cm;
+  }
+
+  #main {
+    display: none !important;
+  }
+  body {
+      overflow: hidden !important;
+  }
+  .portal-view{
+    display: block !important;
+    position: relative;
+  }
+  
+  .workbook-preview-container {
+    width: 100% !important;
+    height: auto !important;
+    z-index: 1000 !important;
+    position: relative !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    display: inline !important;    
+  }
+  .workbook-preview-hud,
+  .loading-overlay,
+  .page-not-supported-overlay,
+  iframe{
+    display: none !important;
+  }
+
+  @media print and (-webkit-min-device-pixel-ratio:0) {
+    .workbook-preview-header-title,
+    .workbook-preview-header-cvalue,
+    .workbook-preview-header-tasks,
+    .activity-block-image-block,
+    blockquote,
+    .image-block,
+    .activity-block,
+    .link-block,
+    .video-block,
+    .preview{
+      -webkit-print-color-adjust: exact;
+    }
+  }
+  .workbook-preview-header-title {
+    font-size: 18px !important;
+  }
+  
+  a[href^="http://"]:after, a[href^="ftp://"]:after {
+    content: " (" attr(href) ")";
+    color: white;
+    font-size: small;
+  }
+
+  .preview{
+    float: none !important; display: block !important;
+  }
+
+  .chapter-section{
+    page-break-after: always; display: block !important;
+    overflow: hidden !important;
+    padding: 20px !important; margin: 0px !important;
+  }
+  .pin-icon{ top:0px !important; }
+  .globe-icon { top:0px !important; }
+  blockquote{
+      display: block !important;
+      page-break-inside: avoid; /* or 'auto' */
+  }
+  .image-block {
+      display: inline-flex !important;
+      page-break-inside: avoid; /* or 'auto' */
+      width: 100% !important;
+      padding: 15px 0px !important;
+  }
+  .video-block {
+      display: inline-flex !important;
+      page-break-inside: avoid; /* or 'auto' */
+      width: 100% !important;
+      padding: 15px 0px !important;
+  }
+  .activity-block{
+      display: flex !important;
+      page-break-inside: avoid; /* or 'auto' */
+      width: 100% !important;
+  }
+
+  .link-block {
+      display: block !important;
+      width: 100% !important;
+      page-break-inside: avoid; /* or 'auto' */
+  }
+  
+  p {
+      break-inside: avoid-column;
+      width: 100% !important; padding: 0px !important;
+      page-break-inside: avoid;
+      orphans:3;
+      widows:3;
+  }
+  ul li, ol li{
+    width: 90% !important;
+  }
+  .workbook-activity-modal {
+    page-break-after: always; display: block !important;
+    overflow: hidden !important;
+  }
+  .workbook-activity-modal-body {
+    .columns {
+      display: flex !important;
+    }
+    .activity-tout {
+      display: flex !important;
+      page-break-inside: avoid; /* or 'auto' */
+    }
+  }
+  .workbook-activity-modal-footer {
+    display: none !important;
+  }
+
+}

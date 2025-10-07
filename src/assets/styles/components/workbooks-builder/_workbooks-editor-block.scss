@@ -1,0 +1,49 @@
+.editor-block-container {
+  .editor-block-header {
+    align-items: center;
+    background-color: $color-background-default;
+    display: flex;
+    padding: 10px 20px;
+    .editor-block-header__outcomes {
+      font-style: italic;
+      color: #043956;
+      padding-left: 15px;
+    }
+  }
+
+  .editor-block-body {
+    display: flex;
+    flex-direction: row;
+    min-height: 300px;
+  }
+
+  .text h2 {
+    font-family: $family-secondary;
+  }
+
+  .editor-block-footer {
+    align-items: center;
+    background-color: $color-background-default;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    .remove-block {
+      align-items: center;
+      color: $blue;
+      cursor: pointer;
+      display: flex;
+      font-size: 15px;
+      padding: 10px;
+
+      i {
+        font-size: 28px;
+        padding: 5px;
+      }
+
+      &:active {
+        box-shadow: inset 2px -2px 2px rgba($black, .1);
+      }
+    }
+  }
+}

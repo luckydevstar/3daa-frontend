@@ -1,0 +1,35 @@
+.validate-test-form {
+    .application-id {
+        font-size: 1.05rem;
+    }
+    span.is-primary {
+        color: $primary;
+    }
+    h4 {
+        color: #9B9B9B;
+        font: 1rem;
+    }
+    .control .custom.radio {
+        display: block;
+    }
+
+    .fa-angle-left {
+        margin-top: 0px;
+        font-size: 1.2rem;
+    }
+    .form {
+        display: none;
+
+        &.visible {
+            display: block;
+        }
+    }
+    .input,
+    select {
+        border-left: 4px solid $primary !important;
+    }
+    .select,
+    select {
+        width: 100%;
+    }
+}

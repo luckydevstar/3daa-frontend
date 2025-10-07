@@ -1,0 +1,13 @@
+
+<svg width="17px" height="18px" viewBox="0 0 17 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Tutor" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tutor-Action-Plan" transform="translate(-363.000000, -675.000000)">
+            <g id="share-copy" transform="translate(363.000000, 675.000000)">
+                <path d="M16.2,2.7 C16.2,4.1904 14.9904,5.4 13.5,5.4 C12.0096,5.4 10.8,4.1904 10.8,2.7 C10.8,1.2096 12.0096,0 13.5,0 C14.9904,0 16.2,1.2096 16.2,2.7 L16.2,2.7 Z" id="Fill-1" fill="#FFFFFF"></path>
+                <path d="M16.2,15.3 C16.2,16.7904 14.9904,18 13.5,18 C12.0096,18 10.8,16.7904 10.8,15.3 C10.8,13.8096 12.0096,12.6 13.5,12.6 C14.9904,12.6 16.2,13.8096 16.2,15.3 L16.2,15.3 Z" id="Fill-2" fill="#FFFFFF"></path>
+                <path d="M5.4,9 C5.4,10.4904 4.1904,11.7 2.7,11.7 C1.2096,11.7 0,10.4904 0,9 C0,7.5096 1.2096,6.3 2.7,6.3 C4.1904,6.3 5.4,7.5096 5.4,9 L5.4,9 Z" id="Fill-3" fill="#FFFFFF"></path>
+                <polyline id="Stroke-4" stroke="#FFFFFF" stroke-width="2" points="13.5 2.7 2.7 9 13.5 15.3"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

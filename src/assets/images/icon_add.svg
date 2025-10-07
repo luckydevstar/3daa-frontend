@@ -1,0 +1,19 @@
+<svg id="Group_3" data-name="Group 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #875ba9;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <circle id="Oval" class="cls-1" cx="19.5" cy="19.5" r="19.5"/>
+  <g id="Icon_5_Copy" data-name="Icon 5 Copy" transform="translate(19.607 9) rotate(45)">
+    <path id="Shape" class="cls-2" d="M13.992,13.991a.943.943,0,0,1-1.331,0L7.134,8.463,1.607,13.991A.941.941,0,1,1,.275,12.66L5.8,7.133.275,1.6A.941.941,0,0,1,1.607.275L7.134,5.8,12.661.275A.941.941,0,0,1,13.992,1.6L8.464,7.133l5.528,5.528A.941.941,0,0,1,13.992,13.991Z"/>
+  </g>
+</svg>

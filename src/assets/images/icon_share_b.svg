@@ -1,0 +1,20 @@
+<svg id="Share_Icon_Copy_5" data-name="Share Icon Copy 5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.2 18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #505759;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #505759;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <path id="Fill_1" data-name="Fill 1" class="cls-1" d="M5.4,2.7A2.7,2.7,0,1,1,2.7,0,2.7,2.7,0,0,1,5.4,2.7Z" transform="translate(10.8)"/>
+  <path id="Fill_2" data-name="Fill 2" class="cls-1" d="M5.4,2.7A2.7,2.7,0,1,1,2.7,0,2.7,2.7,0,0,1,5.4,2.7Z" transform="translate(10.8 12.6)"/>
+  <path id="Fill_3" data-name="Fill 3" class="cls-1" d="M5.4,2.7A2.7,2.7,0,1,1,2.7,0,2.7,2.7,0,0,1,5.4,2.7Z" transform="translate(0 6.3)"/>
+  <path id="Stroke_4" data-name="Stroke 4" class="cls-2" d="M10.8,0,0,6.3l10.8,6.3" transform="translate(2.7 2.7)"/>
+</svg>

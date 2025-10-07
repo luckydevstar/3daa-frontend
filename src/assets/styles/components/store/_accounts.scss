@@ -1,0 +1,172 @@
+.store.accounts {
+  // display: flex;
+  // flex-direction: column;
+  height: calc(100vh - 80px);
+  // overflow: hidden;
+
+  .account-section {
+    // padding: 13px 0;
+    background-color: white;
+
+    .store-account-container {
+      display: flex;
+    }
+
+    .detail-link {
+      font-size: 0.9rem;
+      text-decoration: underline;
+    }
+  }
+
+  .bg-white {
+    background: $white;
+  }
+
+  .flex {
+    flex: 1;
+  }
+
+  .border {
+    border-top: 1px solid $color-border-default;
+    border-bottom: 1px solid $color-border-default;
+  }
+
+  .w-230 {
+    width: 230px;
+    display: inline-block;
+    text-align: left;
+  }
+
+  .w-170 {
+    width: 170px;
+    display: inline-block;
+  }
+
+  .w-70 {
+    width: 70px;
+    display: inline-block;
+  }
+
+  .payment-method {
+    font-weight: bold;
+  }
+
+  .accounts-table {    
+    height: 100%;
+    overflow-y: auto;
+    min-width: 288px;
+    min-height: 500px;
+
+    &.is-detail {
+      box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    table {
+      width: 100%;
+      color: #3A3734;
+    }
+
+    .w-120 {
+      width: 120px;
+    }
+
+    tr {
+      border-left: 4px solid transparent;
+      height: 50px;
+      
+      &.selected {
+        border-left-color: $primary;
+        box-shadow: -10px 0 10px 0 $color-border-primary;
+        border-top: 1px solid $color-border-default;
+        border-bottom: 1px solid $color-border-default;
+        background: $color-background-default;
+      }
+
+      th {
+        padding: 15px 0;
+
+        &.th-badge {
+          width: '20%';
+          max-width: 100px;
+          min-width: 100px;
+        }
+        &.th-description {
+
+        }
+        &.th-level {
+          width: '15%';
+          max-width: 60px;
+          min-width: 60px;
+          text-align: center;
+        }
+        &.th-available {
+          width: '15%';
+          max-width: 60px;
+          min-width: 60px;
+          text-align: center;
+        }
+        &.th-action {
+          width: '15%';         
+          min-width: 100px;
+          text-align: center;
+          &.th-chat {
+            max-width: 80px;
+            min-width: 80px;
+            width: 80px;
+          }
+        }
+
+        &.th-order-number {
+          width: 25%;
+        }
+        &.th-date {
+          width: 30%;
+        }
+      }
+
+      td {
+        border-top: 1px solid $color-border-default;
+        vertical-align: middle;
+
+        &.td-description,
+        &.td-order-number,
+        &.td-date {
+          padding-right: 8px;
+        }
+
+        &.td-level {          
+          text-align: center;
+        }
+        &.td-available {          
+          text-align: center;
+        }
+        
+        &.td-action {
+          text-align: center;
+
+          button {
+            margin: 5px auto;
+            padding: 0 50px;
+          }
+        }
+
+        img {
+          height: 58px;
+        }
+      }      
+    }
+  }
+  .detail-column {
+    padding: 20px 10px 20px 20px;
+    min-width: 480px;    
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  @media (max-width: 1023px) {
+    
+    .store-account-container {      
+      flex-wrap: wrap;
+    }
+  }
+}

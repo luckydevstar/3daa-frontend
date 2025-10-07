@@ -1,0 +1,81 @@
+.test-certificate {
+    flex: 1;
+    display: flex;
+    padding: 40px 68px;
+    overflow: auto;
+    position: relative;
+
+    .certificate-body {
+        background: $white;
+        box-shadow: 0 0 10px 10px #e0e0e0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        min-height: 500px;
+
+        .bg {
+            height: 100%;
+        }
+
+        .centred {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .qualification-img {
+            top: 10%;
+            height: 20%;
+        }
+
+        .results {
+            top: 37%;
+            color: $primary;
+            font-size: 16px;
+        }
+
+        .congratulations {
+            top: 45%;
+            color: $primary;
+            font-size: 48px;
+        }
+
+        .welldone {
+            top: 65%;
+            color: $black;
+            font-size: 16px;
+            width: 280px;
+            text-align: center;
+        }
+
+        .result-link {
+            top: 77%;
+            font-size: 16px;
+        }
+
+        .instructions {
+            font-size: 14px;
+            top: 85%;
+            width: 280px;
+            text-align: center;
+        }
+
+        .sign {
+            position: absolute;
+            top: calc(83% - 110px);
+            left: 80%;
+            height: 100px;
+            transform: translateX(-50%);
+        }
+
+        .signee {
+            position: absolute;
+            top: 83%;
+            left: 80%;
+            width: 75px;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+}

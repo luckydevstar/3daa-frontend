@@ -1,0 +1,69 @@
+.chat-create {
+  padding: 40px 20px;
+  width: 100%;
+  overflow: auto;
+
+  .start-chat-section {
+    text-align: center;
+
+    h1 {
+      width: 268px;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 22px;
+    }
+
+    .button {
+      margin-top: 20px
+    }
+
+    .input {
+      width: 300px;
+    }
+  }
+
+  .chat-create-form {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .upload-avatar {
+    width: 100px;
+    height: 100px;
+    background: transparent url('../images/icon_community.svg') no-repeat center;
+    display: flex;
+    border: 1px;
+    border-style: dashed;
+    border-radius: 50%;
+    padding: 0;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  .photo {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+    margin-bottom: 5px;
+    .media-left {
+      display: inline-block;
+      .image {
+        width: 90px;
+        height: 90px;
+        border: 1px;
+        border-style: dashed;
+        border-radius: 50%;
+        padding: 0;
+      }
+      &+figure.photo__default {
+        display: none;
+      }
+    }
+  }
+
+  .fileUploader {
+    margin-left: 15px;
+  }
+}

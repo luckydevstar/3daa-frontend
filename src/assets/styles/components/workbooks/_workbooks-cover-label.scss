@@ -1,0 +1,23 @@
+.workbooks-cover-label {
+  background-color: $white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &-logo {
+    background-image: url($logo-path);
+    height: 28px;
+    // width: 39px;
+  }
+
+  &-title {
+    color: $primary;
+    font-size: 8px;
+    margin: 0;
+  }
+
+  &-description {
+    font-size: 8px;
+  }
+}

@@ -1,0 +1,72 @@
+.social-login {
+	margin: 50px 0;
+	text-align: center;
+
+	.column {
+		height: 50px;
+		padding: 0;
+		text-align: left;
+		margin: 5px 10px;
+		color: white;
+		border-radius: 5px;
+		// margin: 12px;
+		background-size: 30px 30px;
+		background-position: 15px center;
+	 }
+	 
+	p {
+		padding: 15px 0 0 40px;
+	}
+
+	button {
+		font-size: 1em;
+	}
+
+	.google {
+		@include image('social/google.png');
+		background-color: $color-social-google;
+		width: 100% !important;
+		height: 50px !important;
+		background-size: 30px 30px;
+		background-position: 15px center;
+		color: white;
+		border: none;
+		border-radius: 3px;
+		padding-left: 55px;
+		user-select: none;
+		cursor: pointer;
+	}
+
+	.twitter {
+		@include image('social/twitter.png');
+		background-color: $color-social-twitter;
+		width: 100% !important;
+		height: 50px !important;
+		background-size: 30px 30px;
+		background-position: 15px center;
+		color: white;
+		border: none;
+		border-radius: 3px;
+		padding-left: 55px;
+		user-select: none;
+		cursor: pointer;
+		svg {
+			display: none;
+		}
+	}
+
+	.facebook {
+		@include image('social/facebook.png');
+		background-color: $color-social-facebook;
+		width: 100% !important;
+		height: 50px !important;
+		background-size: 30px 30px;
+		background-position: 15px center;
+		color: white;
+		border: none;
+		border-radius: 3px;
+		padding-left: 49px;
+		user-select: none;
+		cursor: pointer;
+	}
+}

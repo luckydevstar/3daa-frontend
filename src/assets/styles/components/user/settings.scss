@@ -1,0 +1,95 @@
+.settings-container {
+  text-align: center;
+
+  section {
+    background-color: $color-background-default;
+  }
+
+  .container {
+    max-width: 685px;
+  }
+
+  .shrink {
+    margin: auto;
+    max-width: 450px;
+    .control {
+      text-align: left;
+    }
+  }
+
+  .photo {
+    img, figure {
+      border: 10px solid $color-border-default;
+      border-radius: 50%;
+      display: inline-block;
+      width: 110px;
+      height: 110px;
+    }
+    &__default {
+      margin-right: 10px;
+      width: 90px;
+      height: 90px;
+      background-color: $grey-light;
+      .image {
+        width: 60px;
+        height: 80px;
+        margin: 0 auto;
+        margin-top: 5px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+      }
+    }
+
+    .media-left {
+      display: inline-block;
+      .image {
+        width: 90px;
+        height: 90px;
+        background-position: center, center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      &+figure.photo__default {
+        display: none;
+      }
+    }
+  }
+
+  // input:not([value=""]), select {
+  //   background-color: $grey-lighte;
+  //   color: $grey;
+  // }
+
+  .custom.radio {
+    .ui, input:checked + .ui{
+      background:$white;
+    }
+  }
+
+
+  input {
+    &[name="email"],
+    &[name="facebook"],
+    &[name="twitter"],
+    &[name="pinterest"],
+    &[name="linkedin"] {
+      width: 100%;
+    }
+    &[name="uk_mobile_number"] {
+      width: 100%;
+    }
+  }
+
+  .fileUploader {
+    display: inline-block;
+
+    .button{
+      margin-top: -20px;
+      line-height: normal;
+      padding: 0 10px;
+      height: 32px;
+    }
+  }
+
+}

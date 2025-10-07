@@ -1,0 +1,26 @@
+.pairing-sub-category-search {
+    background-color: #2F2F2F;
+    height: 80px;
+    padding: 18px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input {
+        width: 45%;
+        height: 100%;
+        border-radius: 25px;
+        border: none;
+        margin-right: 30px;
+        padding-left: 35px;
+        font-family: 'Open Sans Light';
+        font-size: 14px;
+    }
+    button {
+        width: 20%;
+        font-family: 'Open Sans Semibold';
+        font-size: 14px;
+        background-color: #4A4A4A;
+        color: #a9aeb1;
+        border: none;
+    }
+}

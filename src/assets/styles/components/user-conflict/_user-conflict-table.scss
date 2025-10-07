@@ -1,0 +1,84 @@
+.user-conflict__total {
+  color: #5D9BE7;
+  padding: 60px 0 20px 15px;
+  font-size: 18px;
+}
+.user-conflict__table {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  table {
+    width: 100%;
+    thead {
+      background-color: rgba(70, 154, 181, 0.13);
+      box-shadow: 0 0 1px 0 #cbcbcb;
+      border-radius: 3px;
+      th {
+        border-right: 1px solid rgba(151, 151, 151, 0.3);
+        padding-left: 10px;
+        padding-right: 10px;
+        cursor: pointer;
+        &:first-child {
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+        }
+        &:last-child {
+          border-right: none;
+          border-top-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+        }
+        div {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 18px 0;
+        }
+      }
+    }
+    tbody {
+      tr {
+        border-left: 4px solid transparent;
+        transition: all 0.2s;
+        position: relative;
+        &.active {
+          border-left: 4px solid #003057;
+          background-color: #D5EAE4;
+          z-index: 11;
+        }
+        td {
+          padding: 26px 0;
+          &:last-child {
+            .user-conflict__table__td-inner {
+              border-right: none;
+            }
+          }
+          .user-conflict__table__td-inner {
+            min-height: 40px;
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-right: 1px solid rgba(151, 151, 151, 0.3);
+          
+            &--delete {
+              cursor: pointer;
+              img {
+                width: 25px;
+              }
+            }
+            &--centered {
+              justify-content: center;
+            }
+          }
+          .user-conflict__table__td-inner-edit {
+            cursor: pointer;
+            img {
+              width: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

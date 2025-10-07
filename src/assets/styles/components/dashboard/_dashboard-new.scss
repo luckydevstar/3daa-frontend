@@ -1,0 +1,1041 @@
+.dashboard-new-container {
+    width: 100%;
+    height: 100%;
+    .b {
+        font-family: $family-primary-Semibold;
+    }
+    .dashboard {
+        background-color: $color-background-default;
+
+        .dashboard-header {
+            position: relative;
+            .dashboard-header__banner__media {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+            .header-content {
+                position: relative;
+                min-height: 420px;
+                background-color: $color-background-secondary;
+
+                .dashboard-video {
+                    // background-image: url($bg-dashboard-learner);
+                    background-position: bottom;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 100%;
+                    height: 100%;
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    margin: auto;
+                    overflow: hidden;
+                    video {
+                        width: 100%;
+                        height: auto;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                      }
+                }
+            }
+            .sub-navbar {
+                z-index: 10;
+                height: 45px;
+                box-shadow: 0 0 10px 0 rgba(189, 189, 189, 0.6);
+            }
+            .qualification-container {
+                position: absolute;
+                bottom: 0; left: 0;
+                width: 100%;
+                height: 375px;
+                overflow: hidden;
+
+                .user-info {
+                    position: absolute;
+                    top: 0;
+                    padding: 30px;
+                    max-width: 550px;
+                    .name {
+                        font-size: 2.5rem;
+                        font-weight: 500;
+                        color: $primary;
+                        font-family: $family-primary-Semibold;
+                    }
+                    .desc {
+                        font-size: 1.2em;
+                        font-weight: 500;
+                        color: black;
+                    }
+                }
+
+                .qualification-wrapper {
+                    position: relative;
+                    display: flex;
+                    transition-duration: 0.5s;
+                    height: 100%;
+
+                    .circle {
+                        position: absolute;
+                        box-shadow: 0px 0px 45px 2px rgba(214,214,214,0.7);
+                        border-radius: 100%;
+                        background-color: white;
+                        overflow: hidden;
+                    }
+
+                    .qualification-progress-view {
+                        position: relative;
+                        height: 100%;
+
+                        .centre-info {
+                            line-height: 120px;
+                            text-align: center;
+                            .group-q {
+                                line-height: 1.5;
+                                width: 400px;
+                                display: inline-block;
+                                color: black;
+                            }
+                        }
+                        .left-qualification {
+                            bottom: 5px;
+                            left: 50px;
+                            width: 160px;
+                            height: 160px;
+
+                            .infos {
+                                position: absolute;
+                                width: 100%;
+                                top: 16%;
+                                text-align: center;
+
+                                div {
+                                    font-size: 0.9rem;
+                                    color: rgba($black, 0.6);
+                                    &:first-child {
+                                        color: rgba($black, 0.8);
+                                    }
+                                    &:last-child {
+                                        font-size: 0.8rem;
+                                    }
+                                }
+                            }
+
+                            h2 {
+                                font-family: $family-primary;
+                                font-size: 2.2em;
+                                line-height: 1.7;
+                                margin-left: 5px;
+                                color: $primary;
+                            }
+                        }
+                        .centre-qualification {
+                            top: 75px;
+                            left: 600px;
+                            width: 209px;
+                            height: 209px;
+
+                            .infos {
+                                position: absolute;
+                                width: 100%;
+                                top: 20px;
+                                text-align: center;
+                                div {
+                                    font-size: 1.1rem;
+                                    color: rgba($black, 0.4);
+                                    &:last-child {
+                                        font-size: 0.8rem;
+                                    }
+                                }
+                                .complete {
+                                    font-size: 0.7rem;
+                                    color: rgba($black, 0.6);
+                                }
+                                .hours {
+                                    margin-top: 10px;
+                                }
+                            }
+
+                            h1 {
+                                font-family: $family-primary-Semibold;
+                                font-size: 4rem;
+                                font-weight: 700;
+                                line-height: 1.3;
+                                margin-left: 20px;
+                                color: black;
+                            }
+
+                            .qualification {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                img {
+                                    width: 200px; height: 200px;
+                                    margin: 37.5px;
+                                }
+                            }
+                        }
+                        .right-qualification {
+                            bottom: 5px;
+                            right: 50px;
+                            width: 160px;
+                            height: 160px;
+
+                            .infos {
+                                position: absolute;
+                                width: 100%;
+                                top: 16%;
+                                text-align: center;
+
+                                div {
+                                    font-size: 0.9rem;
+                                    color: rgba($black, 0.6);
+                                    &:first-child {
+                                        color: rgba($black, 0.8);
+                                    }
+                                    &:last-child {
+                                        font-size: 0.8rem;
+                                    }
+                                }
+                            }
+
+                            h2 {
+                                font-family: $family-primary;
+                                font-size: 2.2em;
+                                line-height: 1.7;
+                                margin-left: 5px;
+                                color: $primary;
+                            }
+                        }
+
+                        .add-qualification-button {
+                            position: absolute;
+                            top: 125px;
+                            right: 50px;
+                            width: 80px;
+                            font-size: 0.7rem;
+                            line-height: 5px;
+                            text-align: center;
+                            color: $primary;
+                            cursor: pointer;
+                            z-index: 1;
+                            p {
+                                line-height: 1.1;
+                                padding-bottom: 10px;
+                            }
+                            .isvg {
+                                .primary {
+                                    stroke: $primary !important;
+                                }
+                            }
+                        }
+                    }
+                    .qualification-add-view {
+                        position: relative;
+                        height: 100%;
+                        overflow: hidden;
+
+                        .left-qualification {
+                            bottom: 5px;
+                            left: 50px;
+                            width: 160px;
+                            height: 160px;
+
+                            .infos {
+                                position: absolute;
+                                width: 100%;
+                                top: 17%;
+                                text-align: center;
+                                line-height: 2;
+                            }
+
+                            .qualification {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                img {
+                                    width: 140px; height: 140px;
+                                    margin: 30px;
+                                }
+                            }
+                        }
+
+                        .qualifications {
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            text-align: center;
+
+                            .q-title {
+                                width: 100%;
+                                height: 100px;
+                                padding: 10px;
+                                color: $primary;
+                                font-size: 1.2em;
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex-end;
+                            }
+                            .q-badge {
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex-end;
+                                img {
+                                    width: 100px;
+                                }
+                            }
+                            .button {
+                                display: flex;
+                                margin: 12px auto;
+                                font-size: 1.1em;
+                            }
+                            .q-price {
+                                width: 100%;
+                                color: $purple;
+                                font-size: 1.1rem;
+                            }
+                        }
+
+                        .close-qualification-button {
+                            position: absolute;
+                            top: 125px;
+                            left: 50px;
+                            width: 80px;
+                            font-size: 0.7rem;
+                            line-height: 5px;
+                            text-align: center;
+                            color: $primary;
+                            cursor: pointer;
+                            p {
+                                line-height: 1.1;
+                                padding-bottom: 10px;
+                            }
+                            .isvg {
+                                .primary {
+                                    stroke: $primary !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .dashboard-contents {
+            background-color: $white;
+            padding-bottom: 20px;
+
+            // .container {
+            //     max-width: 1200px;
+            // }
+
+            .columns {
+                flex-wrap: wrap;
+                display: flex;
+            }
+
+            .dashboad-screen-side-left {
+                width: 30%;
+            }
+
+            .dashboad-screen-side {
+                width: 20%;
+            }
+
+            .dashboad-screen-center {
+                width: 50%;
+            }
+
+            @media only screen and (max-width: 978px) {
+                .dashboad-screen-side-left {
+                    width: 40%;
+                }
+    
+                .dashboad-screen-center {
+                    width: 60%;
+                }   
+                
+                .dashboad-screen-side {
+                    width: 40%;
+                }
+
+                .dashboad-sceen-store {
+                    width: 60%;
+                }
+            
+            }
+
+            .content-title {
+                color: rgba($black-bis, 0.8);
+                font-size: 1rem;
+                padding: 10px 0 20px 0;
+                display: flex;
+                justify-content: space-between;
+                .buttons {
+                    color: $color-text-default;
+                    font-size: 0.8rem;
+                    cursor: pointer;
+                    &.close {
+                        color: $primary;
+                    }
+                }
+            }
+
+            .workbook-card {
+                width: 100%;
+                height: 430px;
+                padding: 15px;
+                box-shadow: 0 0 14px 1px rgba(189, 189, 189, 0.6);
+
+                .wb-title {
+                    width: 100%;
+                    color: $primary;
+                    font-size: 1.1em;
+                    padding-bottom: 10px;
+                }
+                .wb-option {
+                    width: 100%;
+                    display: flex;
+                    p {
+                       font-size: 0.8em;
+                       &:last-child {
+                           padding-left: 10px;
+                       }
+                    }
+                }
+                
+                .workbooks {
+                    position: relative;
+                    text-align: center;
+                    height: 230px;
+                    padding: 0;
+                    img {
+                        height: 230px;
+                        width: 100%;
+                        padding: 0 10px;
+                        object-fit: cover;
+                        object-position: top;
+                    }
+                    .progress-badge {
+                        position: absolute;
+                        bottom: -30px;
+                        left: calc(50% - 30px);
+                        border-radius: 100%;
+                        background-color: $white;
+                        padding: 3px;
+                        box-shadow: 0 0 5px 0 rgba(189, 189, 189, 0.6);
+                        
+                        .progress-number {
+                            color: $black-bis !important;
+                            font-size: 1em;
+                        }
+                    }                    
+                }
+
+                .workbook-desc {
+                    height: 235px;
+                    padding: 0;
+                    // .wb-desc {
+                    //     color: rgba($black-bis, 0.8);
+                    //     font-size: 0.9em;
+                    //     line-height: 1.5;
+                    //     word-break: break-all;
+                    //     text-overflow: ellipsis;
+                    // }
+                    /* styles for '...' */ 
+                    .wb-desc {
+                        overflow: hidden;
+                        position: relative; 
+                        /* use this value to count block height */
+                        font-size: 0.9em;
+                        line-height: 1.5em;
+                        /* max-height = line-height (1.2) * lines max number (3) */
+                        height: 235px;
+                        
+                        /* */
+                        margin-right: -1em;
+                        padding-right: 1em;
+                    }
+                    // .wb-desc:before {
+                    //     /* points in the end */
+                    //     content: '...';
+                    //     /* absolute position */
+                    //     position: absolute;
+                    //     /* set position to right bottom corner of block */
+                    //     right: 0;
+                    //     bottom: 0;
+                    // }
+                    // .wb-desc:after {
+                    //     /* points in the end */
+                    //     content: '';
+                    //     /* absolute position */
+                    //     position: absolute;
+                    //     /* set position to right bottom corner of text */
+                    //     right: 0;
+                    //     width: 1em;
+                    //     /* set width and height */
+                    //     height: 100%;
+                    //     margin-top: 0.2em;
+                    //     background: white;
+                    // }
+                }
+
+                // .workbook-desc {
+                //     height: 265px;
+                //     overflow: hidden;
+                // }
+                
+                // .wb-desc {
+                //     color: $black-bis;
+                //     padding: 20px 0 0 0;
+                //     line-height: 25px;
+                // }
+
+                .buttons {
+                    padding-top: 30px;
+                    text-align: center;
+                    .button {
+                        width: 100%;
+                        font-size: 1em;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .your-progress {
+                display: flex;
+                flex-direction: column;
+                background-color: rgba($white-more, 0.2);
+                box-shadow: 0 0 14px 1px rgba(189, 189, 189, 0.6);
+                overflow-y: auto;
+                height: 430px;
+                .progress-list {
+                    display: flex;                 
+                    width: 100%;
+                    height: 85px;
+                    cursor: pointer;
+                    flex: none;
+
+                    .inner {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        height: 55px;
+                        margin: 15px 15px 15px 30px;
+                        .info {
+                            display: flex;
+                            flex-direction: column;
+                            .progress-title {
+                                // padding-top: 10px;
+                                color: $black-bis;
+                                font-size: 1em;
+                            }
+                            .progress-values {
+                                font-size: 1em;
+                                padding-top: 5px;
+                                span {
+                                    padding-right: 15px;
+                                }
+                            }
+                        }
+                        .badge {
+                            display: flex;
+                            position: relative;
+                            height: 56px;
+                            background-color: white;
+                            border-radius: 100%;
+                            padding: 3px;
+                            box-shadow: 0 0 5px 0 rgba(189, 189, 189, 0.6);
+                            .progress-number {
+                                color: $primary !important;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        background-color: $color-background-default;
+                    }
+                    &.active {
+                        border-left: 5px solid $primary;
+                        background-color: rgba($primary, 0.1);
+                    }
+                    &.completed {
+                        .progress-title, .progress-values {
+                            color: $color-text-default !important;
+                        }
+                    }
+                }
+            }
+
+            .cohorts {
+              display: flex;
+              flex-direction: column;
+              background-color: rgba($white-more, 0.2);
+              box-shadow: 0 0 14px 1px rgba(189, 189, 189, 0.6);
+              overflow-y: auto;
+              height: 430px;
+              padding: 15px;
+
+              .progress-list {
+                  display: flex;                 
+                  width: 100%;
+                  height: 85px;
+                  cursor: pointer;
+                  flex: none;
+                  border-bottom: 1px solid $color-border-default;
+
+                  .inner {
+                      display: flex;                      
+                      width: 100%;
+                      height: 75px;
+                      margin: 10px 15px;                      
+
+                      .badge {
+                        display: flex;
+                        position: relative;
+                        height: 56px;
+                        background-color: white;
+                        border-radius: 100%;
+                        padding: 3px;
+                        box-shadow: 0 0 5px 0 rgba(189, 189, 189, 0.6);
+                        .progress-number {
+                            color: $primary !important;
+                        }
+                      }
+                      
+                      .students {
+                        display: flex;
+                        max-width: 55px;
+                        width: 55px;
+                        min-width: 55px;
+                        justify-content: center;
+                        margin: 5px 10px;
+                        color: black;
+                      }
+                      .course {
+                        margin: 5px;
+                        color: black;
+                      }                      
+                  }
+
+                  &:hover {
+                      background-color: $color-background-default;
+                  }
+                  &.active {
+                      border-left: 5px solid $primary;                      
+                      box-shadow: 0 2px 0 0 rgba(189, 189, 189, 0.6);
+                  }
+                  &.completed {
+                      .progress-title, .progress-values {
+                          color: $color-text-default !important;
+                      }
+                  }
+              }
+            }
+
+            .student-progress {
+                display: flex;
+                flex-direction: column;
+                background-color: rgba($white-more, 0.2);
+                box-shadow: 0 0 14px 1px rgba(189, 189, 189, 0.6);
+                overflow-y: auto;
+                height: 430px;
+                padding: 5px;
+
+                .progress-list {
+                    display: flex;                 
+                    width: 100%;
+                    height: 75px;
+                    cursor: pointer;
+                    flex: none;
+                    background-color: #F9F9F9;
+                    margin: 1px 0;
+                    // border-bottom: 1px outset;
+
+                    .inner {
+                        display: flex;
+                        // justify-content: space-between;
+                        width: 100%;
+                        height: 55px;
+                        margin: 10px 8px;
+
+                        .user-badge {
+                            position: relative;
+                            min-width: 60px;
+
+                            .no-photo {
+                                position: absolute;
+                                left: 10px;
+                                top: 10px;
+                                width: 36px;
+                                height: 36px;
+
+                                svg {
+                                    width: 36px;
+                                    height: 36px;
+                                }
+                            }
+                        }
+
+                        .info {
+                            display: flex;
+                            flex-direction: column;
+                            margin: 0 5px;
+                            width: 100%;
+
+                            .progress-title {
+                                padding-top: 10px;
+                                color: $black-bis;
+                                font-size: 1em;
+                            }
+                            .progress-values {
+                                font-size: 1em;
+                                padding-top: 5px;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                span {
+                                    padding-right: 15px;
+                                }
+                            }
+                        }
+
+                        .person, .message, .oval {
+                            display: flex;                        
+                            justify-content: center;
+                            align-items: center;
+                            background: inherit;
+                            min-width: 50px;                        
+                            margin-bottom: 0;
+                        }
+
+                        .person, .message {
+                            border-right: 1px solid rgba(189, 189, 189, 0.6);
+                        }
+
+                        .oval {
+                            .custom.radio {
+                            margin-right: 0;
+                            margin-left: 10px;
+                            }
+                            .offline {
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 100px;
+                                background: $danger;
+                                display: inline-block;
+                                vertical-align: middle;
+                                position: relative;
+                                top: -1px;
+                            }
+                            .online {
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 100px;
+                                background: $success;
+                                display: inline-block;
+                                vertical-align: middle;
+                                position: relative;
+                                top: -1px;
+                            }
+                        }
+                    }
+
+                    &.completed {
+                        .progress-title, .progress-values {
+                            color: $color-text-default !important;
+                        }
+                    }
+                }
+            }
+
+            .latest-news {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 430px;
+                box-shadow: 0 0 14px 1px rgba(189, 189, 189, 0.6);
+
+                .news-media {
+                    height: 150px;
+                    img {
+                        width: 100%;
+                        height: 100%;                    
+                        object-fit: cover;
+                    }
+                }
+                .news-container {
+                    background: #f8f8f8;
+                    height: 280px;
+                    padding: 10px 20px;
+                    .news-title {
+                        font-size: 1em;
+                        font-weight: 500;
+                        padding: 10px 0;
+                    }
+                    // .news-content {
+                    //     color: rgba($black-bis, 0.8);
+                    //     font-size: 0.9em;
+                    //     line-height: 1.5;
+                    //     word-break: break-all;
+                        
+                    //     display: -webkit-box;
+                    //     -webkit-line-clamp: 3;
+                    //     -webkit-box-orient: vertical;
+                    //     max-width: 100px;
+                    //     overflow: hidden;
+                    //     text-overflow: ellipsis;
+                    //     height:56px /* fallback */
+                    // }
+                    /* styles for '...' */ 
+                    .news-content {
+                        overflow: hidden;
+                        position: relative; 
+                        /* use this value to count block height */
+                        font-size: 0.9em;
+                        line-height: 1.5em;
+                        /* max-height = line-height (1.2) * lines max number (3) */
+                        height: 162px;
+                        
+                        /* */
+                        margin-right: -0.8em;
+                        padding-right: 0.8em;
+                    }
+                    // .news-content:before {
+                    //     /* points in the end */
+                    //     content: '...';
+                    //     /* absolute position */
+                    //     position: absolute;
+                    //     /* set position to right bottom corner of block */
+                    //     right: 0;
+                    //     bottom: 0;
+                    // }
+                    // .news-content:after {
+                    //     /* points in the end */
+                    //     content: '';
+                    //     /* absolute position */
+                    //     position: absolute;
+                    //     /* set position to right bottom corner of text */
+                    //     right: 0;
+                    //     width: 1em;
+                    //     /* set width and height */
+                    //     height: 100%;
+                    //     margin-top: 0.2em;
+                    //     background: #f8f8f8;
+                    // }
+
+                    .news-links {
+                        padding: 10px 0;
+                        color: rgba($black-bis, 0.8);
+                        text-align: right;
+                        span {
+                            cursor: pointer;
+                        }
+                        .icon {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+
+            .recommended-video {
+                background-color: $color-background-default;
+                width: 100%;
+                height: 400px;
+                position: relative;
+                display: flex;
+                overflow: hidden;
+
+                .no-video {
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    align-items: center;
+                    p {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+
+                .columns {
+                    margin-top: 0;
+                    padding: 0 30px;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .column.is-8 {
+                  position: relative;
+                }
+                
+                .video {
+                  position: relative;
+                  cursor: pointer;
+
+                  &:hover {
+                    .play-arrow {
+                      opacity: 1;
+                    }
+                  }
+                }
+
+                .play-arrow {
+                  position: absolute;
+                  top: 45%;
+                  font-size: 3rem;
+                  color: $white;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 100%;
+                  opacity: 0;
+                  transition: .5s opacity;
+                }
+
+                .title {
+                    color: $primary;
+                    font-size: 1.2em;
+                }
+                .desc {
+                    font-size: 1em;
+                    color: $black-bis;
+                }
+                .btns {
+                    margin: 20px 0;
+                    text-align: center;
+                    .button {
+                        font-size: 1em;
+                    }
+                }
+            }
+
+            .your-learning-hours {
+                width: 100%;
+                // height: 400px;
+                padding: 15px;
+                box-shadow: 0 0 14px 1px rgba(189, 189, 189, 0.6);
+                
+                .chart-details {
+                    width: 100%;
+                    .total-hours {
+                        color: $black-bis;
+                    }
+                    .learning-hour {
+                        display: flex;
+                        flex-direction: column;
+                        .title {
+                            display: flex;
+                            justify-content: center;
+                            font-size: 0.9rem;
+                            font-weight: 500;
+                            margin-bottom: 10px;
+                        }
+                        .badge {
+                            display: flex;
+                            justify-content: center;
+                            .progress-badge-container {
+                                border-radius: 100%;
+                                box-shadow: 0 0 5px 0 rgba(189, 189, 189, 0.5);
+
+                                .progress-number {
+                                    display: none;
+                                }
+                                .progress-label {
+                                    font-size: 0.6rem;
+                                    color: $black-bis;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                    .chart-tab-container {
+                        justify-content: left;
+                        margin-left: 1px;
+                    }
+                    .chart-tab {
+                        display: flex;
+                        width: 250px;
+                        max-width: 250px;
+                        height: 50px;
+                        align-items: center;
+                        font-size: 1rem;
+
+                        .isvg {
+                            max-height: 30px;
+                        }
+
+                        .chart-tab-text {
+                            margin-left: 10px;
+                        }
+
+                        &.active {
+                            background: lighten($green, 10%);
+                            .isvg {
+                                svg {
+                                    g {
+                                        fill: white;
+                                    }
+                                }
+                            }
+
+                            .chart-tab-text {
+                                color: white;
+                            }
+                        }
+                    }
+
+                    .all-tab {
+                        color: rgba(0, 0, 255, 0.8);
+                        span {
+                            cursor: pointer;
+                        }
+                    }
+
+                    .active-learner {
+                        color: red;
+                    }
+                }
+
+                .chart {
+                    overflow: hidden;
+                    width: 100%;
+                    height: 270px;
+                    margin-top: 30px;
+                }
+            }
+
+            .transition {
+                transition: width .2s, height 0s;
+            }
+
+            .width-0 {
+                overflow: hidden;
+                width: 0;
+                height: 0;
+                padding: 0;
+                flex: none;
+            }
+            .width-100 {
+                width: 100%;
+            }
+        }
+    }
+
+    .footer {
+        background-color: $color-background-default;
+    }
+}

@@ -1,0 +1,177 @@
+.add-friends-modal .modal-content {
+	overflow: visible;
+}
+
+.community-modal-invite {
+  .title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 0px;
+    color: $primary;
+  }
+
+  .sub-title {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .query-label {
+    font-size: 16px;    
+  }
+
+  label {
+    color: $color-text-primary;
+  }
+  
+  .step2 {
+    &.create-file-section {
+      .section-title {
+        color: $primary;
+        font-size: 22px;
+      }
+
+      button {
+        font-size: 16px;
+      }
+    }
+    &.uploading-list-section {
+      background: lighten($grey-lighter, 10%);
+      text-align: center;
+
+      .section-title {
+        color: lighten($green, 10%);
+        font-size: 22px;
+      }
+
+      label {
+        font-size: 16px;
+      }
+    }
+
+    .description-2 {
+      color: $color-text-primary;
+      font-size: 16px;
+    }        
+  }
+
+  .community-list-view tbody td:first-of-type {
+    padding-left: 10px;
+  }
+
+  .added-items {
+    max-width: 450px;
+    margin: auto;
+    max-height: 180px;
+    overflow-y: auto;
+
+    .added-item {
+      display: inline-block;
+      padding: 5px;
+      background: $grey-lighter;
+      border: 2px;
+      min-width: 250px;
+      line-height: 1;
+  
+      .user-type {
+        color: $primary;
+      }
+      .email {
+        margin-right: 10px;
+      }
+    }
+  }  
+  
+  .selected-item {
+    color: $white;
+    background: $primary;
+    padding: 5px;
+  }
+
+  .back-btn {
+    font-size: $font-size-base-bigger;
+  }
+  
+  .skip-btn {
+    flex: none;
+    width: 64px;
+    height: 64px;
+    border: 1px solid $primary;
+    border-radius: 50px;
+    background: lighten($green, 10%);
+    text-align: center;
+    padding-top: 18px;
+    a {
+      color: $white;
+      font-size: $font-size-base-bigger;
+    }
+  }
+
+  .uploaded-result {
+    max-width: 260px;
+    margin: auto;
+    font-size: 24px;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid;
+    background: lighten($grey-lighter, 10%);
+  
+    p {
+      color: $primary;
+    }
+  
+    i {
+      position: absolute;
+      right: -25px;
+      bottom: 0px;
+    }
+  }
+
+  .tabs {
+    overflow-x: hidden;
+  }
+
+  .ui-component-check {
+    margin-top: 0px;
+  }
+
+  .control {
+    input[type=text] {
+      height: 36px;
+    }
+  }
+
+}
+
+.eqa-invitation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  .eqa-invitation-modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .eqa-invitation-modal-block {
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    text-align: center;
+    .modal-content__title {
+      font-size: 26px;
+      font-weight: 700;
+      color: black;
+    }
+    .modal-content__text {
+      margin: 20px 0;
+      font-weight: 600;
+    }
+  }
+}

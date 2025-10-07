@@ -1,0 +1,164 @@
+.modal {
+  z-index: 1021;
+  &.is-large .modal-content {
+    width: 100%; //NOTE - TEMP -- 22 may 2017. Still temp.
+    max-width: 920px;
+  }
+
+  &.is-medium .modal-content {
+    width: 100%; //NOTE - TEMP
+    max-width: 640px;
+    overflow: auto;
+  }
+
+  &.is-small .modal-content {
+    width: 100%; //NOTE - TEMP
+    max-width: 480px;
+  }
+
+  .tabs-search {
+    width: 280px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
+  }
+
+  .old-modal {
+    overflow-y: auto;
+  }
+}
+
+.list-modal {
+  .modal-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.list-modal-groups {
+  tbody {
+    display: block;
+    max-height: 400px;
+    overflow: scroll;
+  }
+  thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 30px;
+    padding-right: 30px;
+    transform: translate3d(0, 0, 0);
+    box-shadow: 0px -15px 18px -9px rgba($black,.1);
+    .button:first-child {
+      margin-right: 15px;
+    }
+  }
+}
+.users-table {
+  td, th {
+    padding: 15px 10px;
+  }
+  .wide {
+    width: 100px;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .group-avatar {
+    border: 10px solid $white;
+    border-radius: 50%;
+    background-color: $grey-light;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+  }
+
+  &-header {
+    background-color: $grey-lighter;
+    border-bottom: 2px solid $white;
+
+    th {
+      height: 50px;
+      vertical-align: middle;
+      &:last-child {
+        text-align: center;
+      }
+    }
+    th:last-child {
+      text-align: center;
+    }
+  }
+
+  &-row {
+    border-bottom: 2px solid $color-border-default;
+
+    &:hover {
+      background-color: $grey-lighter;
+      .icon-check {
+        opacity: 1;
+      }
+      .icon-workbook {
+        @include image('icon_workbooks_blue.svg');
+      }
+      span {
+        color: $blue;
+      }
+    }
+    .icon-workbook {
+      @include image('icon_workbooks.svg');
+      height: 20px;
+      width: 28px;
+      margin: 0 auto;
+    }
+
+    td {
+      vertical-align: middle;
+      height: 85px;
+      max-width: 150px;
+      &:first-child {
+        padding-left: 45px;
+      }
+      &:last-child {
+        text-align: center;
+        cursor: pointer;
+        min-width: 75px;
+      }
+      span {
+        display: block;
+        overflow: hidden;
+        transition: max-height .5s ease;
+        text-align: center;
+      }
+      &:nth-child(2) { //Screen name
+        font-size: 16px;
+        color: $blue;
+      }
+    }
+  }
+  .icon-check {
+    @include image('icon_tick_round_unfilled.svg');
+    opacity: .85;
+    cursor: pointer;
+    &.selected {
+      opacity: 1;
+      @include image('icon_tick_round_filled.svg');
+    }
+    &:hover  {
+      opacity: 1;
+    }
+    height: 24px;
+    width: 24px;
+    margin: 0 auto;
+  }
+}

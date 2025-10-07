@@ -1,0 +1,81 @@
+.workbook-landing-page-container {
+  .thumbnail {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .hero {
+    background-color: $color-background-secondary;
+    margin-bottom: 10px;
+    // background-image: url('../images/workbooks-builder-landing-page-bg-left.svg'), url('../images/workbooks-builder-landing-page-bg-right.svg');
+    // background-position: bottom left, top right;
+    // background-repeat: no-repeat;
+
+    .title {
+      color: $blue;
+      font-size: 50px;
+      text-align: center;
+    }
+
+    .subtitle {
+      color: $blue;
+      font-size: 16px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .button {
+      display: flex;
+      margin: auto;
+      width: 250px;
+    }
+  }
+
+  .description {
+    padding: 20px 0;
+    text-align: center;
+
+    .title {
+      color: $blue;
+      padding: 10px;
+    }
+
+    p {
+      color: $grey;
+      margin: 0 auto;
+      max-width: 450px;
+      padding: 10px;
+    }
+  }
+
+  .video-cards {
+    margin-bottom: 100px;
+    padding: 10px 0;
+
+    .video-card {
+      box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.3);
+      height: 350px;
+      position: relative;
+      cursor: pointer;
+
+      .thumbnail {
+        height: 100%;
+      }
+
+      .content {
+        background: $white;
+        bottom: 0;
+        padding: 40px 0;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+
+        h5 {
+          margin-bottom: 0;
+        }
+
+      }
+    }
+  }
+}

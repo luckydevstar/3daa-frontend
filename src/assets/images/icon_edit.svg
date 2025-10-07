@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.243 18.244">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #505759;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #505759;
+      }
+    </style>
+  </defs>
+  <g id="Rectangle_45_pencil_Copy_3" data-name="Rectangle 45 + pencil Copy 3" transform="translate(0.138 0.106)">
+    <g id="pencil" transform="translate(0.5 0.5)">
+      <path id="Stroke_1" data-name="Stroke 1" class="cls-1" d="M0,1.139.619.52a1.728,1.728,0,0,1,2.472,0,1.728,1.728,0,0,1,0,2.472l-.619.619" transform="translate(13.369 0.02)"/>
+      <path id="Stroke_2" data-name="Stroke 2" class="cls-1" d="M0,0,3.323,3.323" transform="translate(10.739 2.937)"/>
+      <path id="Stroke_3" data-name="Stroke 3" class="cls-1" d="M3.4,3.4,2.783.619,0,0" transform="translate(1.08 12.517)"/>
+      <path id="Stroke_4" data-name="Stroke 4" class="cls-1" d="M4.25,15.455,0,16.306l.852-4.25L12.9,0l3.4,3.4Z" transform="translate(0 0.694)"/>
+      <path id="Fill_5" data-name="Fill 5" class="cls-2" d="M2.7,2.164,0,2.7.54,0Z" transform="translate(0 14.295)"/>
+    </g>
+  </g>
+</svg>

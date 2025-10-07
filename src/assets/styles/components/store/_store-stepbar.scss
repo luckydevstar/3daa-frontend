@@ -1,0 +1,42 @@
+.store-stepbar {
+  background: $white;
+  border-top: 1px solid $color-border-default;
+  border-bottom: 1px solid $color-border-default;
+  padding: 0 30px;  
+
+  .ui-arrow-steps {
+    padding: 0;
+    // font-family: $family-primary-Semibold;
+    font-size: $font-size-base-bigger;
+
+    svg {
+      margin-left: 0;
+
+      text {
+        fill: $black;
+      }
+    }
+  }
+
+  .column {
+    padding: 0;
+  }
+  
+
+  .search {
+    @include image('icon_search_grey.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    border-left: 1px solid #dbdbdb;
+
+    input {
+      margin-left: 10px;
+      padding-left: 20px;
+      padding-right: 35px;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      color: #7a7a7a;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.register-other-uln {
+  width: 900px;
+  min-height: calc(100vh - 80px);
+  margin: 0 auto;
+  h1 {
+    width: 100%;
+    padding: 60px 0 30px 0;
+  }
+  h2 {
+    color: #043956;
+    margin-bottom: 20px;
+  }
+  .inputs-container {
+    padding-top: 50px;
+    width: 400px;
+    margin: 0 auto;
+    .register-other-uln__lastname {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+  }
+  hr {
+    width: 600px;
+    margin: 40px auto;
+  }
+  p {
+    text-align: left;
+    margin-top: 15px;
+    &.small-font {
+      font-size: 13px;
+    }
+  }
+}
