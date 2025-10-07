@@ -71,6 +71,7 @@ const Routes = store => {
     <Router history={syncHistoryWithStore(browserHistory, store)}>
       <Route path="/" component={Main}>
         <IndexRoute component={Home}></IndexRoute>
+
         {UserRoutes}
         {InfoRoutes}
         {/* Primary app routes (authenticated) */}
