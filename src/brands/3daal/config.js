@@ -1,26 +1,26 @@
 const config = {
-  // api: {
-  //   API_URL_PROD: 'http://api.testing.3darchitecturalacademy.com/api',
-  //   API_URL_TEST: 'http://api.testing.3darchitecturalacademy.com/api',
-  //   API_URL_DEV: 'http://api.testing.3darchitecturalacademy.com/api',
-  //   API_URL_STAGING: 'http://api.testing.3darchitecturalacademy.com/api',
-  // },
   api: {
-    API_URL_PROD: 'https://api.3daa.apppixies.local/api',
-    API_URL_TEST: 'https://api.3daa.apppixies.local/api',
-    API_URL_DEV: 'https://api.3daa.apppixies.local/api',
-    API_URL_STAGING: 'https://api.3daa.apppixies.local/api',
+    API_URL_PROD: 'http://api.testing.3darchitecturalacademy.com/api',
+    API_URL_TEST: 'http://api.testing.3darchitecturalacademy.com/api',
+    API_URL_DEV: 'http://api.testing.3darchitecturalacademy.com/api',
+    API_URL_STAGING: 'http://api.testing.3darchitecturalacademy.com/api',
   },
+  // api: {
+  //   API_URL_PROD: 'https://api.3daa.apppixies.local/api',
+  //   API_URL_TEST: 'https://api.3daa.apppixies.local/api',
+  //   API_URL_DEV: 'https://api.3daa.apppixies.local/api',
+  //   API_URL_STAGING: 'https://api.3daa.apppixies.local/api',
+  // },
   
-  PUSHER_APP_ID: '7412a8cd399899be1f03',
-  STRIPE_KEY: 'pk_test_evoVBj2oSJWld7GqdMhk3UzQ', //pk_test_AmDR6NAKbOpdoFUOB0oYdm5T
-  INTERCOM_APP_ID: 'q8u05dcb',
-  CLOUD_NAME: 'ncfe',
+  PUSHER_APP_ID: process.env.PUSHER_APP_ID,
+  STRIPE_KEY: process.env.STRIPE_KEY, //pk_test_AmDR6NAKbOpdoFUOB0oYdm5T
+  INTERCOM_APP_ID: process.env.INTERCOM_APP_ID,
+  CLOUD_NAME: process.env.CLOUD_NAME,
 
-  AWS_ACCESS_KEY_ID: 'AKIA6DARUYOM2K65VXC4',
-  AWS_SECRET_ACCESS_KEY: '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',
-  AWS_DEFAULT_REGION: 'eu-west-2',
-  AWS_BUCKET: '3daa-static',
+  AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID,
+  AWS_SECRET_ACCESS_KEY: process.env.AWS_SECRET_ACCESS_KEY,
+  AWS_DEFAULT_REGION: process.env.AWS_DEFAULT_REGION,
+  AWS_BUCKET: process.env.AWS_BUCKET,
 
   title: '3DAA APX',
   fulTitle: '3D Architectural Academy APX',
