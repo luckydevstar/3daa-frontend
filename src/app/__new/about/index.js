@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import HeroSmart from "./smart";
 import AboutCopy from "./copy";
 import CardShowcase from "./card";
 import heroBg from "images/new/about/background.jpg"; 
 
 const About = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="min-h-screen">
       {/* HERO with overlayed photo + S.M.A.R.T */}
@@ -31,7 +33,7 @@ const About = () => {
 
       {/* CARD showcase sits on white like your screenshot */}
       <div className="-mt-[230px]">
-        <CardShowcase />
+        <CardShowcase onOpen={() => setOpen(true)}/>
       </div>
     </div>
   );
