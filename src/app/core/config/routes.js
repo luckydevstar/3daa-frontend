@@ -37,6 +37,8 @@ import development from 'app/under-development';
 
 import Main from '../containers/main/main';
 import Home from '../../__new/home/index';
+import Contact from '../../__new/contact/index';
+import About from '../../__new/about/index';
 
 /**
  * Extract module routes
@@ -71,6 +73,8 @@ const Routes = store => {
     <Router history={syncHistoryWithStore(browserHistory, store)}>
       <Route path="/" component={Main}>
         <IndexRoute component={Home}></IndexRoute>
+        <Route path="contact" component={Contact} />
+        <Route path="about" component={About} />
 
         {UserRoutes}
         {InfoRoutes}
