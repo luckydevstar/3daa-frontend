@@ -263,20 +263,20 @@ class AppHeader extends React.Component {
     } else if (userStatus === 'INVALID_USER') {
       headerTemplate = (
         <div className="is-hidden-mobile">
-          <div className="flex items-center px-4 gap-8 justify-center absolute right-1/2 transform translate-x-1/2 top-10 -translate-y-1/2">
-            <Link to="#" className="text-lg !font-bold !text-black">
+          <div className="flex items-center font-2 px md:font-4 px-4 gap-8 justify-center absolute right-1/2 transform translate-x-1/2 top-10 -translate-y-1/2">
+            <Link to="#" className="!font-bold !text-black">
               Shop
             </Link>
-            <Link to="#" className="text-lg !font-bold !text-black">
+            <Link to="#" className="!font-bold !text-black">
               Jobs
             </Link>
-            <Link to="#" className="text-lg !font-bold !text-black">
+            <Link to="#" className="!font-bold !text-black">
               About
             </Link>
-            <Link to="#" className="text-lg !font-bold !text-black">
+            <Link to="#" className="!font-bold !text-black">
               Online Training
             </Link>
-            <Link to="#" className="text-lg !font-bold !text-black">
+            <Link to="#" className="!font-bold !text-black">
               Contact
             </Link>
           </div>
@@ -359,12 +359,18 @@ class AppHeader extends React.Component {
                     <Text iKey="sign_out" />
                   </Link>
                 ) : (
-                  <Link to="/login">
-                    <div className="icon">
-                      <i className="fa fa-sign-in" />
-                    </div>
-                    <Text iKey="sign_in" />
-                  </Link>
+                  <div>
+                    <Link to="/login">
+                      <div className="icon">
+                        <i className="fa fa-sign-in" />
+                      </div>
+                      <Text iKey="sign_in" />
+                    </Link>
+                    <div className='mt-2 cusor'>Store</div>
+                    <div className='mt-2 cusor'>Contact</div>
+                    <div className='mt-2 cusor'>Job</div>
+                    <div className='mt-2 cusor'>About</div>
+                  </div>
                 )}
               </div>
             </div>

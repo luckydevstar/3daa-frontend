@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactHero = () => {
   return (
-    <div className="max-w-[460px] text-white mt-20" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+    <div className="max-w-[460px] text-white mt-0 md:mt-20 " style={{ fontFamily: 'Montserrat, sans-serif' }}>
       <h1 className="mb-6 text-white text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
         Contact us
       </h1>
