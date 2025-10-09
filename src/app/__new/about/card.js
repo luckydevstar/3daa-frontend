@@ -124,8 +124,6 @@ const CardShowcase = ({}) => {
                 >
                   Become a member
                 </button>
-
-                
               </div>
             </div>
           </div>
