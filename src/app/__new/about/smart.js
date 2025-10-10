@@ -15,7 +15,7 @@ const Dot = () => (
   <div
     aria-hidden
     className="mx-1 sm:mx-1.5 lg:mx-2 text-white leading-none
-               text-[44px] sm:text-[66px] lg:text-[88px] mt-20"
+               text-[34px] sm:text-[61px] lg:text-[88px] mt-20"
   >
     •
   </div>
@@ -26,7 +26,7 @@ const Unit = ({ letter, caption }) => (
     className="
       flex flex-col items-center justify-start select-none
       h-[200px] sm:h-[240px] lg:h-[280px]
-      w-[50px] sm:w-[98px] lg:w-[112px]
+      w-[30px] sm:w-[98px] lg:w-[112px]
     "
   >
     {/* Letter box with fixed height so all captions line up */}
@@ -35,14 +35,14 @@ const Unit = ({ letter, caption }) => (
       <span
         className="
           text-white font-extrabold leading-none tracking-[0.01em]
-          text-[84px] sm:text-[112px] lg:text-[132px]
+          text-[55px] sm:text-[112px] lg:text-[132px]
         "
       >
         {letter}
       </span>
     </div>
 
-    <div className="mt-2 text-[10px] sm:text-[11px] lg:text-[12px] font-semibold text-black/85 text-center">
+    <div className="mt-2 text-[7px] sm:text-[11px] lg:text-[12px] font-semibold text-black/85 text-center">
       {caption}
     </div>
   </div>

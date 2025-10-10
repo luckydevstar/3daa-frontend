@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutCopy = () => {
   return (
-    <div className="text-white relative isolate">
+    <div className="text-white relative isolate text-center sm:text-left">
       <h2 className="text-4xl text-white lg:text-5xl font-bold mb-6">About 3DAA</h2>
 
       <div className="space-y-5 text-blue-50 text-lg leading-7 max-w-3xl" style={{fontFamily: "Montserrat"}}>
