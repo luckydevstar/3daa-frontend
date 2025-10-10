@@ -3,36 +3,51 @@ import JoinBackground from 'images/new/home/join-background.jpg';
 
 const Join3DAA = () => {
   // Works whether your app scrolls the window or an inner wrapper
+  // drop-in replacement (plain JS, Node 12 friendly)
   const scrollToTop = () => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined' || typeof document === 'undefined')
+      return;
 
-    const behavior = { top: 0, behavior: 'smooth' };
+    // Collect possible scroll containers (document + common wrappers)
+    var root1 = document.scrollingElement || document.documentElement;
+    var root2 = document.body;
+    var extras = Array.prototype.slice.call(
+      document.querySelectorAll(
+        '[data-scroll-container], .overflow-y-auto, .overflow-auto, main'
+      )
+    );
 
-    // 1) Try the window
-    window.scrollTo(behavior);
+    // Animation (no 'behavior: smooth' - works everywhere)
+    var start = null;
+    var startPos = Math.max(
+      (root1 && root1.scrollTop) || 0,
+      (root2 && root2.scrollTop) || 0,
+      extras.reduce(function(m, el) {
+        return Math.max(m, el.scrollTop || 0);
+      }, 0)
+    );
+    if (startPos === 0) return;
 
-    // 2) Try common roots
-    if (
-      document &&
-      document.documentElement &&
-      document.documentElement.scrollTo
-    ) {
-      document.documentElement.scrollTo(behavior);
+    var duration = 400; // ms
+    function easeOutCubic(t) {
+      return 1 - Math.pow(1 - t, 3);
     }
-    if (document && document.body && document.body.scrollTo) {
-      document.body.scrollTo(behavior);
+
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / duration, 1);
+      var y = Math.round(startPos * (1 - easeOutCubic(p)));
+
+      if (root1) root1.scrollTop = y;
+      if (root2) root2.scrollTop = y;
+      extras.forEach(function(el) {
+        if (el) el.scrollTop = y;
+      });
+
+      if (p < 1) requestAnimationFrame(step);
     }
 
-    // 3) If your layout uses a scrollable wrapper, try those too
-    var scrollEl =
-      document.querySelector('[data-scroll-container]') ||
-      document.querySelector('.overflow-y-auto') ||
-      document.querySelector('.overflow-auto') ||
-      document.querySelector('main');
-
-    if (scrollEl && scrollEl.scrollTo) {
-      scrollEl.scrollTo(behavior);
-    }
+    requestAnimationFrame(step);
   };
 
   return (
@@ -48,13 +63,13 @@ const Join3DAA = () => {
       {/* Content Container */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-6xl px-8 md:px-16">
         {/* LEFT — Headline */}
-        <div className="text-[#488AFF] font-bold text-5xl leading-tight md:w-1/2 mb-12 md:mb-0">
+        <div className="text-[#488AFF] font-bold text-5xl leading-tight md:w-1/2 mb-12 md:mb-0 mt-12 md:mt-0">
           <h1
             style={{
               fontFamily: '"Montserrat", sans-serif',
-              fontWeight: '700',
-              fontSize: '60px'
+              fontWeight: '600'
             }}
+            className="text-center md:text-left text-3xl sm:text-4xl md:text-6xl"
           >
             Join the
             <br />
@@ -67,7 +82,7 @@ const Join3DAA = () => {
         {/* RIGHT — Card */}
         <div className="bg-white rounded-2xl shadow-md p-8 md:p-10 w-full md:w-[400px]">
           {/* Logo + Heading */}
-          <div className="flex flex-col items-center mb-5 text-black">
+          <div className="flex flex-col items-center mb-5 text-black ">
             <div className="bg-[#488AFF] text-white font-bold px-2 py-1 rounded-md text-sm">
               3D
             </div>
@@ -192,7 +207,8 @@ const Join3DAA = () => {
       {/* Scroll-up button (works even with inner scroll wrappers) */}
       <button
         onClick={scrollToTop}
-        className="absolute top-6 left-1/2 -translate-x-1/2 z-20 bg-[#488AFF] text-white p-2 rounded-full shadow-md hover:bg-blue-600 transition"
+        type="button"
+        className="absolute top-3 md:top-6 left-1/2 -translate-x-1/2 z-20 bg-[#488AFF] text-white p-2 rounded-full shadow-md hover:bg-blue-600 transition"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

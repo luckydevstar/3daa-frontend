@@ -8,7 +8,7 @@ const CheckCard = () => {
     >
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 px-6 items-center text-white">
         {/* ===== Left Side (Form) ===== */}
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-center md: items-start">
           <h2
             className="text-3xl md:text-4xl font-extrabold mb-10 tracking-tight"
             style={{

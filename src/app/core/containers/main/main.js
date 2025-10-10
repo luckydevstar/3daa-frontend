@@ -123,8 +123,8 @@ class Main extends React.Component {
         className={mainClasses(
           profileMenuOpen,
           sidebarOpen,
-          appLoading,
-          isPageNotSupported
+          appLoading
+          // isPageNotSupported
         )}
       >
         {/* Intercom messaging component */}
@@ -160,16 +160,16 @@ class Main extends React.Component {
             {online && <PusherSubscribe currentLocation={location.pathname} />}
 
             {/* Overlay */}
-            <div className="app-overlay" />
+            {/* <div className="app-overlay" /> */}
           </div>
         </main>
 
         {/* Window size not supported */}
-        {isPageNotSupported && (
+        {/* {isPageNotSupported && (
           <Portal isOpened>
             <UIPageNotSupported />
           </Portal>
-        )}
+        )} */}
       </div>
     );
   }

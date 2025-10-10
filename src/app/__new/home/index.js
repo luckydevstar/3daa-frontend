@@ -17,7 +17,7 @@ const Home = () => {
       <HomeIntro />
       <ApplyCard />
       <CheckCard />
-      <JobSearch />
+      {/* <JobSearch /> */}
       <Join3DAA />
     </div>
   );
