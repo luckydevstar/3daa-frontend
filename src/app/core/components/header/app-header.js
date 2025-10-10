@@ -9,7 +9,7 @@ import Isvg from 'react-inlinesvg';
 
 import IconFlagCN from 'images/flag_cn.svg';
 import IconFlagUK from 'images/flag_uk.svg';
-
+import { extractUserCentre } from 'app/common/util/helpers';
 import UserComponent from 'app/user';
 import { Creators as CoreCreators } from 'app/core/actions';
 
@@ -28,9 +28,14 @@ import DMPMenu from './dmp-menu';
 import SecondaryMenu from './secondary-menu';
 import ProfileMenu from './profile-menu';
 
+import LogoImage from 'images/new/home/logo.png';
+import { Popover, Button, Badge } from 'antd';
+
 const UserCreators = UserComponent.Actions;
 
 const extractUserStatus = common.util.helpers.extractUserStatus;
+const helpers = common.util.helpers;
+const extractUserRole = helpers.extractUserRole;
 
 const ContentModalConfirm = common.components.ContentModalConfirm;
 
@@ -158,6 +163,7 @@ class AppHeader extends React.Component {
     let headerTemplate;
 
     const userStatus = extractUserStatus(user);
+    const role = extractUserRole(user);
 
     if (this.inEditor() === 'EDITOR' && workbookTitle !== '') {
       headerTemplate = (
@@ -284,7 +290,10 @@ class AppHeader extends React.Component {
             <Link to="/login" className="m-l-10 button is-info !text-base">
               Sign In
             </Link>
-            <Link to="/register" className="m-l-10 button is-info !bg-[#E9E9E9] !text-base !text-black">
+            <Link
+              to="/register"
+              className="m-l-10 button is-info !bg-[#E9E9E9] !text-base !text-black"
+            >
               Sign Up
             </Link>
           </div>
@@ -293,6 +302,123 @@ class AppHeader extends React.Component {
     }
 
     const { isResponsiveMenu } = this.state;
+
+    if (userStatus === 'ACTIVE_USER' && role === CentreLearner) {
+      return (
+        <div className="bg-white h-[90px] flex items-center px-12 justify-between overflow-visible relative">
+          <div className="w-max h-max text-[42px]">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div className="shadow-lg z-10 mt-8">
+            <img src={LogoImage} className="w-28 h-28 object-fit" />
+          </div>
+          <div id="app-header-actions" className="relative">
+            <Popover
+              placement="bottomRight"
+              getPopupContainer={() => document.body}
+              content={
+                <div className="px-4 py-4">
+                  <h2 className="text-sm font-bold mb-2">App</h2>
+                  <div className="flex flex-col gap-6 w-full">
+                    <div className="w-full flex items-center justify-center gap-6">
+                      <div className="flex flex-col justify-center items-center gap-1">
+                        <div className="w-[60px] h-[60px] p-4 shadow-md bg-[#488AFF] flex items-center justify-center text-white text-[40px] rounded-md">
+                          <i class="fa-solid fa-table-columns"></i>
+                        </div>
+                        <span className="text-xs font-semibold">Dashboard</span>
+                      </div>
+
+                      <Badge count={5}>
+                        <div className="flex flex-col justify-center items-center gap-1">
+                          <div className="w-[60px] h-[60px] p-4 shadow-md bg-[#E02020] flex items-center justify-center text-white text-[40px] rounded-md">
+                            <i class="fa-regular fa-bell"></i>
+                          </div>
+                          <span className="text-xs font-semibold">
+                            Notifications
+                          </span>
+                        </div>
+                      </Badge>
+
+                      <Badge count={5}>
+                        <div className="flex flex-col justify-center items-center gap-1">
+                          <div className="w-[60px] h-[60px] p-4 shadow-md bg-[#ffffff] text-[#488AFF] flex items-center justify-center text-[40px] rounded-md">
+                            <i class="fa-regular fa-comment"></i>
+                          </div>
+                          <span className="text-xs font-semibold">
+                            Messages
+                          </span>
+                        </div>
+                      </Badge>
+
+                      <div className="flex flex-col justify-center items-center gap-1">
+                        <div className="w-[60px] h-[60px] p-4 shadow-md bg-[#ffffff] text-[#488AFF] flex items-center justify-center text-[40px] rounded-md">
+                          <i class="fa-regular fa-user"></i>
+                        </div>
+                        <span className="text-xs font-semibold">
+                          My Profile
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="w-full flex items-center justify-between gap-6">
+                      <div className="flex flex-col justify-center items-center gap-1">
+                        <div className="w-[60px] h-[60px] p-4 shadow-md bg-[#ffffff] text-[#488AFF] flex items-center justify-center text-[40px] rounded-md">
+                          <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <span className="text-xs font-semibold">Learning</span>
+                      </div>
+
+                      <div className="flex flex-col justify-center items-center gap-1">
+                        <div className="w-[60px] h-[60px] p-4 shadow-md bg-[#488AFF] text-[#ffffff] flex items-center justify-center text-[40px] rounded-md">
+                          <i class="fa-solid fa-chart-simple"></i>
+                        </div>
+                        <span className="text-xs font-semibold">Progress</span>
+                      </div>
+
+                      <div className="flex flex-col justify-center items-center gap-1">
+                        <div className="w-[60px] h-[60px] p-4 shadow-md bg-[#ffffff] text-[#488AFF] flex items-center justify-center text-[40px] rounded-md">
+                          <i class="fa-solid fa-book"></i>
+                        </div>
+                        <span className="text-xs font-semibold">Bookstand</span>
+                      </div>
+
+                      <div className="flex flex-col justify-center items-center gap-1">
+                        <div className="w-[60px] h-[60px] p-4 shadow-md bg-[#ffffff] text-[#488AFF] flex items-center justify-center text-[40px] rounded-md">
+                          <i class="fa-solid fa-video"></i>
+                        </div>
+                        <span className="text-xs font-semibold">Videos</span>
+                      </div>
+                    </div>
+
+                    <div className="w-full flex items-center justify-start gap-6">
+                      <div className="flex flex-col justify-center items-center gap-1">
+                        <div className="w-[60px] h-[60px] p-4 shadow-md bg-[#5E5E5E] text-[#ffffff] flex items-center justify-center text-[40px] rounded-md">
+                          <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <span className="text-xs font-semibold">Settings</span>
+                      </div>
+
+                      <div className="flex flex-col justify-center items-center gap-1">
+                        <div className="w-[60px] h-[60px] p-4 shadow-md bg-[#488AFF] text-[#ffffff] flex items-center justify-center text-[40px] rounded-md">
+                          <i class="fa-regular fa-user"></i>
+                        </div>
+                        <span className="text-xs font-semibold">Support</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              }
+              trigger="click"
+            >
+              <Button size="large">
+                <i class="fa-solid fa-table-cells text-[24px]"></i>
+              </Button>
+            </Popover>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div>
         <header role="banner">
@@ -350,8 +476,8 @@ class AppHeader extends React.Component {
                 onClick={() => this.toggleResponsiveMenu()}
               >
                 {userStatus === 'INCOMPLETE_PROFILE' ||
-                  userStatus === 'UNVERIFIED_EMAIL' ||
-                  userStatus === 'ACTIVE_USER' ? (
+                userStatus === 'UNVERIFIED_EMAIL' ||
+                userStatus === 'ACTIVE_USER' ? (
                   <Link onClick={logout}>
                     <div className="icon">
                       <i className="fa fa-sign-out" />

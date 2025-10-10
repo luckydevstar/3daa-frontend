@@ -11,6 +11,8 @@ import HttpsRedirect from 'react-https-redirect';
 import Routes from 'app/core/config/routes';
 import configureStore from 'app/core/config/store';
 
+import 'antd/dist/antd.css';
+
 const store = configureStore();
 
 const Main = () => (

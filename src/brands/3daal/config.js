@@ -1,11 +1,11 @@
-console.log(">>>>>>>>>>>>>>>>>", process.env.PUSHER_APP_ID)
+console.log('>>>>>>>>>>>>>>>>>', process.env.PUSHER_APP_ID);
 
 const config = {
   api: {
     API_URL_PROD: 'http://api.testing.3darchitecturalacademy.com/api',
     API_URL_TEST: 'http://api.testing.3darchitecturalacademy.com/api',
-    API_URL_DEV: 'http://api.testing.3darchitecturalacademy.com/api',
-    API_URL_STAGING: 'http://api.testing.3darchitecturalacademy.com/api',
+    API_URL_DEV: 'https://api.testing.3darchitecturalacademy.com/api',
+    API_URL_STAGING: 'http://api.testing.3darchitecturalacademy.com/api'
   },
   // api: {
   //   API_URL_PROD: 'https://api.3daa.apppixies.local/api',
